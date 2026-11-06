@@ -454,24 +454,7 @@ export const WorkOSUnifiedTopBar: React.FC<WorkOSUnifiedTopBarProps> = ({
             )}
           </div>
 
-          {/* User Profile Avatar & Name */}
-          <div className="hidden sm:flex items-center gap-2 pr-2 border-r border-slate-200 dark:border-slate-700">
-            <div className="w-8 h-8 rounded-full bg-teal-900 text-white font-bold flex items-center justify-center text-xs shadow-2xs overflow-hidden shrink-0">
-              {userAvatar ? (
-                <img src={userAvatar} alt={userName} className="w-full h-full object-cover" />
-              ) : (
-                userName.charAt(0)
-              )}
-            </div>
-            <div className="text-right leading-tight">
-              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 block truncate max-w-[110px]">
-                {userName}
-              </span>
-              <span className="text-xs text-slate-400 dark:text-slate-500 block">
-                {userRole}
-              </span>
-            </div>
-          </div>
+
         </div>
       </div>
     </header>
