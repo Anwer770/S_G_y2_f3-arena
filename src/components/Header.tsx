@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ActiveModuleTab } from '../types';
-import { getCurrentUserProfile, SETTINGS_UPDATED_EVENT } from '../utils/settingsStorage';
 import { useAuth } from '../context/AuthContext';
 import {
   Menu,
-  Calendar,
-  Layers,
-  Settings,
-  Sparkles,
   Sun,
   Moon,
   Search,
   Bell,
-  User,
   LogOut,
-  ShieldCheck,
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
@@ -106,25 +99,9 @@ export const Header: React.FC<HeaderProps> = ({
   alertsCount = 0,
   onOpenAlertsModal,
 }) => {
-  const { theme, toggleTheme, isDark } = useTheme();
-  const { currentUser, logout } = useAuth();
+  const { toggleTheme, isDark } = useTheme();
+  const { logout } = useAuth();
   const currentTabMeta = TAB_TITLES[activeTab] || TAB_TITLES.dashboard;
-  const [userProfile, setUserProfile] = useState(() => getCurrentUserProfile());
-
-  useEffect(() => {
-    const handleSettingsUpdate = () => {
-      setUserProfile(getCurrentUserProfile());
-    };
-    window.addEventListener(SETTINGS_UPDATED_EVENT, handleSettingsUpdate);
-    return () => window.removeEventListener(SETTINGS_UPDATED_EVENT, handleSettingsUpdate);
-  }, []);
-
-  const todayArabic = new Intl.DateTimeFormat('ar-SA-u-ca-gregory', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  }).format(new Date());
 
   return (
     <header className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-30 shadow-2xs transition-colors" dir="rtl">
@@ -164,34 +141,8 @@ export const Header: React.FC<HeaderProps> = ({
           </p>
         </div>
 
-        {/* Left side: User Greeting + Notifications + Theme Toggle + Logout */}
+        {/* Left side: Notifications + Theme Toggle + Logout */}
         <div className="flex items-center gap-2 shrink-0">
-          {/* User Greeting & Avatar Badge */}
-          <button
-            type="button"
-            onClick={() => setActiveTab('settings')}
-            className="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700/80 transition-all cursor-pointer group shadow-2xs"
-            title={`المستخدم الحالي: ${currentUser?.name || userProfile.name} (انقر لفتح الإعدادات)`}
-          >
-            <div className="w-7 h-7 rounded-lg bg-[#0D9488] text-white font-black text-xs flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform border border-emerald-400/30 shrink-0">
-              {currentUser?.avatarInitial || userProfile.initial}
-            </div>
-            <div className="text-right hidden sm:block">
-              <span className="text-xs font-bold text-slate-800 dark:text-slate-100 block group-hover:text-[#0D9488] transition-colors leading-tight">
-                مرحباً، {(currentUser?.name || userProfile.name).split(' ')[0]}
-              </span>
-              <span className="text-[10px] font-semibold text-[#0D9488] dark:text-teal-400 block leading-tight">
-                {currentUser?.role === 'admin'
-                  ? 'مدير النظام'
-                  : currentUser?.role === 'accountant'
-                  ? 'محاسب مالي'
-                  : currentUser?.role === 'sales'
-                  ? 'مندوب مبيعات'
-                  : 'مستعرض'}
-              </span>
-            </div>
-          </button>
-
           {/* Notification Bell with Dynamic Alerts */}
           <div className="relative">
             <button

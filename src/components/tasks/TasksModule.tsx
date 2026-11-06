@@ -11,6 +11,7 @@ import { calculateTaskStats, filterTasks, getUpcomingTasks } from '../../utils/t
 import { exportTasksToCSV, exportTasksToExcel } from '../../utils/excel';
 import { formatArabicDate, formatCurrency } from '../../utils/formatters';
 import { TaskModal } from './TaskModal';
+import { CommitmentModal } from './CommitmentModal';
 import { CalendarView } from './CalendarView';
 import { CommitmentsTable } from './CommitmentsTable';
 import { UniversalDataExchangeModal } from '../common/UniversalDataExchangeModal';
@@ -78,6 +79,10 @@ export const TasksModule: React.FC<Props> = ({
   const [activeTab, setActiveTab] = useState<'dashboard' | 'tasks' | 'commitments' | 'calendar' | 'audit'>('dashboard');
   const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
+  const [taskModalInitialDate, setTaskModalInitialDate] = useState<string | undefined>(undefined);
+  const [isCommitmentModalOpen, setIsCommitmentModalOpen] = useState(false);
+  const [editingCommitment, setEditingCommitment] = useState<Commitment | null>(null);
+  const [commitmentModalInitialDate, setCommitmentModalInitialDate] = useState<string | undefined>(undefined);
   const [isImportModalOpen, setIsImportModalOpen] = useState(false);
 
   const handleImportFile = async (file: File) => {
@@ -144,13 +149,15 @@ export const TasksModule: React.FC<Props> = ({
     });
   };
 
-  const handleOpenAdd = () => {
+  const handleOpenAdd = (dateStr?: string) => {
     setEditingTask(null);
+    setTaskModalInitialDate(typeof dateStr === 'string' ? dateStr : undefined);
     setIsTaskModalOpen(true);
   };
 
   const handleOpenEdit = (task: Task) => {
     setEditingTask(task);
+    setTaskModalInitialDate(task.start);
     setIsTaskModalOpen(true);
   };
 
@@ -674,8 +681,25 @@ export const TasksModule: React.FC<Props> = ({
       {activeTab === 'calendar' && (
         <CalendarView
           tasks={tasks}
+          commitments={commitments}
           onToggleComplete={onToggleCompleteTask}
           onEditTask={handleOpenEdit}
+          onToggleCompleteCommitment={onToggleCompleteCommitment}
+          onEditCommitment={(c) => {
+            setEditingCommitment(c);
+            setCommitmentModalInitialDate(c.due);
+            setIsCommitmentModalOpen(true);
+          }}
+          onAddTaskForDate={(dateStr) => {
+            setEditingTask(null);
+            setTaskModalInitialDate(dateStr);
+            setIsTaskModalOpen(true);
+          }}
+          onAddCommitmentForDate={(dateStr) => {
+            setEditingCommitment(null);
+            setCommitmentModalInitialDate(dateStr);
+            setIsCommitmentModalOpen(true);
+          }}
         />
       )}
 
@@ -730,6 +754,20 @@ export const TasksModule: React.FC<Props> = ({
         categories={categories}
         operations={operations}
         assignees={assignees}
+        initialDate={taskModalInitialDate}
+      />
+
+      {/* Commitment Modal */}
+      <CommitmentModal
+        isOpen={isCommitmentModalOpen}
+        onClose={() => setIsCommitmentModalOpen(false)}
+        onSave={(c) => {
+          onSaveCommitment(c);
+          setIsCommitmentModalOpen(false);
+        }}
+        editingCommitment={editingCommitment}
+        existingCommitments={commitments}
+        initialDate={commitmentModalInitialDate}
       />
 
       {/* Universal Data Exchange Modal for Tasks */}

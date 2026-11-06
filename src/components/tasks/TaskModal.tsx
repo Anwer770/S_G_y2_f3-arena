@@ -13,6 +13,7 @@ interface Props {
   categories: string[];
   operations: string[];
   assignees: string[];
+  initialDate?: string;
 }
 
 export const TaskModal: React.FC<Props> = ({
@@ -24,6 +25,7 @@ export const TaskModal: React.FC<Props> = ({
   categories,
   operations,
   assignees,
+  initialDate,
 }) => {
   const [id, setId] = useState('');
   const [sub, setSub] = useState('');
@@ -58,8 +60,9 @@ export const TaskModal: React.FC<Props> = ({
       setId(nextId);
       setSub(`${categories[0] || 'عام'}-${nextId.replace('T-', '')}`);
       setTitle('');
-      setStart(new Date().toISOString().split('T')[0]);
-      setEnd('');
+      const defaultDate = initialDate || new Date().toISOString().split('T')[0];
+      setStart(defaultDate);
+      setEnd(defaultDate);
       setDesc('');
       setCat(categories[0] || 'العملاء');
       setOp(operations[0] || 'مهمة');
@@ -69,7 +72,7 @@ export const TaskModal: React.FC<Props> = ({
       setAmount('');
     }
     setError(null);
-  }, [editingTask, isOpen, existingTasks, categories, operations, assignees]);
+  }, [editingTask, isOpen, existingTasks, categories, operations, assignees, initialDate]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

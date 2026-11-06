@@ -10,6 +10,7 @@ interface Props {
   onSave: (commitment: Commitment) => void;
   editingCommitment?: Commitment | null;
   existingCommitments: Commitment[];
+  initialDate?: string;
 }
 
 export const CommitmentModal: React.FC<Props> = ({
@@ -18,6 +19,7 @@ export const CommitmentModal: React.FC<Props> = ({
   onSave,
   editingCommitment,
   existingCommitments,
+  initialDate,
 }) => {
   const [id, setId] = useState('');
   const [name, setName] = useState('');
@@ -42,12 +44,12 @@ export const CommitmentModal: React.FC<Props> = ({
       setName('');
       setAmount('');
       setPri('A');
-      setDue(new Date().toISOString().split('T')[0]);
+      setDue(initialDate || new Date().toISOString().split('T')[0]);
       setStatus('قيد التنفيذ');
       setDesc('');
     }
     setError(null);
-  }, [editingCommitment, isOpen, existingCommitments]);
+  }, [editingCommitment, isOpen, existingCommitments, initialDate]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -68,9 +68,9 @@ export const WorkOSUnifiedTopBar: React.FC<WorkOSUnifiedTopBarProps> = ({
   onToggleShowCompleted,
   onFilterByOverdue,
   onFilterByUrgent,
-  userName = 'محمد العولقي',
-  userRole = 'مدير النظام التنفيذي',
-  userAvatar,
+  userName: _userName,
+  userRole: _userRole,
+  userAvatar: _userAvatar,
 }) => {
   const [isAddMenuOpen, setIsAddMenuOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);

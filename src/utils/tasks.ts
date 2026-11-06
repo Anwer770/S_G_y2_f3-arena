@@ -203,15 +203,15 @@ export function generateNextCommitmentId(commitments: Commitment[]): string {
   return `التزامات-${String(max + 1).padStart(3, '0')}`;
 }
 
-// FR-34: ICS Calendar Export for Google / Apple / Outlook Calendar
-export function generateICS(tasks: Task[]): string {
+// FR-34: ICS Calendar Export for Google / Apple / Outlook Calendar (Tasks & Commitments)
+export function generateICS(tasks: Task[], commitments: Commitment[] = []): string {
   const lines: string[] = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//AlMaha//Tasks & Plans Manager v2.0//AR',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
-    'X-WR-CALNAME:دفتر المهام والأعمال والخطط - المها',
+    'X-WR-CALNAME:دفتر المهام والالتزامات والخطط - المها',
     'X-WR-TIMEZONE:Asia/Aden',
   ];
 
@@ -235,12 +235,31 @@ export function generateICS(tasks: Task[]): string {
     lines.push('END:VEVENT');
   });
 
+  commitments.forEach((c) => {
+    if (!c.due) return;
+    const dueFormatted = c.due.replace(/-/g, '');
+    const endDateObj = new Date(c.due);
+    endDateObj.setDate(endDateObj.getDate() + 1);
+    const endFormatted = endDateObj.toISOString().split('T')[0].replace(/-/g, '');
+
+    lines.push('BEGIN:VEVENT');
+    lines.push(`UID:${c.id}@almaha-commitments.local`);
+    lines.push(`DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`);
+    lines.push(`DTSTART;VALUE=DATE:${dueFormatted}`);
+    lines.push(`DTEND;VALUE=DATE:${endFormatted}`);
+    lines.push(`SUMMARY:[التزام مالي] ${c.name} - ${c.amount} ريال`);
+    lines.push(`DESCRIPTION:المبلغ: ${c.amount} ريال | الأهمية: ${c.pri} | الحالة: ${c.status}\\n${c.desc || ''}`);
+    lines.push('CATEGORIES:التزامات مالية');
+    lines.push(`STATUS:${c.status === 'تم الانجاز' ? 'COMPLETED' : 'CONFIRMED'}`);
+    lines.push('END:VEVENT');
+  });
+
   lines.push('END:VCALENDAR');
   return lines.join('\r\n');
 }
 
-export function downloadICS(tasks: Task[], filename = 'almaha_tasks_calendar.ics'): void {
-  const icsContent = generateICS(tasks);
+export function downloadICS(tasks: Task[], commitments: Commitment[] = [], filename = 'almaha_tasks_calendar.ics'): void {
+  const icsContent = generateICS(tasks, commitments);
   const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
