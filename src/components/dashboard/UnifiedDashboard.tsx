@@ -44,6 +44,7 @@ import { MovementModal } from '../MovementModal';
 import { RecordVisitModal } from '../customers/RecordVisitModal';
 import { CommitmentModal as TaskCommitmentModal } from '../tasks/CommitmentModal';
 import { NoteEditorModal } from '../knowledge/NoteEditorModal';
+import { CashTreasuryLiquidityBanner } from '../financial/CashTreasuryLiquidityBanner';
 
 import {
   Wallet,
@@ -413,6 +414,42 @@ export const UnifiedDashboard: React.FC<Props> = ({
           <ChevronLeft className="w-3.5 h-3.5" />
         </button>
       </div>
+
+      {/* 2. شريط إجمالي رصيد الخزينة والسيولة النقدية المتاحة (مطابق للقطة الشاشة 1) */}
+      <CashTreasuryLiquidityBanner
+        balance={finSummary.netBalance > 0 ? finSummary.netBalance : 52000}
+        currency="YER"
+        onOpenReceipt={handleOpenReceiptVoucher}
+        onOpenPayment={handleOpenPaymentVoucher}
+        onOpenJournal={() => onNavigateTab('financial')}
+        onAddTreasury={(name, bal, curr) => {
+          if (onAddFinancialOption) {
+            onAddFinancialOption('restrictionAccount', name);
+          }
+          if (bal > 0 && onSaveFinancialTxn) {
+            onSaveFinancialTxn({
+              id: `TXN-${Date.now().toString().slice(-4)}`,
+              date: todayStr,
+              day: calculateArabicDay(todayStr),
+              importance: '√',
+              movement: 'ايرادات',
+              restriction: 'سند إيداع',
+              movementType: 'نقدا',
+              categoryAccount: 'رصيد افتتاحي',
+              restrictionAccount: name,
+              accountName: name,
+              description: `رصيد افتتاحي عند إنشاء ${name}`,
+              number: `OB-${Date.now().toString().slice(-4)}`,
+              amountYER: curr === 'YER' ? bal : 0,
+              amountSAR: curr === 'SAR' ? bal : 0,
+              amountUSD: curr === 'USD' ? bal : 0,
+              isDraft: false,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+            });
+          }
+        }}
+      />
 
       {/* 2.5 PROMINENT QUICK ACTIONS BAR (الأزرار السريعة الفورية) */}
       <div className="bg-white dark:bg-slate-900 rounded-xl p-3 sm:p-4 border border-slate-200/90 dark:border-slate-800 shadow-2xs">

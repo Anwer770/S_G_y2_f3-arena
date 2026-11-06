@@ -227,10 +227,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
         />
       )}
 
-      {/* Main Right Sidebar (ثابتة تماماً على جهة اليمين بلون زيتي داكن #0F3935 / #134E48) */}
+      {/* Main Right Sidebar (مطابق تماماً لألوان وستايل لقطة الشاشة) */}
       <aside
         id="app-right-sidebar"
-        className={`fixed top-0 right-0 h-screen bg-[#0F3935] text-white border-l border-[#134E48]/90 z-50 flex flex-col transition-all duration-300 shadow-xl ${
+        className={`fixed top-0 right-0 h-screen bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 border-l border-slate-200/90 dark:border-slate-800 z-50 flex flex-col transition-all duration-300 shadow-xl ${
           isCollapsed ? 'w-20' : 'w-72 sm:w-80'
         } ${
           isMobileOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'
@@ -238,22 +238,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
         dir="rtl"
       >
         {/* Sidebar Header & Brand Profile */}
-        <div className="p-4 border-b border-[#134E48] flex items-center justify-between gap-2 shrink-0 bg-[#0c2e2a]">
+        <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 shrink-0 bg-white dark:bg-slate-900">
           <div
             onClick={() => handleSelectTab('dashboard')}
             className="flex items-center gap-3 cursor-pointer overflow-hidden group select-none"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#0D9488] hover:bg-[#059669] text-white flex items-center justify-center font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform border border-emerald-400/30">
-              ق
+            <div className="w-10 h-10 rounded-xl bg-[#0B2B26] text-white flex items-center justify-center font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+              م
             </div>
 
             {!isCollapsed && (
               <div className="min-w-0 transition-opacity">
-                <h1 className="text-sm font-black text-white truncate tracking-tight flex items-center gap-1.5" title="المنظومة المحاسبية والإدارية">
-                  <span>المنظومة المحاسبية الموحدة</span>
+                <h1 className="text-sm font-black text-slate-900 dark:text-white truncate tracking-tight flex items-center gap-1.5" title="المنظومة-الإدارية-المتكاملة">
+                  <span>المنظومة-الإدارية-المتكاملة</span>
                 </h1>
-                <p className="text-[11px] text-[#99C7BF] truncate mt-0.5 font-medium">
-                  نظام الإدارة والحسابات المالية
+                <p className="text-[11px] text-slate-400 dark:text-slate-500 truncate mt-0.5 font-medium">
+                  نظام الإدارة والتشغيل الموحد
                 </p>
               </div>
             )}
@@ -262,7 +262,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {/* Desktop Collapse Toggle Button */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className="hidden lg:flex items-center justify-center w-8 h-8 rounded-lg bg-[#134E48] hover:bg-[#1a665f] text-emerald-100 transition-colors cursor-pointer border border-[#1a665f] shrink-0"
+            className="hidden lg:flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors cursor-pointer border border-slate-200/60 dark:border-slate-700 shrink-0"
             title={isCollapsed ? 'توسيع القائمة الجانبية' : 'تصغير القائمة الجانبية'}
           >
             {isCollapsed ? (
@@ -275,7 +275,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {/* Mobile Close Button */}
           <button
             onClick={() => setIsMobileOpen(false)}
-            className="flex lg:hidden items-center justify-center w-8 h-8 rounded-lg bg-[#134E48] hover:bg-[#1a665f] text-emerald-100 cursor-pointer border border-[#1a665f]"
+            className="flex lg:hidden items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-600 cursor-pointer border border-slate-200"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
@@ -300,12 +300,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   }
                   handleSelectTab(item.id);
                 }}
-                className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-xs transition-all cursor-pointer select-none group relative ${
+                className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs transition-all cursor-pointer select-none group relative ${
                   !isAllowed
-                    ? 'opacity-35 bg-[#134E48]/30 text-emerald-200/50'
+                    ? 'opacity-35 bg-slate-100 dark:bg-slate-800 text-slate-400'
                     : isActive
-                    ? 'bg-[#0D9488] text-white font-bold border-r-4 border-emerald-300 shadow-xs'
-                    : 'text-[#E6F4F1]/85 hover:bg-[#134E48] hover:text-white font-medium'
+                    ? 'bg-[#E6F4F1] dark:bg-teal-950/60 text-[#0F3935] dark:text-teal-200 font-black shadow-2xs'
+                    : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/60 font-medium'
                 } ${isCollapsed ? 'justify-center px-2' : 'justify-between'}`}
                 title={!isAllowed ? `${item.label} (مغلق ومحمي بالصلاحيات)` : `${item.index}. ${item.label}`}
               >
@@ -313,10 +313,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   <div
                     className={`shrink-0 transition-colors ${
                       !isAllowed
-                        ? 'text-emerald-300/40'
+                        ? 'text-slate-400'
                         : isActive
-                        ? 'text-white'
-                        : 'text-[#99C7BF] group-hover:text-white'
+                        ? 'text-[#0D9488] dark:text-teal-400'
+                        : 'text-slate-400 dark:text-slate-500 group-hover:text-slate-700 dark:group-hover:text-slate-200'
                     }`}
                   >
                     <Icon className="w-4 h-4" />
@@ -330,14 +330,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 {/* Badge / Count or Lock */}
                 {!isCollapsed && (
                   !isAllowed ? (
-                    <Lock className="w-3.5 h-3.5 text-emerald-300/40 shrink-0" title="مغلق بالصلاحيات" />
+                    <Lock className="w-3.5 h-3.5 text-slate-400 shrink-0" title="مغلق بالصلاحيات" />
                   ) : typeof item.count === 'number' && item.count > 0 ? (
                     <span
-                      className={`text-xs font-mono font-bold px-2 py-0.5 rounded-md shrink-0 ${
-                        isActive
-                          ? 'bg-[#0F3935] text-emerald-100 border border-emerald-400/30'
-                          : 'bg-[#134E48] text-emerald-100 border border-[#1a665f]'
-                      }`}
+                      className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full shrink-0 bg-[#0F3935] text-white shadow-2xs"
                     >
                       {item.count}
                     </span>
@@ -349,33 +345,33 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* Sidebar Footer with Live Clock & Dynamic User Profile */}
-        <div className="p-3 border-t border-[#134E48] bg-[#0c2e2a] shrink-0 space-y-2">
+        <div className="p-3 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shrink-0 space-y-2">
           {!isCollapsed ? (
             <>
               {/* Date & Time */}
-              <div className="text-[11px] font-mono font-medium text-[#99C7BF] px-1 text-center truncate">
+              <div className="text-[11px] font-mono font-medium text-slate-400 dark:text-slate-500 px-1 text-center truncate">
                 {currentTimeStr || 'جاري تحديث الوقت...'}
               </div>
 
               {/* User Profile Card */}
               <div
-                className="flex items-center justify-between p-2 rounded-xl bg-[#134E48] border border-[#1a665f] shadow-2xs select-none"
+                className="flex items-center justify-between p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-2xs select-none"
               >
                 <div
                   onClick={() => handleSelectTab('settings')}
                   className="flex items-center gap-2.5 min-w-0 flex-1 cursor-pointer group"
                   title="تعديل اسم المستخدم والملف الشخصي من الإعدادات"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-[#0D9488] text-white font-black text-xs flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform border border-emerald-400/30">
-                    {currentUser?.avatarInitial || userProfile.initial}
+                  <div className="w-8 h-8 rounded-full bg-[#0A3832] text-white font-black text-sm flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                    {currentUser?.avatarInitial || userProfile.initial || 'م'}
                   </div>
                   <div className="min-w-0">
-                    <div className="text-xs font-bold text-white truncate group-hover:text-emerald-300 transition-colors">
-                      {currentUser?.name || userProfile.name}
+                    <div className="text-xs font-bold text-slate-800 dark:text-slate-100 truncate group-hover:text-teal-600 transition-colors">
+                      {currentUser?.name || userProfile.name || 'محمد العولقي'}
                     </div>
-                    <div className="text-[11px] text-[#99C7BF] font-medium truncate">
+                    <div className="text-[11px] text-slate-400 dark:text-slate-500 font-medium truncate">
                       {currentUser?.role === 'admin'
-                        ? 'مدير عام النظام'
+                        ? 'مدير النظام التنفيذي'
                         : currentUser?.role === 'accountant'
                         ? 'المحاسب المالي'
                         : currentUser?.role === 'sales'
@@ -385,11 +381,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   </div>
                 </div>
 
-                {/* Coral Red Logout Button (#EF4444 / #FCA5A5) */}
+                {/* Logout Button */}
                 <button
                   type="button"
                   onClick={logout}
-                  className="p-1.5 rounded-lg text-[#FCA5A5] hover:text-white hover:bg-[#EF4444] transition-colors shrink-0 cursor-pointer"
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40 transition-colors shrink-0 cursor-pointer"
                   title="تسجيل الخروج من الجلسة الحالية"
                 >
                   <LogOut className="w-4 h-4" />
@@ -400,15 +396,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <div className="flex flex-col items-center gap-2 py-1 select-none">
               <div
                 onClick={() => handleSelectTab('settings')}
-                className="w-8 h-8 rounded-lg bg-[#0D9488] text-white font-bold text-xs flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs cursor-pointer border border-emerald-400/30"
+                className="w-8 h-8 rounded-full bg-[#0F3935] text-white font-bold text-xs flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs cursor-pointer"
                 title={`${currentUser?.name || userProfile.name} (انقر للإعدادات)`}
               >
-                {currentUser?.avatarInitial || userProfile.initial}
+                {currentUser?.avatarInitial || userProfile.initial || 'م'}
               </div>
               <button
                 type="button"
                 onClick={logout}
-                className="p-1.5 rounded-lg text-[#FCA5A5] hover:text-white hover:bg-[#EF4444] cursor-pointer transition-colors"
+                className="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 cursor-pointer transition-colors"
                 title="تسجيل الخروج"
               >
                 <LogOut className="w-3.5 h-3.5" />

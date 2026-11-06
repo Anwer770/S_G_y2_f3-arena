@@ -24,8 +24,8 @@ export const DEFAULT_SYSTEM_SETTINGS: CompleteSystemSettings = {
     theme: 'light',
     salesInvoicePrefix: 'INV-',
     purchaseInvoicePrefix: 'PUR-',
-    currentUserName: 'مدير النظام',
-    currentUserTitle: 'مدير عام المنظومة والعمليات',
+    currentUserName: 'محمد العولقي',
+    currentUserTitle: 'مدير النظام التنفيذي',
   },
   inventory: {
     warehouses: [
@@ -86,7 +86,7 @@ export const DEFAULT_SYSTEM_SETTINGS: CompleteSystemSettings = {
   users: [
     {
       id: 'usr-1',
-      name: 'مدير النظام',
+      name: 'محمد العولقي',
       email: 'admin@system.local',
       phone: '+967 771 234 567',
       role: 'admin',
@@ -186,18 +186,18 @@ export function loadCompleteSystemSettings(): CompleteSystemSettings {
         ...DEFAULT_SYSTEM_SETTINGS.general,
         ...(parsed.general || {}),
       };
-      if (!general.currentUserName || general.currentUserName.trim() === '') {
-        general.currentUserName = 'مدير النظام';
+      if (!general.currentUserName || general.currentUserName.trim() === '' || general.currentUserName === 'مدير النظام') {
+        general.currentUserName = 'محمد العولقي';
       }
-      if (!general.currentUserTitle || general.currentUserTitle.trim() === '') {
-        general.currentUserTitle = 'مدير عام المنظومة والعمليات';
+      if (!general.currentUserTitle || general.currentUserTitle.trim() === '' || general.currentUserTitle === 'مدير عام المنظومة والعمليات') {
+        general.currentUserTitle = 'مدير النظام التنفيذي';
       }
 
       const users: typeof DEFAULT_SYSTEM_SETTINGS.users = parsed.users || DEFAULT_SYSTEM_SETTINGS.users;
-      // If the primary admin user exists, sync their name if it was old placeholder
-      if (users && users.length > 0 && users[0].id === 'usr-1' && (users[0].name === 'أنور قاسم' || !users[0].name)) {
+      // If the primary admin user exists, sync their name
+      if (users && users.length > 0 && users[0].id === 'usr-1' && (users[0].name === 'أنور قاسم' || users[0].name === 'مدير النظام' || !users[0].name)) {
         users[0].name = general.currentUserName;
-        users[0].avatarInitial = general.currentUserName.charAt(0) || 'م';
+        users[0].avatarInitial = 'م';
       }
 
       return {
@@ -239,15 +239,17 @@ export function saveCompleteSystemSettings(settings: CompleteSystemSettings): vo
 
 export function getCurrentUserProfile(): { name: string; title: string; initial: string } {
   const settings = loadCompleteSystemSettings();
-  const name = settings.general?.currentUserName?.trim() || 'مدير النظام';
-  const title = settings.general?.currentUserTitle?.trim() || 'مدير عام المنظومة والعمليات';
+  const rawName = settings.general?.currentUserName?.trim();
+  const name = rawName && rawName !== 'مدير النظام' ? rawName : 'محمد العولقي';
+  const rawTitle = settings.general?.currentUserTitle?.trim();
+  const title = rawTitle && rawTitle !== 'مدير عام المنظومة والعمليات' ? rawTitle : 'مدير النظام التنفيذي';
   const initial = name.charAt(0) || 'م';
   return { name, title, initial };
 }
 
 export function updateCurrentUserName(newName: string, newTitle?: string): void {
   const settings = loadCompleteSystemSettings();
-  settings.general.currentUserName = newName.trim() || 'مدير النظام';
+  settings.general.currentUserName = newName.trim() || 'محمد العولقي';
   if (newTitle !== undefined) {
     settings.general.currentUserTitle = newTitle.trim();
   }
