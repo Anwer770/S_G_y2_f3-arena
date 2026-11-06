@@ -17,7 +17,6 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
-import { PWAInstallButton } from './pwa/PWAInstallButton';
 
 interface HeaderProps {
   activeTab: ActiveModuleTab;
@@ -235,9 +234,6 @@ export const Header: React.FC<HeaderProps> = ({
               <Moon className="w-4 h-4 text-slate-600 dark:text-slate-300 transition-transform group-hover:-rotate-12" />
             )}
           </button>
-
-          {/* PWA Install Button */}
-          <PWAInstallButton compact />
         </div>
       </div>
     </header>

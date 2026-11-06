@@ -46,6 +46,7 @@ export default defineConfig(() => {
           ],
         },
         workbox: {
+          maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
           globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
           runtimeCaching: [
             {
@@ -103,6 +104,7 @@ export default defineConfig(() => {
       rollupOptions: {
         output: {
           manualChunks: {
+            'vendor-react': ['react', 'react-dom'],
             'vendor-xlsx': ['xlsx'],
             'vendor-charts': ['recharts'],
             'vendor-icons': ['lucide-react'],

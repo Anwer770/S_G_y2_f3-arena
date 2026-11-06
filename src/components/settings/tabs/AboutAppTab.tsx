@@ -1,6 +1,5 @@
 import React from 'react';
 import { Info, ExternalLink, ShieldCheck, Youtube, Phone, Globe, Mail, Sparkles, Award } from 'lucide-react';
-import { PWAInstallButton } from '../../pwa/PWAInstallButton';
 
 export const AboutAppTab: React.FC = () => {
   return (
@@ -49,44 +48,6 @@ export const AboutAppTab: React.FC = () => {
         {/* Decorative background shape */}
         <div className="absolute -left-12 -bottom-12 w-64 h-64 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none" />
         <div className="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
-      </div>
-
-      {/* PWA & Offline Experience Card */}
-      <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="p-3 rounded-2xl bg-teal-500/10 text-teal-700 dark:text-teal-400 border border-teal-500/20">
-              <Sparkles className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
-                تطبيق الويب التقدمي المستقل (PWA & Offline Support)
-              </h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                تثبيت المنظومة كتطبيق أصلي سريع على سطح المكتب وهواتف Android وiOS مع استمرارية العمل دون اتصال
-              </p>
-            </div>
-          </div>
-
-          <div className="shrink-0">
-            <PWAInstallButton />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
-          <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
-            <span className="font-bold text-teal-700 dark:text-teal-300 block mb-1">⚡ تثبيت بنقرة واحدة</span>
-            <span className="text-[11px] text-slate-500 dark:text-slate-400">إضافة فورية للشاشة الرئيسية بدون الحاجة لمتجر تطبيقات.</span>
-          </div>
-          <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
-            <span className="font-bold text-teal-700 dark:text-teal-300 block mb-1">🛡️ عمل كامل دون اتصال</span>
-            <span className="text-[11px] text-slate-500 dark:text-slate-400">تخزين مؤقت عالي الأداء مع استقرار IndexedDB المحلي.</span>
-          </div>
-          <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
-            <span className="font-bold text-teal-700 dark:text-teal-300 block mb-1">🖥️ شاشة تشغيل مستقلة</span>
-            <span className="text-[11px] text-slate-500 dark:text-slate-400">واجهة كاملة بدون شريط عنوان المتصفح تماثل التطبيقات المجمعة.</span>
-          </div>
-        </div>
       </div>
 
       {/* Company & Support Cards */}

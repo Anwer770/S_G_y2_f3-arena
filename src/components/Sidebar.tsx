@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ActiveModuleTab } from '../types';
 import { getCurrentUserProfile, SETTINGS_UPDATED_EVENT } from '../utils/settingsStorage';
 import { useAuth } from '../context/AuthContext';
-import { PWAInstallButton } from './pwa/PWAInstallButton';
 import {
   LayoutDashboard,
   Wallet,
@@ -353,11 +352,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <div className="p-3 border-t border-slate-200/90 dark:border-slate-800/90 bg-slate-50/70 dark:bg-slate-900/60 shrink-0 space-y-2">
           {!isCollapsed ? (
             <>
-              {/* PWA Install Quick Action */}
-              <div className="w-full">
-                <PWAInstallButton />
-              </div>
-
               {/* Date & Time */}
               <div className="text-xs font-mono font-medium text-slate-500 dark:text-slate-400 px-1 text-center truncate">
                 {currentTimeStr || 'جاري تحميل الوقت...'}

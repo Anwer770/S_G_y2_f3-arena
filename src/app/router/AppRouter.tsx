@@ -20,43 +20,19 @@ import {
   UnifiedBackupState,
 } from '../../types';
 
-// Lazy loaded modules for fast startup
-const FinancialModule = React.lazy(() =>
-  import('../../components/financial/FinancialModule').then((m) => ({ default: m.FinancialModule }))
-);
-const DebtsModule = React.lazy(() =>
-  import('../../components/debts/DebtsModule').then((m) => ({ default: m.DebtsModule }))
-);
-const KnowledgeModule = React.lazy(() =>
-  import('../../components/knowledge/KnowledgeModule').then((m) => ({ default: m.KnowledgeModule }))
-);
-const StockModule = React.lazy(() =>
-  import('../../components/stock/StockModule').then((m) => ({ default: m.StockModule }))
-);
-const CustomersModule = React.lazy(() =>
-  import('../../components/customers/CustomersModule').then((m) => ({ default: m.CustomersModule }))
-);
-const DoctorsModule = React.lazy(() =>
-  import('../../components/doctors/DoctorsModule').then((m) => ({ default: m.DoctorsModule }))
-);
-const RoutinesModule = React.lazy(() =>
-  import('../../components/routines/RoutinesModule').then((m) => ({ default: m.RoutinesModule }))
-);
-const CustodyIssuesModule = React.lazy(() =>
-  import('../../components/custody/CustodyIssuesModule').then((m) => ({ default: m.CustodyIssuesModule }))
-);
-const LinksLibraryModule = React.lazy(() =>
-  import('../../components/links/LinksLibraryModule').then((m) => ({ default: m.LinksLibraryModule }))
-);
-const WorkOSModule = React.lazy(() =>
-  import('../../components/workos/WorkOSModule').then((m) => ({ default: m.WorkOSModule }))
-);
-const UnifiedSettings = React.lazy(() =>
-  import('../../components/settings/UnifiedSettings').then((m) => ({ default: m.UnifiedSettings }))
-);
-const UnifiedDashboard = React.lazy(() =>
-  import('../../components/dashboard/UnifiedDashboard').then((m) => ({ default: m.UnifiedDashboard }))
-);
+// Directly imported core modules for instant zero-latency screen transitions (no Suspense flash)
+import { FinancialModule } from '../../components/financial/FinancialModule';
+import { DebtsModule } from '../../components/debts/DebtsModule';
+import { KnowledgeModule } from '../../components/knowledge/KnowledgeModule';
+import { StockModule } from '../../components/stock/StockModule';
+import { CustomersModule } from '../../components/customers/CustomersModule';
+import { DoctorsModule } from '../../components/doctors/DoctorsModule';
+import { RoutinesModule } from '../../components/routines/RoutinesModule';
+import { CustodyIssuesModule } from '../../components/custody/CustodyIssuesModule';
+import { LinksLibraryModule } from '../../components/links/LinksLibraryModule';
+import { WorkOSModule } from '../../components/workos/WorkOSModule';
+import { UnifiedSettings } from '../../components/settings/UnifiedSettings';
+import { UnifiedDashboard } from '../../components/dashboard/UnifiedDashboard';
 
 import { loadDebts, loadDebtCommitments, loadCustodyIssues, loadLinksRecords, saveTaskAuditLogs } from '../../utils/storage';
 
@@ -159,187 +135,342 @@ export const AppRouter: React.FC<AppRouterProps> = (props) => {
     );
   }
 
+  // Canonical tab representation (workos, tasks, and taskflow share the WorkOS module)
+  const canonicalTab = activeTab === 'tasks' || activeTab === 'taskflow' ? 'workos' : activeTab;
+  const isWorkOSActive = activeTab === 'workos' || activeTab === 'tasks' || activeTab === 'taskflow';
+
+  // Keep-Alive tab cache: mounts each tab once on first visit, keeps it alive in DOM for 0ms instant switching
+  const [visitedTabs, setVisitedTabs] = React.useState<Set<string>>(() => {
+    return new Set<string>(['dashboard', canonicalTab]);
+  });
+
+  // Track visited tabs
+  React.useEffect(() => {
+    setVisitedTabs((prev) => {
+      if (prev.has(canonicalTab)) return prev;
+      const next = new Set(prev);
+      next.add(canonicalTab);
+      return next;
+    });
+  }, [canonicalTab]);
+
+  // Pre-warm remaining tabs on idle after initial render so every first navigation is also instant
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisitedTabs((prev) => {
+        const allTabs = [
+          'dashboard',
+          'workos',
+          'links',
+          'custody',
+          'routines',
+          'financial',
+          'debts',
+          'knowledge',
+          'stock',
+          'customers',
+          'doctors',
+          'settings',
+        ];
+        const next = new Set(prev);
+        allTabs.forEach((t) => {
+          if (canAccessModule(t as ActiveModuleTab)) {
+            next.add(t);
+          }
+        });
+        return next;
+      });
+    }, 600);
+    return () => clearTimeout(timer);
+  }, [canAccessModule]);
+
+  // Fresh memoized data for dashboard & auxiliary counters
+  const debtsData = React.useMemo(() => loadDebts(), [activeTab, props.debtsCount]);
+  const debtCommitmentsData = React.useMemo(
+    () => loadDebtCommitments(),
+    [activeTab, props.debtCommitmentsCount]
+  );
+  const custodyCountMemo = React.useMemo(() => loadCustodyIssues().length, [activeTab]);
+  const linksCountMemo = React.useMemo(() => loadLinksRecords().length, [activeTab]);
+
   return (
-    <React.Suspense
-      fallback={
-        <div className="flex flex-col items-center justify-center py-28 space-y-4">
-          <div className="w-10 h-10 border-4 border-teal-600 border-t-transparent rounded-full animate-spin"></div>
-          <p className="text-xs font-bold text-slate-500 dark:text-slate-400">جاري تحميل الشاشة...</p>
-        </div>
-      }
-    >
+    <div className="relative w-full">
       {/* 1. DASHBOARD */}
-      {activeTab === 'dashboard' && (
-        <UnifiedDashboard
-          items={props.products}
-          movements={props.records}
-          financialTransactions={props.financialTransactions}
-          debts={loadDebts()}
-          debtCommitments={loadDebtCommitments()}
-          tasks={props.tasks}
-          commitments={props.commitments}
-          customers={props.customers}
-          visits={props.customerVisits}
-          doctors={props.doctors}
-          doctorVisits={props.doctorVisits}
-          onNavigateTab={(tab) => setActiveTab(tab)}
-          onSaveFinancialTxn={props.onSaveFinancialTxn}
-          onSaveMovement={props.onSaveMovement}
-          onSaveTask={props.onSaveTask}
-          onToggleCompleteTask={props.onToggleCompleteTask}
-          onSaveCommitment={props.onSaveCommitment}
-          onUpdateCustomers={props.onUpdateCustomers}
-          onUpdateVisits={props.onUpdateVisits}
-          categories={props.categories}
-          statuses={props.statuses}
-          seq={props.seq}
-          financialMovements={props.movements}
-          restrictions={props.restrictions}
-          movementTypes={props.movementTypes}
-          importanceList={props.importanceList}
-          categoryAccounts={props.categoryAccounts}
-          restrictionAccounts={props.restrictionAccounts}
-          accountNames={props.accountNames}
-          onAddFinancialOption={props.onAddFinancialOption}
-          taskCategories={props.taskCategories}
-          taskOperations={props.taskOperations}
-          taskAssignees={props.taskAssignees}
-        />
+      {visitedTabs.has('dashboard') && (
+        <div
+          key="tab-pane-dashboard"
+          id="tab-pane-dashboard"
+          className={activeTab === 'dashboard' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'dashboard' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'dashboard'}
+        >
+          <UnifiedDashboard
+            items={props.products}
+            movements={props.records}
+            financialTransactions={props.financialTransactions}
+            debts={debtsData}
+            debtCommitments={debtCommitmentsData}
+            tasks={props.tasks}
+            commitments={props.commitments}
+            customers={props.customers}
+            visits={props.customerVisits}
+            doctors={props.doctors}
+            doctorVisits={props.doctorVisits}
+            onNavigateTab={(tab) => setActiveTab(tab)}
+            onSaveFinancialTxn={props.onSaveFinancialTxn}
+            onSaveMovement={props.onSaveMovement}
+            onSaveTask={props.onSaveTask}
+            onToggleCompleteTask={props.onToggleCompleteTask}
+            onSaveCommitment={props.onSaveCommitment}
+            onUpdateCustomers={props.onUpdateCustomers}
+            onUpdateVisits={props.onUpdateVisits}
+            categories={props.categories}
+            statuses={props.statuses}
+            seq={props.seq}
+            financialMovements={props.movements}
+            restrictions={props.restrictions}
+            movementTypes={props.movementTypes}
+            importanceList={props.importanceList}
+            categoryAccounts={props.categoryAccounts}
+            restrictionAccounts={props.restrictionAccounts}
+            accountNames={props.accountNames}
+            onAddFinancialOption={props.onAddFinancialOption}
+            taskCategories={props.taskCategories}
+            taskOperations={props.taskOperations}
+            taskAssignees={props.taskAssignees}
+          />
+        </div>
       )}
 
       {/* 2. WORK OS UNIFIED (Projects, Tasks, Kanban, Timeline, Matrix, Workload) */}
-      {(activeTab === 'workos' || activeTab === 'tasks' || activeTab === 'taskflow') && (
-        <WorkOSModule
-          initialView={
-            activeTab === 'taskflow' ? 'taskflow' : activeTab === 'tasks' ? 'tasks' : 'dashboard'
-          }
-          onNavigateToERP={(tab) => setActiveTab(tab as any)}
-          tasks={props.tasks}
-          commitments={props.commitments}
-          categories={props.taskCategories}
-          operations={props.taskOperations}
-          assignees={props.taskAssignees}
-          auditLogs={props.taskAuditLogs}
-          onSaveTask={props.onSaveTask}
-          onDeleteTask={props.onDeleteTask}
-          onToggleCompleteTask={props.onToggleCompleteTask}
-          onSaveCommitment={props.onSaveCommitment}
-          onDeleteCommitment={props.onDeleteCommitment}
-          onToggleCompleteCommitment={props.onToggleCompleteCommitment}
-          onClearCompletedTasks={props.onClearCompletedTasks}
-          onClearAuditLogs={() => {
-            saveTaskAuditLogs([]);
-            props.setTaskAuditLogs([]);
-          }}
-        />
+      {visitedTabs.has('workos') && (
+        <div
+          key="tab-pane-workos"
+          id="tab-pane-workos"
+          className={isWorkOSActive ? 'block' : 'hidden'}
+          style={{ display: isWorkOSActive ? 'block' : 'none' }}
+          aria-hidden={!isWorkOSActive}
+        >
+          <WorkOSModule
+            initialView={
+              activeTab === 'taskflow' ? 'taskflow' : activeTab === 'tasks' ? 'tasks' : 'overview'
+            }
+            onNavigateToERP={(tab) => setActiveTab(tab as any)}
+            tasks={props.tasks}
+            commitments={props.commitments}
+            categories={props.taskCategories}
+            operations={props.taskOperations}
+            assignees={props.taskAssignees}
+            auditLogs={props.taskAuditLogs}
+            onSaveTask={props.onSaveTask}
+            onDeleteTask={props.onDeleteTask}
+            onToggleCompleteTask={props.onToggleCompleteTask}
+            onSaveCommitment={props.onSaveCommitment}
+            onDeleteCommitment={props.onDeleteCommitment}
+            onToggleCompleteCommitment={props.onToggleCompleteCommitment}
+            onClearCompletedTasks={props.onClearCompletedTasks}
+            onClearAuditLogs={() => {
+              saveTaskAuditLogs([]);
+              props.setTaskAuditLogs([]);
+            }}
+          />
+        </div>
       )}
 
       {/* 3. SMART LINKS LIBRARY */}
-      {activeTab === 'links' && <LinksLibraryModule />}
+      {visitedTabs.has('links') && (
+        <div
+          key="tab-pane-links"
+          id="tab-pane-links"
+          className={activeTab === 'links' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'links' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'links'}
+        >
+          <LinksLibraryModule />
+        </div>
+      )}
 
       {/* 4. CUSTODY & PENDING ISSUES */}
-      {activeTab === 'custody' && <CustodyIssuesModule />}
+      {visitedTabs.has('custody') && (
+        <div
+          key="tab-pane-custody"
+          id="tab-pane-custody"
+          className={activeTab === 'custody' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'custody' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'custody'}
+        >
+          <CustodyIssuesModule />
+        </div>
+      )}
 
       {/* 5. ROUTINES & HABITS */}
-      {activeTab === 'routines' && <RoutinesModule />}
+      {visitedTabs.has('routines') && (
+        <div
+          key="tab-pane-routines"
+          id="tab-pane-routines"
+          className={activeTab === 'routines' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'routines' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'routines'}
+        >
+          <RoutinesModule />
+        </div>
+      )}
 
       {/* 6. FINANCIAL LEDGER */}
-      {activeTab === 'financial' && (
-        <FinancialModule
-          transactions={props.financialTransactions}
-          movements={props.movements}
-          restrictions={props.restrictions}
-          movementTypes={props.movementTypes}
-          importanceList={props.importanceList}
-          categoryAccounts={props.categoryAccounts}
-          restrictionAccounts={props.restrictionAccounts}
-          accountNames={props.accountNames}
-          onSaveTransaction={props.onSaveFinancialTxn}
-          onDeleteTransaction={props.onDeleteFinancialTxn}
-          onImportTransactions={props.onImportFinancialTxns}
-          onAddOption={props.onAddFinancialOption}
-        />
+      {visitedTabs.has('financial') && (
+        <div
+          key="tab-pane-financial"
+          id="tab-pane-financial"
+          className={activeTab === 'financial' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'financial' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'financial'}
+        >
+          <FinancialModule
+            transactions={props.financialTransactions}
+            movements={props.movements}
+            restrictions={props.restrictions}
+            movementTypes={props.movementTypes}
+            importanceList={props.importanceList}
+            categoryAccounts={props.categoryAccounts}
+            restrictionAccounts={props.restrictionAccounts}
+            accountNames={props.accountNames}
+            onSaveTransaction={props.onSaveFinancialTxn}
+            onDeleteTransaction={props.onDeleteFinancialTxn}
+            onImportTransactions={props.onImportFinancialTxns}
+            onAddOption={props.onAddFinancialOption}
+          />
+        </div>
       )}
 
       {/* 7. DEBTS & COMMITMENTS */}
-      {activeTab === 'debts' && <DebtsModule />}
+      {visitedTabs.has('debts') && (
+        <div
+          key="tab-pane-debts"
+          id="tab-pane-debts"
+          className={activeTab === 'debts' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'debts' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'debts'}
+        >
+          <DebtsModule />
+        </div>
+      )}
 
       {/* 8. KNOWLEDGE & NOTES */}
-      {activeTab === 'knowledge' && (
-        <KnowledgeModule
-          customersList={props.customers.map((c) => ({ id: c.id, name: c.name }))}
-          doctorsList={props.doctors.map((d) => ({ id: d.id, name: d.doctorName }))}
-          tasksList={props.tasks.map((t) => ({ id: t.id, title: t.title }))}
-        />
+      {visitedTabs.has('knowledge') && (
+        <div
+          key="tab-pane-knowledge"
+          id="tab-pane-knowledge"
+          className={activeTab === 'knowledge' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'knowledge' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'knowledge'}
+        >
+          <KnowledgeModule
+            customersList={props.customers.map((c) => ({ id: c.id, name: c.name }))}
+            doctorsList={props.doctors.map((d) => ({ id: d.id, name: d.doctorName }))}
+            tasksList={props.tasks.map((t) => ({ id: t.id, title: t.title }))}
+          />
+        </div>
       )}
 
       {/* 9. STOCK LEDGER */}
-      {activeTab === 'stock' && (
-        <StockModule
-          products={props.products}
-          records={props.records}
-          categories={props.categories}
-          statuses={props.statuses}
-          settings={props.settings}
-          seq={props.seq}
-          auditLogs={props.stockAuditLogs}
-          stocks={props.stocks}
-          onSaveMovement={props.onSaveMovement}
-          onDeleteRecord={props.onDeleteRecord}
-          onBulkDelete={props.onBulkDelete}
-          onCloneRecord={props.onCloneRecord}
-          onAddProduct={props.onAddProduct}
-          onEditProduct={props.onEditProduct}
-          onDeleteProduct={props.onDeleteProduct}
-          onToggleProductActive={props.onToggleProductActive}
-        />
+      {visitedTabs.has('stock') && (
+        <div
+          key="tab-pane-stock"
+          id="tab-pane-stock"
+          className={activeTab === 'stock' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'stock' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'stock'}
+        >
+          <StockModule
+            products={props.products}
+            records={props.records}
+            categories={props.categories}
+            statuses={props.statuses}
+            settings={props.settings}
+            seq={props.seq}
+            auditLogs={props.stockAuditLogs}
+            stocks={props.stocks}
+            onSaveMovement={props.onSaveMovement}
+            onDeleteRecord={props.onDeleteRecord}
+            onBulkDelete={props.onBulkDelete}
+            onCloneRecord={props.onCloneRecord}
+            onAddProduct={props.onAddProduct}
+            onEditProduct={props.onEditProduct}
+            onDeleteProduct={props.onDeleteProduct}
+            onToggleProductActive={props.onToggleProductActive}
+          />
+        </div>
       )}
 
       {/* 10. CUSTOMERS & VISITS */}
-      {activeTab === 'customers' && (
-        <CustomersModule
-          customers={props.customers}
-          visits={props.customerVisits}
-          auditLogs={props.customerAuditLogs}
-          onUpdateCustomers={props.onUpdateCustomers}
-          onUpdateVisits={props.onUpdateVisits}
-        />
+      {visitedTabs.has('customers') && (
+        <div
+          key="tab-pane-customers"
+          id="tab-pane-customers"
+          className={activeTab === 'customers' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'customers' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'customers'}
+        >
+          <CustomersModule
+            customers={props.customers}
+            visits={props.customerVisits}
+            auditLogs={props.customerAuditLogs}
+            onUpdateCustomers={props.onUpdateCustomers}
+            onUpdateVisits={props.onUpdateVisits}
+          />
+        </div>
       )}
 
       {/* 11. DOCTORS & MEDICAL VISITS */}
-      {activeTab === 'doctors' && (
-        <DoctorsModule
-          doctors={props.doctors}
-          visits={props.doctorVisits}
-          auditLogs={props.doctorAuditLogs}
-          onUpdateDoctors={props.onUpdateDoctors}
-          onUpdateVisits={props.onUpdateDoctorVisits}
-          onAddAuditLog={props.logDoctorAudit}
-        />
+      {visitedTabs.has('doctors') && (
+        <div
+          key="tab-pane-doctors"
+          id="tab-pane-doctors"
+          className={activeTab === 'doctors' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'doctors' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'doctors'}
+        >
+          <DoctorsModule
+            doctors={props.doctors}
+            visits={props.doctorVisits}
+            auditLogs={props.doctorAuditLogs}
+            onUpdateDoctors={props.onUpdateDoctors}
+            onUpdateVisits={props.onUpdateDoctorVisits}
+            onAddAuditLog={props.logDoctorAudit}
+          />
+        </div>
       )}
 
       {/* 12. UNIFIED SETTINGS & BACKUP */}
-      {activeTab === 'settings' && (
-        <UnifiedSettings
-          onExportBackup={props.onExportBackup}
-          onImportBackup={props.onImportBackup}
-          onResetAllData={props.onResetAllData}
-          stockCount={props.products.length}
-          movementCount={props.records.length}
-          financialCount={props.financialTransactions.length}
-          debtsCount={props.debtsCount}
-          debtCommitmentsCount={props.debtCommitmentsCount}
-          tasksCount={props.tasks.length}
-          commitmentsCount={props.commitments.length}
-          customersCount={props.customers.length}
-          visitsCount={props.customerVisits.length}
-          doctorsCount={props.doctors.length}
-          doctorVisitsCount={props.doctorVisits.length}
-          routinesCount={props.routinesCount}
-          custodyCount={loadCustodyIssues().length}
-          linksCount={loadLinksRecords().length}
-        />
+      {visitedTabs.has('settings') && (
+        <div
+          key="tab-pane-settings"
+          id="tab-pane-settings"
+          className={activeTab === 'settings' ? 'block' : 'hidden'}
+          style={{ display: activeTab === 'settings' ? 'block' : 'none' }}
+          aria-hidden={activeTab !== 'settings'}
+        >
+          <UnifiedSettings
+            onExportBackup={props.onExportBackup}
+            onImportBackup={props.onImportBackup}
+            onResetAllData={props.onResetAllData}
+            stockCount={props.products.length}
+            movementCount={props.records.length}
+            financialCount={props.financialTransactions.length}
+            debtsCount={props.debtsCount}
+            debtCommitmentsCount={props.debtCommitmentsCount}
+            tasksCount={props.tasks.length}
+            commitmentsCount={props.commitments.length}
+            customersCount={props.customers.length}
+            visitsCount={props.customerVisits.length}
+            doctorsCount={props.doctors.length}
+            doctorVisitsCount={props.doctorVisits.length}
+            routinesCount={props.routinesCount}
+            custodyCount={custodyCountMemo}
+            linksCount={linksCountMemo}
+          />
+        </div>
       )}
-    </React.Suspense>
+    </div>
   );
 };
