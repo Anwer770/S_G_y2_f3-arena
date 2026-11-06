@@ -5,7 +5,47 @@
 @source "./";
 @source "../index.html";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --color-bg-base: #f8fafc;
+  --color-bg-canvas: #f3f7f5;
+  --color-bg-card: #ffffff;
+  --color-bg-surface: #ffffff;
+  --color-bg-muted: #f1f5f9;
+  --color-bg-elevated: #ffffff;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-dim: #94a3b8;
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+  --color-primary: #0d6854;
+  --color-primary-hover: #0a5242;
+  --color-primary-fg: #ffffff;
+}
+
+:root[data-theme="dark"],
+:root.dark,
+[data-theme="dark"],
+.dark {
+  /* الوضع الليلي المعتمد: خلفيات داكنة فحمية ومطفأة مع نصوص فاتحة عالية التباين */
+  --color-bg-base: #0f172a;       /* خلفية الشاشة العامة #0F172A */
+  --color-bg-canvas: #0f172a;     /* خلفية شبكة القماش #0F172A */
+  --color-bg-card: #1e293b;       /* خلفيات البطاقات والمحافظ واللوحات #1E293B */
+  --color-bg-surface: #1e293b;    /* خلفيات الأسطح والجداول #1E293B */
+  --color-bg-muted: #1e293b;      /* خلفية العناصر الخاملة */
+  --color-bg-elevated: #334155;   /* النوافذ المنبثقة والقوائم المنسدلة */
+  --color-text-primary: #f8fafc;  /* عناوين وأسعار بيضاء ناصعة #F8FAFC */
+  --color-text-secondary: #cbd5e1;/* نصوص ثانوية مريحة وفاتحة #CBD5E1 */
+  --color-text-muted: #94a3b8;    /* تسميات ووصف فرعي واضح #94A3B8 */
+  --color-text-dim: #64748b;
+  --color-border: #334155;        /* حدود فواصل واضحة #334155 */
+  --color-border-subtle: #1e293b;
+  --color-primary: #14b8a6;       /* الأزرق التيل المضيء */
+  --color-primary-hover: #2dd4bf;
+  --color-primary-fg: #ffffff;
+}
 
 @layer base {
   html {
@@ -13,8 +53,11 @@
     transition: background-color 0.25s ease, color 0.25s ease;
   }
 
-  html.dark {
+  html.dark,
+  html[data-theme="dark"] {
     color-scheme: dark;
+    background-color: #0f172a;
+    color: #f8fafc;
   }
 
   html, body {
@@ -36,18 +79,21 @@
   }
 }
 
-/* Exact Nova ERP Soft Dot Canvas Background */
+/* Nova ERP Soft Dot Canvas Background */
 .bg-canvas-pattern {
-  background-color: #f3f7f5;
+  background-color: var(--color-bg-canvas, #f3f7f5);
   background-image: 
     radial-gradient(circle, rgba(13, 104, 84, 0.13) 1.5px, transparent 1.5px);
   background-size: 26px 26px;
 }
 
-.dark .bg-canvas-pattern {
-  background-color: #0a1212;
+.dark .bg-canvas-pattern,
+[data-theme="dark"] .bg-canvas-pattern,
+.dark.bg-canvas-pattern,
+[data-theme="dark"].bg-canvas-pattern {
+  background-color: #0f172a;
   background-image: 
-    radial-gradient(circle, rgba(45, 212, 191, 0.12) 1.5px, transparent 1.5px);
+    radial-gradient(circle, rgba(20, 184, 166, 0.12) 1.5px, transparent 1.5px);
   background-size: 26px 26px;
 }
 

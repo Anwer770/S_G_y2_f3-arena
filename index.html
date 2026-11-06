@@ -19,8 +19,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('app_theme_mode');
+          var isDark = saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch(e) {}
+      })();
+    </script>
   </head>
-  <body class="bg-slate-100 text-slate-900 antialiased font-sans selection:bg-indigo-600 selection:text-white" dir="rtl">
+  <body class="bg-[#f8fafc] text-slate-900 dark:bg-[#0f172a] dark:text-[#f8fafc] antialiased font-sans selection:bg-teal-600 selection:text-white transition-colors duration-200" dir="rtl">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

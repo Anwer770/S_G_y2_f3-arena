@@ -1,5 +1,6 @@
 import React from 'react';
 import { GeneralSettings } from '../../../types/settings';
+import { useTheme } from '../../../context/ThemeContext';
 import { Sliders, Sun, Moon, Calendar, Coins, Hash, Check, User, ShieldCheck } from 'lucide-react';
 
 interface Props {
@@ -36,6 +37,7 @@ const TIMEZONES = [
 ];
 
 export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
+  const { theme, setTheme } = useTheme();
   return (
     <div className="space-y-6 animate-fadeIn">
       {/* Header Info */}
@@ -212,33 +214,33 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
               type="button"
               onClick={() => {
                 onChange({ ...settings, theme: 'light' });
-                document.documentElement.classList.remove('dark');
+                setTheme('light');
               }}
               className={`flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                settings.theme === 'light'
+                theme === 'light'
                   ? 'bg-amber-500 text-white shadow-xs'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
               }`}
             >
               <Sun className="w-4 h-4" />
               <span>نهاري (فاتح)</span>
-              {settings.theme === 'light' && <Check className="w-3.5 h-3.5" />}
+              {theme === 'light' && <Check className="w-3.5 h-3.5" />}
             </button>
             <button
               type="button"
               onClick={() => {
                 onChange({ ...settings, theme: 'dark' });
-                document.documentElement.classList.add('dark');
+                setTheme('dark');
               }}
               className={`flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                settings.theme === 'dark'
+                theme === 'dark'
                   ? 'bg-slate-800 text-white shadow-xs border border-slate-700'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
               }`}
             >
               <Moon className="w-4 h-4" />
               <span>ليلي (داكن)</span>
-              {settings.theme === 'dark' && <Check className="w-3.5 h-3.5" />}
+              {theme === 'dark' && <Check className="w-3.5 h-3.5" />}
             </button>
           </div>
         </div>

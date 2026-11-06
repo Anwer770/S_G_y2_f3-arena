@@ -230,7 +230,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Main Right Sidebar */}
       <aside
         id="app-right-sidebar"
-        className={`fixed top-0 right-0 h-screen bg-white dark:bg-[#0b1313] text-slate-800 dark:text-slate-100 border-l border-slate-200/90 dark:border-slate-800/80 z-50 flex flex-col transition-all duration-300 shadow-xl ${
+        className={`fixed top-0 right-0 h-screen bg-white dark:bg-[#0f172a] text-slate-800 dark:text-slate-100 border-l border-slate-200/90 dark:border-slate-800/80 z-50 flex flex-col transition-all duration-300 shadow-xl ${
           isCollapsed ? 'w-20' : 'w-72 sm:w-80'
         } ${
           isMobileOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'
