@@ -81,7 +81,7 @@ export const DebtPrintModal: React.FC<DebtPrintModalProps> = ({
         }
       `}</style>
 
-      <div className="bg-white dark:bg-slate-900 w-full max-w-4xl rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] print:max-h-none print:h-auto print-container my-auto">
+      <div className="bg-white dark:bg-slate-900 w-full max-w-4xl rounded-xl sm:rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] print:max-h-none print:h-auto print-container my-auto">
         {/* Modal Toolbar (Hidden on print) */}
         <div className="px-5 py-3.5 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0 print-hidden">
           <div className="flex items-center gap-3">
@@ -131,7 +131,7 @@ export const DebtPrintModal: React.FC<DebtPrintModalProps> = ({
           <div className="border-b-2 border-slate-900 pb-5">
             <div className="flex items-start justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-black text-sm">
+                <div className="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-black text-sm">
                   Q
                 </div>
                 <div>

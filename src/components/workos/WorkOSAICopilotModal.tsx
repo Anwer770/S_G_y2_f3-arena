@@ -57,7 +57,7 @@ export const WorkOSAICopilotModal: React.FC<WorkOSAICopilotModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs" dir="rtl">
-      <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 w-full max-w-3xl overflow-hidden flex flex-col max-h-[90vh] animate-scaleIn">
+      <div className="bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 w-full max-w-3xl overflow-hidden flex flex-col max-h-[90vh] animate-scaleIn">
         {/* Header */}
         <div className="bg-linear-to-l from-teal-900 to-indigo-950 text-white p-5 flex items-center justify-between">
           <div className="flex items-center gap-3">

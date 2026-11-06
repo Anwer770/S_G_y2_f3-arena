@@ -113,7 +113,7 @@ export const AppRouter: React.FC<AppRouterProps> = (props) => {
   if (!canAccessModule(activeTab)) {
     return (
       <div className="py-20 px-4 text-center max-w-md mx-auto space-y-4" dir="rtl">
-        <div className="w-16 h-16 rounded-3xl bg-rose-50 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900/60 flex items-center justify-center mx-auto shadow-sm">
+        <div className="w-16 h-16 rounded-xl bg-rose-50 dark:bg-rose-950/50 text-[#EF4444] dark:text-rose-400 border border-rose-200 dark:border-rose-900/60 flex items-center justify-center mx-auto shadow-sm">
           <ShieldAlert className="w-8 h-8" />
         </div>
         <div className="space-y-1">
@@ -127,7 +127,7 @@ export const AppRouter: React.FC<AppRouterProps> = (props) => {
         <button
           type="button"
           onClick={() => setActiveTab('dashboard')}
-          className="px-4 py-2 bg-teal-700 hover:bg-teal-800 text-white font-bold rounded-xl text-xs transition cursor-pointer shadow-xs"
+          className="px-4 py-2 bg-[#0D9488] hover:bg-[#059669] text-white font-bold rounded-lg text-xs transition cursor-pointer shadow-xs"
         >
           العودة إلى لوحة التحكم
         </button>

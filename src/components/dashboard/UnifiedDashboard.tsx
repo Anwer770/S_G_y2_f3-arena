@@ -414,84 +414,84 @@ export const UnifiedDashboard: React.FC<Props> = ({
         </button>
       </div>
 
-      {/* 2. PROMINENT QUICK ACTIONS BAR (الأزرار السريعة) */}
-      <div className="bg-white dark:bg-slate-900/90 rounded-2xl p-3 sm:p-4 border border-slate-200/90 dark:border-slate-800 shadow-xs">
+      {/* 2.5 PROMINENT QUICK ACTIONS BAR (الأزرار السريعة الفورية) */}
+      <div className="bg-white dark:bg-slate-900 rounded-xl p-3 sm:p-4 border border-slate-200/90 dark:border-slate-800 shadow-2xs">
         <div className="flex items-center justify-between mb-2.5 pb-2 border-b border-slate-100 dark:border-slate-800">
           <div className="flex items-center gap-2">
-            <Zap className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+            <Zap className="w-4 h-4 text-[#0D9488]" />
             <span className="text-xs font-black text-slate-900 dark:text-slate-100">
               الإجراءات السريعة الفورية
             </span>
             <span className="text-xs text-slate-400 font-medium hidden sm:inline">
-              (إدخال مباشر عبر النماذج المحمية دون مغادرة لوحة التحكم)
+              (إدخال مباشر منظم عبر النماذج المحاسبية دون مغادرة الشاشة)
             </span>
           </div>
-          <span className="text-xs text-teal-700 dark:text-teal-300 font-bold">
+          <span className="text-xs text-[#0D9488] dark:text-teal-400 font-bold">
             7 إجراءات فورية
           </span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
-          {/* + مهمة */}
+          {/* + مهمة (أخضر زمردي) */}
           <button
             onClick={() => setIsTaskModalOpen(true)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-teal-50 dark:bg-teal-950/60 hover:bg-teal-100 dark:hover:bg-teal-900/60 text-teal-800 dark:text-teal-200 border border-teal-200/80 dark:border-teal-800/80 text-xs font-black transition-all cursor-pointer shadow-2xs hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-[#0F3935] dark:text-emerald-200 border border-emerald-200/80 dark:border-emerald-800/80 text-xs font-bold transition-all cursor-pointer shadow-2xs"
           >
-            <CheckSquare className="w-4 h-4 text-teal-600 dark:text-teal-400 shrink-0" />
+            <CheckSquare className="w-4 h-4 text-[#0D9488] shrink-0" />
             <span>+ مهمة</span>
           </button>
 
-          {/* + زيارة */}
+          {/* + زيارة (أزرق ملكي) */}
           <button
             onClick={() => handleOpenRecordVisit()}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-sky-50 dark:bg-sky-950/60 hover:bg-sky-100 dark:hover:bg-sky-900/60 text-sky-800 dark:text-sky-200 border border-sky-200/80 dark:border-sky-800/80 text-xs font-black transition-all cursor-pointer shadow-2xs hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-blue-50 dark:bg-blue-950/60 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-900 dark:text-blue-200 border border-blue-200/80 dark:border-blue-800/80 text-xs font-bold transition-all cursor-pointer shadow-2xs"
           >
-            <Users className="w-4 h-4 text-sky-600 dark:text-sky-400 shrink-0" />
-            <span>+ زيارة</span>
+            <Users className="w-4 h-4 text-[#3B82F6] shrink-0" />
+            <span>+ زيارة عميل</span>
           </button>
 
-          {/* + سند قبض */}
+          {/* + سند قبض (أخضر زمردي #0D9488) */}
           <button
             onClick={handleOpenReceiptVoucher}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 border border-emerald-200/80 dark:border-emerald-800/80 text-xs font-black transition-all cursor-pointer shadow-2xs hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-teal-50 dark:bg-teal-950/60 hover:bg-teal-100 dark:hover:bg-teal-900/60 text-teal-950 dark:text-teal-200 border border-teal-200/80 dark:border-teal-800/80 text-xs font-bold transition-all cursor-pointer shadow-2xs"
           >
-            <ArrowDownLeft className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+            <ArrowDownLeft className="w-4 h-4 text-[#0D9488] shrink-0" />
             <span>+ سند قبض</span>
           </button>
 
-          {/* + سند صرف */}
+          {/* + سند صرف (أحمر مرجاني #EF4444) */}
           <button
             onClick={handleOpenPaymentVoucher}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-800 dark:text-rose-200 border border-rose-200/80 dark:border-rose-800/80 text-xs font-black transition-all cursor-pointer shadow-2xs hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-950 dark:text-rose-200 border border-rose-200/80 dark:border-rose-800/80 text-xs font-bold transition-all cursor-pointer shadow-2xs"
           >
-            <ArrowUpRight className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
+            <ArrowUpRight className="w-4 h-4 text-[#EF4444] shrink-0" />
             <span>+ سند صرف</span>
           </button>
 
-          {/* + حركة مخزون */}
+          {/* + حركة مخزون (أخضر زيتي / نيلي) */}
           <button
             onClick={() => setIsMovementModalOpen(true)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 text-indigo-800 dark:text-indigo-200 border border-indigo-200/80 dark:border-indigo-800/80 text-xs font-black transition-all cursor-pointer shadow-2xs hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 text-indigo-950 dark:text-indigo-200 border border-indigo-200/80 dark:border-indigo-800/80 text-xs font-bold transition-all cursor-pointer shadow-2xs"
           >
-            <Package className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0" />
-            <span>+ حركة مخزون</span>
+            <Package className="w-4 h-4 text-[#4338CA] shrink-0" />
+            <span>+ إذن مخزني</span>
           </button>
 
-          {/* + ملاحظة */}
+          {/* + ملاحظة (ذهبي برونزي) */}
           <button
             onClick={() => setIsNoteModalOpen(true)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-purple-50 dark:bg-purple-950/60 hover:bg-purple-100 dark:hover:bg-purple-900/60 text-purple-800 dark:text-purple-200 border border-purple-200/80 dark:border-purple-800/80 text-xs font-black transition-all cursor-pointer shadow-2xs hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-950 dark:text-amber-200 border border-amber-200/80 dark:border-amber-800/80 text-xs font-bold transition-all cursor-pointer shadow-2xs"
           >
-            <BookOpen className="w-4 h-4 text-purple-600 dark:text-purple-400 shrink-0" />
+            <BookOpen className="w-4 h-4 text-[#D97706] shrink-0" />
             <span>+ ملاحظة</span>
           </button>
 
-          {/* + موعد */}
+          {/* + موعد (برونزي #B45309) */}
           <button
             onClick={() => setIsCommitmentModalOpen(true)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-200 border border-amber-200/80 dark:border-amber-800/80 text-xs font-black transition-all cursor-pointer shadow-2xs hover:-translate-y-0.5 col-span-2 sm:col-span-1"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-orange-50 dark:bg-orange-950/60 hover:bg-orange-100 dark:hover:bg-orange-900/60 text-orange-950 dark:text-orange-200 border border-orange-200/80 dark:border-orange-800/80 text-xs font-bold transition-all cursor-pointer shadow-2xs col-span-2 sm:col-span-1"
           >
-            <Calendar className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+            <Calendar className="w-4 h-4 text-[#B45309] shrink-0" />
             <span>+ موعد / التزام</span>
           </button>
         </div>
@@ -502,7 +502,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
         {/* مهام اليوم */}
         <div
           onClick={() => setActiveOpsTab('today')}
-          className={`p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between ${
+          className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
             activeOpsTab === 'today'
               ? 'bg-teal-50/90 dark:bg-teal-950/60 border-teal-500 shadow-xs'
               : 'bg-white dark:bg-slate-900/90 border-slate-200/90 dark:border-slate-800 hover:border-teal-300'
@@ -527,7 +527,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
         {/* المتأخرات */}
         <div
           onClick={() => setActiveOpsTab('overdue')}
-          className={`p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between ${
+          className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
             activeOpsTab === 'overdue'
               ? 'bg-rose-50/90 dark:bg-rose-950/60 border-rose-500 shadow-xs'
               : 'bg-white dark:bg-slate-900/90 border-slate-200/90 dark:border-slate-800 hover:border-rose-300'
@@ -552,7 +552,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
         {/* زيارات اليوم */}
         <div
           onClick={() => setActiveOpsTab('visits')}
-          className={`p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between ${
+          className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
             activeOpsTab === 'visits'
               ? 'bg-sky-50/90 dark:bg-sky-950/60 border-sky-500 shadow-xs'
               : 'bg-white dark:bg-slate-900/90 border-slate-200/90 dark:border-slate-800 hover:border-sky-300'
@@ -577,7 +577,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
         {/* الالتزامات والديون */}
         <div
           onClick={() => setActiveOpsTab('commitments')}
-          className={`p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between ${
+          className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
             activeOpsTab === 'commitments'
               ? 'bg-amber-50/90 dark:bg-amber-950/60 border-amber-500 shadow-xs'
               : 'bg-white dark:bg-slate-900/90 border-slate-200/90 dark:border-slate-800 hover:border-amber-300'
@@ -602,7 +602,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
         {/* تنبيهات المخزون */}
         <div
           onClick={() => onNavigateTab('stock')}
-          className="p-4 rounded-2xl border bg-white dark:bg-slate-900/90 border-slate-200/90 dark:border-slate-800 hover:border-rose-400 transition-all cursor-pointer flex flex-col justify-between"
+          className="p-4 rounded-xl border bg-white dark:bg-slate-900/90 border-slate-200/90 dark:border-slate-800 hover:border-rose-400 transition-all cursor-pointer flex flex-col justify-between"
         >
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-slate-500 dark:text-slate-400">تنبيه المخزون</span>
@@ -623,7 +623,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
         {/* صافي السيولة النقدية */}
         <div
           onClick={() => onNavigateTab('financial')}
-          className="p-4 rounded-2xl border bg-white dark:bg-slate-900/90 border-slate-200/90 dark:border-slate-800 hover:border-emerald-400 transition-all cursor-pointer flex flex-col justify-between"
+          className="p-4 rounded-xl border bg-white dark:bg-slate-900/90 border-slate-200/90 dark:border-slate-800 hover:border-emerald-400 transition-all cursor-pointer flex flex-col justify-between"
         >
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-slate-500 dark:text-slate-400">صافي السيولة</span>
@@ -643,7 +643,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
       </div>
 
       {/* 4. DAILY OPERATIONS CENTER (المركز التنفيذي اليومي) */}
-      <div className="bg-white dark:bg-slate-900/95 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs p-4 sm:p-5 space-y-4">
+      <div className="bg-white dark:bg-slate-900/95 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-xs p-4 sm:p-5 space-y-4">
         {/* Segmented Control for Operations Tab */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100 dark:border-slate-800">
           <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
@@ -1064,7 +1064,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
       {/* 5. FINANCIAL & INVENTORY COMMAND BLOCKS (حركة مالية + حركة مخزون) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* حركة مالية */}
-        <div className="bg-white/95 dark:bg-slate-900/90 rounded-2xl p-5 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-3.5">
+        <div className="bg-white/95 dark:bg-slate-900/90 rounded-xl p-5 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-3.5">
           <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
             <div className="flex items-center gap-2">
               <div className="p-2 rounded-xl bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400">
@@ -1142,7 +1142,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
         </div>
 
         {/* حركة مخزون */}
-        <div className="bg-white/95 dark:bg-slate-900/90 rounded-2xl p-5 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-3.5">
+        <div className="bg-white/95 dark:bg-slate-900/90 rounded-xl p-5 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-3.5">
           <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
             <div className="flex items-center gap-2">
               <div className="p-2 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400">
@@ -1234,7 +1234,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 2: Financial */}
           <div
             onClick={() => onNavigateTab('financial')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-teal-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-teal-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1260,7 +1260,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 3: Debts */}
           <div
             onClick={() => onNavigateTab('debts')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-amber-200/60 dark:border-slate-800 shadow-xs hover:border-amber-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-amber-200/60 dark:border-slate-800 shadow-xs hover:border-amber-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1286,7 +1286,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 4: Stock */}
           <div
             onClick={() => onNavigateTab('stock')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-sky-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-sky-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1312,7 +1312,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 5: Work OS */}
           <div
             onClick={() => onNavigateTab('workos')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-emerald-200/80 dark:border-slate-800 shadow-xs hover:border-emerald-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-emerald-200/80 dark:border-slate-800 shadow-xs hover:border-emerald-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1338,7 +1338,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 6: Customers */}
           <div
             onClick={() => onNavigateTab('customers')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-teal-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-teal-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1364,7 +1364,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 7: Doctors */}
           <div
             onClick={() => onNavigateTab('doctors')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-sky-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-sky-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1390,7 +1390,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 8: Routines */}
           <div
             onClick={() => onNavigateTab('routines')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-amber-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-amber-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1416,7 +1416,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 9: Knowledge / Notes */}
           <div
             onClick={() => onNavigateTab('knowledge')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-purple-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-purple-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1442,7 +1442,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 10: Custody */}
           <div
             onClick={() => onNavigateTab('custody')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-rose-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-rose-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1468,7 +1468,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 11: Links Library */}
           <div
             onClick={() => onNavigateTab('links')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-violet-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-violet-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -1494,7 +1494,7 @@ export const UnifiedDashboard: React.FC<Props> = ({
           {/* Module 12: Settings */}
           <div
             onClick={() => onNavigateTab('settings')}
-            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-slate-500 transition-all cursor-pointer group flex flex-col justify-between"
+            className="bg-white/95 dark:bg-slate-900/85 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-slate-500 transition-all cursor-pointer group flex flex-col justify-between"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">

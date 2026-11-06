@@ -18,7 +18,7 @@ export const LinksPrintReport: React.FC<LinksPrintReportProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-700 p-6 md:p-10 my-4 shadow-sm print:m-0 print:p-0 print:border-none print:shadow-none">
+    <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 p-6 md:p-10 my-4 shadow-sm print:m-0 print:p-0 print:border-none print:shadow-none">
       {/* Top Action Bar (hidden in print) */}
       <div className="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-700 mb-6 print:hidden">
         <button
@@ -45,7 +45,7 @@ export const LinksPrintReport: React.FC<LinksPrintReportProps> = ({
 
       {/* Printable Document Header */}
       <div className="text-center pb-6 border-b-2 border-slate-800">
-        <div className="inline-flex items-center justify-center p-3 bg-purple-100 text-purple-800 rounded-2xl mb-3 print:border print:border-purple-300">
+        <div className="inline-flex items-center justify-center p-3 bg-purple-100 text-purple-800 rounded-xl mb-3 print:border print:border-purple-300">
           <Globe className="w-6 h-6" />
         </div>
         <h1 className="text-xl font-black text-slate-900 dark:text-slate-100">

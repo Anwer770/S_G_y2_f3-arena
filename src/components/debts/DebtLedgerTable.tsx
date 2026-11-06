@@ -140,7 +140,7 @@ export const DebtLedgerTable: React.FC<DebtLedgerTableProps> = ({
   return (
     <div className="space-y-4">
       {/* 4 Books Sub-Navigation Tabs */}
-      <div className="bg-white dark:bg-slate-900 p-2 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap gap-2 items-center justify-between">
+      <div className="bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap gap-2 items-center justify-between">
         <div className="flex flex-wrap items-center gap-1 sm:gap-2">
           {(Object.keys(DEBT_BOOKS_META) as DebtBookId[]).map((bkId) => {
             const meta = DEBT_BOOKS_META[bkId];
@@ -191,7 +191,7 @@ export const DebtLedgerTable: React.FC<DebtLedgerTableProps> = ({
       </div>
 
       {/* Book Description Banner */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 rounded-2xl shadow-xs flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 rounded-xl shadow-xs flex flex-wrap items-center justify-between gap-3">
         <div>
           <div className="flex items-center gap-2">
             <h3 className="text-base font-black">{currentBookMeta.title}</h3>
@@ -233,7 +233,7 @@ export const DebtLedgerTable: React.FC<DebtLedgerTableProps> = ({
       </div>
 
       {/* Filters Row */}
-      <div className="bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap items-center justify-between gap-3">
         {/* Search */}
         <div className="relative flex-1 min-w-[220px]">
           <Search className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute right-3 top-1/2 -translate-y-1/2" />

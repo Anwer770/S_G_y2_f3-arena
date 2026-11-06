@@ -25,7 +25,7 @@ export const PrinterSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* Paper & Orientation */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center gap-2">
             <Layout className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             <h3 className="text-xs font-bold text-slate-900 dark:text-white">إعدادات مقاس واتجاه الورق</h3>
@@ -91,7 +91,7 @@ export const PrinterSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
         </div>
 
         {/* Margins */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center gap-2">
             <FileText className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <h3 className="text-xs font-bold text-slate-900 dark:text-white">هوامش الصفحة (بالملمتر mm)</h3>
@@ -166,7 +166,7 @@ export const PrinterSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
         </div>
 
         {/* Content Options */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <h3 className="text-xs font-bold text-slate-900 dark:text-white">محتويات الفاتورة والمطبوعات</h3>
 
           <div className="space-y-3">
@@ -232,7 +232,7 @@ export const PrinterSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
         </div>
 
         {/* Colors & Typography */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center gap-2">
             <Palette className="w-4 h-4 text-purple-600 dark:text-purple-400" />
             <h3 className="text-xs font-bold text-slate-900 dark:text-white">التنسيق والمظهر والألوان</h3>

@@ -83,7 +83,7 @@ export const RoutineAnalyticsView: React.FC<RoutineAnalyticsViewProps> = ({
     <div id="routine-analytics-view" className="space-y-6">
       {/* Top 4 KPI Metrics */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 mb-2">
             <span className="text-xs font-bold">معدل الإنجاز الإجمالي</span>
             <div className="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400">
@@ -98,7 +98,7 @@ export const RoutineAnalyticsView: React.FC<RoutineAnalyticsViewProps> = ({
           </p>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 mb-2">
             <span className="text-xs font-bold">ساعات التركيز المستثمرة</span>
             <div className="p-2 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400">
@@ -113,7 +113,7 @@ export const RoutineAnalyticsView: React.FC<RoutineAnalyticsViewProps> = ({
           </p>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 mb-2">
             <span className="text-xs font-bold">أطول مسار استمرارية (Streak)</span>
             <div className="p-2 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400">
@@ -128,7 +128,7 @@ export const RoutineAnalyticsView: React.FC<RoutineAnalyticsViewProps> = ({
           </p>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 mb-2">
             <span className="text-xs font-bold">متوسط الطاقة والتركيز</span>
             <div className="p-2 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
@@ -147,7 +147,7 @@ export const RoutineAnalyticsView: React.FC<RoutineAnalyticsViewProps> = ({
       {/* Charts Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Trend Line Chart */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold text-slate-800 dark:text-white flex items-center gap-2">
               <TrendingUp size={16} className="text-emerald-500" />
@@ -183,7 +183,7 @@ export const RoutineAnalyticsView: React.FC<RoutineAnalyticsViewProps> = ({
         </div>
 
         {/* Planned vs Actual Duration */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold text-slate-800 dark:text-white flex items-center gap-2">
               <Clock size={16} className="text-blue-500" />
@@ -207,7 +207,7 @@ export const RoutineAnalyticsView: React.FC<RoutineAnalyticsViewProps> = ({
 
       {/* Category Breakdown & Insights */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
           <h3 className="text-sm font-bold text-slate-800 dark:text-white">توزيع الروتينات حسب التصنيف</h3>
           <div className="space-y-3">
             {categoryData.map((cat, i) => (
@@ -225,7 +225,7 @@ export const RoutineAnalyticsView: React.FC<RoutineAnalyticsViewProps> = ({
           </div>
         </div>
 
-        <div className="lg:col-span-2 bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-6 rounded-2xl shadow-lg space-y-4">
+        <div className="lg:col-span-2 bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-6 rounded-xl shadow-lg space-y-4">
           <div className="flex items-center gap-2">
             <Sparkles size={20} className="text-amber-400" />
             <h3 className="font-bold text-base">توصيات الذكاء الاصطناعي لرفع الكفاءة والاستمرارية</h3>

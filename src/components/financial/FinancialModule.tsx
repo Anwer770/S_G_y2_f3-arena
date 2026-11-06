@@ -535,7 +535,7 @@ export const FinancialModule: React.FC<Props> = ({
       {/* 2. KPI SUMMARY BAR (Matching User Design: وارد الفترة | مصروف الفترة | صافي الفترة | عدد الحركات) */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {/* 1. وارد الفترة (Rightmost in RTL) */}
-        <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-700 transition-all">
+        <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-700 transition-all">
           <div className="text-xs sm:text-[13px] font-semibold text-slate-500 dark:text-slate-400 text-right">
             وارد الفترة
           </div>
@@ -551,7 +551,7 @@ export const FinancialModule: React.FC<Props> = ({
         </div>
 
         {/* 2. مصروف الفترة */}
-        <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between hover:border-rose-300 dark:hover:border-rose-700 transition-all">
+        <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between hover:border-rose-300 dark:hover:border-rose-700 transition-all">
           <div className="text-xs sm:text-[13px] font-semibold text-slate-500 dark:text-slate-400 text-right">
             مصروف الفترة
           </div>
@@ -564,7 +564,7 @@ export const FinancialModule: React.FC<Props> = ({
         </div>
 
         {/* 3. صافي الفترة */}
-        <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between hover:border-teal-300 dark:hover:border-teal-700 transition-all">
+        <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between hover:border-teal-300 dark:hover:border-teal-700 transition-all">
           <div className="text-xs sm:text-[13px] font-semibold text-slate-500 dark:text-slate-400 text-right">
             صافي الفترة
           </div>
@@ -579,7 +579,7 @@ export const FinancialModule: React.FC<Props> = ({
         </div>
 
         {/* 4. عدد الحركات (Leftmost in RTL) */}
-        <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between hover:border-teal-300 dark:hover:border-teal-700 transition-all">
+        <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between hover:border-teal-300 dark:hover:border-teal-700 transition-all">
           <div className="text-xs sm:text-[13px] font-semibold text-slate-500 dark:text-slate-400 text-right">
             عدد الحركات
           </div>
@@ -697,7 +697,7 @@ export const FinancialModule: React.FC<Props> = ({
 
                 {/* Dropdown Options Popup */}
                 {isPeriodDropdownOpen && (
-                  <div className="absolute right-0 top-full mt-1.5 w-48 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 z-50 space-y-1">
+                  <div className="absolute right-0 top-full mt-1.5 w-48 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 z-50 space-y-1">
                     {[
                       { id: 'daily', label: 'يومي' },
                       { id: 'weekly', label: 'أسبوعي' },
@@ -982,7 +982,7 @@ export const FinancialModule: React.FC<Props> = ({
                       <div
                         key={txn.id}
                         onClick={() => setActiveRowId(txn.id)}
-                        className={`p-3.5 rounded-2xl border transition-all relative flex flex-col justify-between space-y-2.5 shadow-2xs cursor-pointer select-none ${
+                        className={`p-3.5 rounded-xl border transition-all relative flex flex-col justify-between space-y-2.5 shadow-2xs cursor-pointer select-none ${
                           isActive
                             ? 'bg-teal-50/70 dark:bg-teal-950/40 border-teal-500 ring-2 ring-teal-500/20'
                             : isSelected

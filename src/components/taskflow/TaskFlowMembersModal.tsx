@@ -118,11 +118,11 @@ export const TaskFlowMembersModal: React.FC<TaskFlowMembersModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-xs overflow-y-auto">
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-2xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]">
+      <div className="bg-white rounded-xl border border-slate-200 shadow-2xl max-w-2xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]">
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-xs">
               <Users className="w-5 h-5" />
             </div>
             <div>
@@ -144,7 +144,7 @@ export const TaskFlowMembersModal: React.FC<TaskFlowMembersModalProps> = ({
         <div className="p-6 overflow-y-auto flex-1 space-y-6">
           {/* Form when Adding or Editing Member */}
           {(isAdding || editingMember) && (
-            <form onSubmit={handleSubmit} className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
+            <form onSubmit={handleSubmit} className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-4">
               <div className="flex items-center justify-between">
                 <h4 className="text-xs font-black text-slate-800 flex items-center gap-2">
                   <User className="w-4 h-4 text-indigo-600" />
@@ -267,7 +267,7 @@ export const TaskFlowMembersModal: React.FC<TaskFlowMembersModalProps> = ({
               )}
             </div>
 
-            <div className="divide-y divide-slate-100 border border-slate-200 rounded-2xl overflow-hidden bg-white">
+            <div className="divide-y divide-slate-100 border border-slate-200 rounded-xl overflow-hidden bg-white">
               {members.map((m) => (
                 <div
                   key={m.id}
@@ -275,7 +275,7 @@ export const TaskFlowMembersModal: React.FC<TaskFlowMembersModalProps> = ({
                 >
                   <div className="flex items-center gap-3">
                     <div
-                      className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-sm shadow-xs shrink-0"
+                      className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-sm shadow-xs shrink-0"
                       style={{ backgroundColor: m.avatarColor }}
                     >
                       {m.name.charAt(0)}

@@ -169,7 +169,7 @@ export const TasksModule: React.FC<Props> = ({
   return (
     <div className="space-y-6" dir="rtl">
       {/* Top Banner Header */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 md:p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4 animate-fade-in-up stagger-1">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 md:p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4 animate-fade-in-up stagger-1">
         <div className="flex items-center gap-3.5">
           <div className="w-11 h-11 rounded-xl bg-teal-600 dark:bg-teal-500 text-white flex items-center justify-center shadow-xs">
             <CheckSquare className="w-5 h-5" />
@@ -346,7 +346,7 @@ export const TasksModule: React.FC<Props> = ({
           {/* Charts & Breakdown */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Category Distribution Bars */}
-            <div className="lg:col-span-2 bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-4">
+            <div className="lg:col-span-2 bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="font-bold text-base text-slate-900 dark:text-slate-100">توزيع المهام حسب الفئات (18 فئة)</h3>
                 <span className="text-xs text-slate-400 dark:text-slate-500">نسبة الإنجاز العامة: {stats.completionRate}%</span>
@@ -374,7 +374,7 @@ export const TasksModule: React.FC<Props> = ({
             </div>
 
             {/* FR-22: Upcoming 8 Tasks */}
-            <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-4">
+            <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="font-bold text-base text-slate-900 dark:text-slate-100">أقرب المهام المستحقة</h3>
                 <span className="text-xs text-teal-600 dark:text-teal-400 font-bold">8 مهام</span>
@@ -417,7 +417,7 @@ export const TasksModule: React.FC<Props> = ({
       {activeTab === 'tasks' && (
         <div className="space-y-4">
           {/* Filter Bar */}
-          <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-3">
+          <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-3">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
               {/* Search */}
               <div className="lg:col-span-2 relative">
@@ -681,7 +681,7 @@ export const TasksModule: React.FC<Props> = ({
 
       {/* 5. AUDIT LOG VIEW */}
       {activeTab === 'audit' && (
-        <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
           <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-700">
             <div>
               <h3 className="font-bold text-lg text-slate-900 dark:text-slate-100">سجل تدقيق وتعديلات المهام (Audit Log)</h3>

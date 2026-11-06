@@ -50,12 +50,12 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
     return revenueCurveData.reduce((acc, curr) => acc + (curr.revenue || 0), 0);
   }, [revenueCurveData]);
 
-  // 2. Order Status Donut Chart Data (matching screenshot: 15 total)
+  // 2. Order Status Donut Chart Data (matching system palette)
   const orderStatusData = [
-    { name: 'مُسلَّم', value: 5, color: '#0d6854' },
-    { name: 'بالشحن', value: 4, color: '#0ea5e9' },
-    { name: 'قيد المعالجة', value: 4, color: '#f59e0b' },
-    { name: 'ملغي', value: 2, color: '#e11d48' },
+    { name: 'مُسلَّم', value: 5, color: '#0D9488' }, // Emerald
+    { name: 'بالشحن', value: 4, color: '#3B82F6' }, // Royal Blue
+    { name: 'قيد المعالجة', value: 4, color: '#D97706' }, // Gold/Bronze
+    { name: 'ملغي', value: 2, color: '#EF4444' }, // Coral Red
   ];
 
   const totalOrders = orderStatusData.reduce((acc, curr) => acc + curr.value, 0);
@@ -68,7 +68,7 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 animate-fade-in-up">
       {/* 1. Order Statuses Donut Chart (Left Side / 5 cols) */}
-      <div className="lg:col-span-5 bg-white dark:bg-slate-900/90 rounded-2xl p-5 border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between">
+      <div className="lg:col-span-5 bg-white dark:bg-slate-900/90 rounded-xl p-5 border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-sm font-black text-slate-900 dark:text-slate-100">
             حالات الطلبات
@@ -141,7 +141,7 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
       </div>
 
       {/* 2. Revenue Curve - Last 6 Months (Right Side / 7 cols) */}
-      <div className="lg:col-span-7 bg-white dark:bg-slate-900/90 rounded-2xl p-5 border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between">
+      <div className="lg:col-span-7 bg-white dark:bg-slate-900/90 rounded-xl p-5 border border-slate-200/90 dark:border-slate-800 shadow-2xs flex flex-col justify-between">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <h3 className="text-sm font-black text-slate-900 dark:text-slate-100">

@@ -135,11 +135,11 @@ export const TaskFlowImportExportModal: React.FC<TaskFlowImportExportModalProps>
   <style>* { font-family: 'Cairo', sans-serif; }</style>
 </head>
 <body class="bg-slate-100 p-8 text-slate-900">
-  <div class="max-w-4xl mx-auto bg-white p-8 rounded-3xl shadow-xl border border-slate-200 text-center space-y-6">
-    <div class="w-16 h-16 bg-indigo-600 text-white rounded-3xl mx-auto flex items-center justify-center font-black text-2xl">TF</div>
+  <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-xl border border-slate-200 text-center space-y-6">
+    <div class="w-16 h-16 bg-indigo-600 text-white rounded-xl mx-auto flex items-center justify-center font-black text-2xl">TF</div>
     <h1 class="text-2xl font-black">TaskFlow Standalone Version</h1>
     <p class="text-slate-600 text-sm">تم استخراج هذا الملف ليكون قابلاً للرفع المباشر إلى Netlify أو أي استضافة سحابية بنقرة واحدة.</p>
-    <div class="p-4 bg-emerald-50 text-emerald-800 rounded-2xl text-xs font-bold font-mono">
+    <div class="p-4 bg-emerald-50 text-emerald-800 rounded-xl text-xs font-bold font-mono">
       Total Projects: ${projects.length} | Total Tasks: ${tasks.length} | Total Members: ${members.length}
     </div>
   </div>
@@ -175,11 +175,11 @@ export const TaskFlowImportExportModal: React.FC<TaskFlowImportExportModalProps>
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-xs overflow-y-auto">
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-white rounded-xl border border-slate-200 shadow-2xl max-w-xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-xs">
               <FileSpreadsheet className="w-5 h-5" />
             </div>
             <div>
@@ -261,7 +261,7 @@ export const TaskFlowImportExportModal: React.FC<TaskFlowImportExportModalProps>
                   handleFileUpload(fakeEvent);
                 }
               }}
-              className="border-2 border-dashed border-indigo-200 rounded-2xl p-5 text-center hover:bg-indigo-50/30 transition-colors"
+              className="border-2 border-dashed border-indigo-200 rounded-xl p-5 text-center hover:bg-indigo-50/30 transition-colors"
             >
               <Upload className="w-8 h-8 text-indigo-500 mx-auto mb-2" />
               <p className="text-xs text-slate-700 font-bold mb-1">
@@ -293,7 +293,7 @@ export const TaskFlowImportExportModal: React.FC<TaskFlowImportExportModalProps>
           </div>
 
           {/* 2. One-Click Sample Modern 2026 Data Generator */}
-          <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-between">
+          <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between">
             <div>
               <h4 className="text-xs font-black text-slate-900 flex items-center gap-1.5">
                 <Sparkles className="w-4 h-4 text-indigo-600" />
@@ -322,7 +322,7 @@ export const TaskFlowImportExportModal: React.FC<TaskFlowImportExportModalProps>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <button
                 onClick={() => exportTaskFlowToExcel(tasks, projects, members)}
-                className="p-3 rounded-2xl border border-slate-200 hover:border-emerald-300 hover:bg-emerald-50/40 text-right transition-all flex items-center gap-3"
+                className="p-3 rounded-xl border border-slate-200 hover:border-emerald-300 hover:bg-emerald-50/40 text-right transition-all flex items-center gap-3"
               >
                 <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
                   <FileSpreadsheet className="w-4 h-4" />
@@ -335,7 +335,7 @@ export const TaskFlowImportExportModal: React.FC<TaskFlowImportExportModalProps>
 
               <button
                 onClick={handleExportJSON}
-                className="p-3 rounded-2xl border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50/40 text-right transition-all flex items-center gap-3"
+                className="p-3 rounded-xl border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50/40 text-right transition-all flex items-center gap-3"
               >
                 <div className="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0">
                   <Download className="w-4 h-4" />
@@ -348,7 +348,7 @@ export const TaskFlowImportExportModal: React.FC<TaskFlowImportExportModalProps>
 
               <button
                 onClick={handleDownloadStandaloneHtml}
-                className="sm:col-span-2 p-3 rounded-2xl border border-slate-200 hover:border-sky-300 hover:bg-sky-50/40 text-right transition-all flex items-center gap-3"
+                className="sm:col-span-2 p-3 rounded-xl border border-slate-200 hover:border-sky-300 hover:bg-sky-50/40 text-right transition-all flex items-center gap-3"
               >
                 <div className="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
                   <Globe className="w-4 h-4" />

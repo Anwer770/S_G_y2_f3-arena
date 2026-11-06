@@ -122,11 +122,11 @@ export const TaskFlowTimelineView: React.FC<TaskFlowTimelineViewProps> = ({
   const overdueCount = tasks.filter((t) => isTaskOverdue(t)).length;
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200 shadow-xs overflow-hidden flex flex-col">
+    <div className="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden flex flex-col">
       {/* Timeline Controls Toolbar */}
       <div className="px-6 py-4 border-b border-slate-200 flex flex-wrap items-center justify-between gap-4 bg-slate-50/60">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600">
+          <div className="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600">
             <Calendar className="w-4 h-4" />
           </div>
           <div>

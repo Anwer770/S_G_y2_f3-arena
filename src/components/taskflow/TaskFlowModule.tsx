@@ -345,7 +345,7 @@ export const TaskFlowModule: React.FC = () => {
       )}
 
       {/* Main Top Header Strip */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-2xl border border-slate-200/80 dark:border-slate-800 p-5 shadow-xs space-y-4 animate-fade-in-up stagger-1">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-xl border border-slate-200/80 dark:border-slate-800 p-5 shadow-xs space-y-4 animate-fade-in-up stagger-1">
         {/* Row 1: Brand, Live indicator, View Switcher & Primary Action Buttons */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">

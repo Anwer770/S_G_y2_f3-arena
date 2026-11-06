@@ -24,7 +24,7 @@ export const DueAlertsToast: React.FC<DueAlertsToastProps> = ({
   return (
     <aside
       aria-label="تنبيهات المواعيد والاستحقاقات"
-      className="fixed bottom-5 left-5 z-40 max-w-md w-[calc(100vw-2.5rem)] sm:w-auto bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-amber-200 dark:border-amber-900/60 shadow-2xl rounded-2xl p-3.5 sm:p-4 text-slate-800 dark:text-slate-100 transition-all duration-300 animate-in fade-in slide-in-from-bottom-5"
+      className="fixed bottom-5 left-5 z-40 max-w-md w-[calc(100vw-2.5rem)] sm:w-auto bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-amber-200 dark:border-amber-900/60 shadow-2xl rounded-xl p-3.5 sm:p-4 text-slate-800 dark:text-slate-100 transition-all duration-300 animate-in fade-in slide-in-from-bottom-5"
       dir="rtl"
     >
       <div className="flex items-start justify-between gap-3">

@@ -101,7 +101,7 @@ export const WorkOSVisitsView: React.FC = () => {
   return (
     <div className="space-y-5" dir="rtl">
       {/* تنبيه المصدر: قراءة فقط */}
-      <div className="rounded-2xl border border-sky-200 dark:border-sky-800 bg-sky-50/70 dark:bg-sky-950/30 p-3.5 flex items-start gap-2.5">
+      <div className="rounded-xl border border-sky-200 dark:border-sky-800 bg-sky-50/70 dark:bg-sky-950/30 p-3.5 flex items-start gap-2.5">
         <Eye className="w-4 h-4 text-sky-700 dark:text-sky-300 mt-0.5 shrink-0" />
         <p className="text-xs text-sky-900 dark:text-sky-200 leading-5">
           <strong>عرض للقراءة فقط.</strong> الزيارات ملكُ وحدة «العملاء والزيارات» و«الأطباء والزيارات» — إدارة العمل تعرضها
@@ -110,7 +110,7 @@ export const WorkOSVisitsView: React.FC = () => {
       </div>
 
       {/* الملخّص + أدوات العرض */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
         <div>
           <h2 className="text-sm font-black text-slate-900 dark:text-slate-100">الزيارات</h2>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
@@ -180,7 +180,7 @@ export const WorkOSVisitsView: React.FC = () => {
       )}
 
       {/* القائمة */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 space-y-2">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 space-y-2">
         <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2.5">
           <h3 className="text-xs font-black text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
             <Calendar className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />

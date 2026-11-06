@@ -76,13 +76,13 @@ export const RecordVisitModal: React.FC<Props> = ({
       }}
     >
       <div
-        className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden flex flex-col border border-slate-200 dark:border-slate-800 animate-in fade-in zoom-in-95 duration-200 my-auto"
+        className="bg-white dark:bg-slate-900 rounded-xl sm:rounded-xl shadow-2xl max-w-lg w-full overflow-hidden flex flex-col border border-slate-200 dark:border-slate-800 animate-in fade-in zoom-in-95 duration-200 my-auto"
         dir="rtl"
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-4 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-white/15 dark:bg-slate-900/15 backdrop-blur-xs flex items-center justify-center border border-white/20">
+            <div className="w-10 h-10 rounded-xl bg-white/15 dark:bg-slate-900/15 backdrop-blur-xs flex items-center justify-center border border-white/20">
               <CheckCircle2 className="w-5 h-5 text-blue-100" />
             </div>
             <div>
@@ -103,7 +103,7 @@ export const RecordVisitModal: React.FC<Props> = ({
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-6 space-y-4 text-xs">
           {/* Customer Summary Pill */}
-          <div className="bg-slate-50 dark:bg-slate-800/60 p-3 rounded-2xl border border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs">
+          <div className="bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs">
             <div>
               <span className="text-slate-500 dark:text-slate-400 block">الرصيد الحالي للعميل:</span>
               <span
@@ -180,7 +180,7 @@ export const RecordVisitModal: React.FC<Props> = ({
           </div>
 
           {/* Amount Collection */}
-          <div className="bg-emerald-50/60 dark:bg-emerald-950/40 p-3.5 rounded-2xl border border-emerald-200 dark:border-emerald-800 space-y-2">
+          <div className="bg-emerald-50/60 dark:bg-emerald-950/40 p-3.5 rounded-xl border border-emerald-200 dark:border-emerald-800 space-y-2">
             <div className="flex items-center justify-between">
               <label className="font-bold text-emerald-900 flex items-center gap-1.5 text-xs">
                 <DollarSign className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />

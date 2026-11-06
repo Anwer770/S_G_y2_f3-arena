@@ -26,7 +26,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
     <div className="space-y-6">
       {/* Top Overview Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold text-xs">
             <span>إجمالي شبكة العملاء</span>
             <Users className="w-4 h-4 text-amber-600 dark:text-amber-400" />
@@ -37,7 +37,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">عميل ومنشأة مسجلة في المنظومة</p>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold text-xs">
             <span>نسبة إنجاز الزيارات</span>
             <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
@@ -50,7 +50,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
           </p>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold text-xs">
             <span>إجمالي المديونيات بالسالب</span>
             <AlertTriangle className="w-4 h-4 text-rose-600 dark:text-rose-400" />
@@ -63,7 +63,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
           </p>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold text-xs">
             <span>الزيارات الميدانية الموثقة</span>
             <Calendar className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
@@ -78,7 +78,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
       {/* Grid: Geographic Distribution & Route Schedules */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* 1. Geographic Regions Breakdown */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
               <MapPin className="w-4 h-4 text-amber-600 dark:text-amber-400" />
@@ -110,7 +110,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
         </div>
 
         {/* 2. Routes & Weekly Schedule Distribution */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
               <Calendar className="w-4 h-4 text-blue-600 dark:text-blue-400" />
@@ -148,7 +148,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
       {/* Grid: Representative Performance & Significance Breakdown */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* 3. Representative Performance Rankings */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
               <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
@@ -188,7 +188,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
         </div>
 
         {/* 4. Significance & Status Matrix */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4">
           <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
             <Layers className="w-4 h-4 text-purple-600 dark:text-purple-400" />
             تصنيف العملاء حسب درجات الأهمية والحالة
@@ -196,7 +196,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
 
           <div className="grid grid-cols-2 gap-3 pt-2">
             {/* Significance */}
-            <div className="bg-slate-50 dark:bg-slate-800/60 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 text-xs">
+            <div className="bg-slate-50 dark:bg-slate-800/60 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2 text-xs">
               <h4 className="font-bold text-slate-700 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700 pb-1">مستويات الأهمية:</h4>
               {stats.significanceBreakdown.map((s) => (
                 <div key={s.key} className="flex justify-between font-medium">
@@ -215,7 +215,7 @@ export const CustomerReports: React.FC<Props> = ({ customers, visits }) => {
             </div>
 
             {/* Status */}
-            <div className="bg-slate-50 dark:bg-slate-800/60 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 text-xs">
+            <div className="bg-slate-50 dark:bg-slate-800/60 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2 text-xs">
               <h4 className="font-bold text-slate-700 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700 pb-1">حالات المتابعة:</h4>
               {stats.statusBreakdown.slice(0, 5).map((st) => (
                 <div key={st.key} className="flex justify-between font-medium">

@@ -79,7 +79,7 @@ export const WorkOSDashboard: React.FC<WorkOSDashboardProps> = ({
   return (
     <div className="space-y-6" dir="rtl">
       {/* Top Banner: Greeting & AI Plan Bar */}
-      <div className="bg-linear-to-l from-teal-900 via-slate-900 to-indigo-950 text-white p-6 rounded-2xl shadow-md relative overflow-hidden">
+      <div className="bg-linear-to-l from-teal-900 via-slate-900 to-indigo-950 text-white p-6 rounded-xl shadow-md relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>

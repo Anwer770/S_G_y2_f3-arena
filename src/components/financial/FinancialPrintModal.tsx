@@ -82,7 +82,7 @@ export const FinancialPrintModal: React.FC<FinancialPrintModalProps> = ({
         }
       `}</style>
 
-      <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl max-w-5xl w-full overflow-hidden flex flex-col max-h-[96vh] border border-slate-200 dark:border-slate-800 print:border-none print:shadow-none print:max-h-none print:w-full my-auto">
+      <div className="bg-white dark:bg-slate-900 rounded-xl sm:rounded-xl shadow-2xl max-w-5xl w-full overflow-hidden flex flex-col max-h-[96vh] border border-slate-200 dark:border-slate-800 print:border-none print:shadow-none print:max-h-none print:w-full my-auto">
         {/* Top Control Bar (Hidden on Print) */}
         <div className="bg-slate-900 text-white px-5 py-3.5 flex flex-wrap items-center justify-between gap-3 shadow-xs print-hidden">
           <div className="flex items-center gap-3">
@@ -155,7 +155,7 @@ export const FinancialPrintModal: React.FC<FinancialPrintModalProps> = ({
           {/* 4 Summary Cards (Matching Annotation 2026-09-23 032005.png) */}
           <div className="grid grid-cols-4 gap-3 print-card">
             {/* 1. وارد الفترة */}
-            <div className="bg-slate-50/80 dark:bg-slate-800/60 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+            <div className="bg-slate-50/80 dark:bg-slate-800/60 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
               <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 text-right">وارد الفترة</span>
               <div className="mt-2 text-xl sm:text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400 text-right leading-none">
                 {periodSummary.totalIncomeYER.toLocaleString()}
@@ -164,7 +164,7 @@ export const FinancialPrintModal: React.FC<FinancialPrintModalProps> = ({
             </div>
 
             {/* 2. مصروف الفترة */}
-            <div className="bg-slate-50/80 dark:bg-slate-800/60 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+            <div className="bg-slate-50/80 dark:bg-slate-800/60 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
               <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 text-right">مصروف الفترة</span>
               <div className="mt-2 text-xl sm:text-2xl font-black font-mono text-rose-600 dark:text-rose-400 text-right leading-none">
                 {periodSummary.totalExpenseYER.toLocaleString()}
@@ -173,7 +173,7 @@ export const FinancialPrintModal: React.FC<FinancialPrintModalProps> = ({
             </div>
 
             {/* 3. صافي الفترة */}
-            <div className="bg-slate-50/80 dark:bg-slate-800/60 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+            <div className="bg-slate-50/80 dark:bg-slate-800/60 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
               <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 text-right">صافي الفترة</span>
               <div className={`mt-2 text-xl sm:text-2xl font-black font-mono text-right leading-none ${
                 periodSummary.netBalanceYER >= 0 ? 'text-emerald-600' : 'text-rose-600'
@@ -184,7 +184,7 @@ export const FinancialPrintModal: React.FC<FinancialPrintModalProps> = ({
             </div>
 
             {/* 4. عدد الحركات */}
-            <div className="bg-slate-50/80 dark:bg-slate-800/60 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+            <div className="bg-slate-50/80 dark:bg-slate-800/60 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
               <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 text-right">عدد الحركات</span>
               <div className="mt-2 text-xl sm:text-2xl font-black font-mono text-teal-600 dark:text-teal-400 text-right leading-none">
                 {transactions.length}
@@ -194,7 +194,7 @@ export const FinancialPrintModal: React.FC<FinancialPrintModalProps> = ({
           </div>
 
           {/* Transactions Table */}
-          <div className="border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden">
+          <div className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
             <div className="w-full overflow-x-auto print:overflow-visible">
             <table className="w-full text-right text-xs border-collapse min-w-[820px] print:min-w-0">
               <thead>

@@ -42,7 +42,7 @@ export const HabitsStreakView: React.FC<HabitsStreakViewProps> = ({
     <div id="habits-streak-view" className="space-y-5">
       {/* Top Highlights Banner */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+        <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white p-5 rounded-xl shadow-lg relative overflow-hidden">
           <div className="relative z-10 space-y-1">
             <span className="text-xs font-bold text-amber-100 flex items-center gap-1">
               <Flame size={16} className="fill-white" /> أطول Streak حالي نشط
@@ -53,7 +53,7 @@ export const HabitsStreakView: React.FC<HabitsStreakViewProps> = ({
           <Flame size={110} className="absolute -left-4 -bottom-6 text-white/10" />
         </div>
 
-        <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+        <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-5 rounded-xl shadow-lg relative overflow-hidden">
           <div className="relative z-10 space-y-1">
             <span className="text-xs font-bold text-emerald-100 flex items-center gap-1">
               <Award size={16} /> أعلى معدل انضباط واستمرارية
@@ -66,7 +66,7 @@ export const HabitsStreakView: React.FC<HabitsStreakViewProps> = ({
           <Award size={110} className="absolute -left-4 -bottom-6 text-white/10" />
         </div>
 
-        <div className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+        <div className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-5 rounded-xl shadow-lg relative overflow-hidden">
           <div className="relative z-10 space-y-1">
             <span className="text-xs font-bold text-indigo-100 flex items-center gap-1">
               <TrendingUp size={16} /> إجمالي العادات والروتينات
@@ -113,7 +113,7 @@ export const HabitsStreakView: React.FC<HabitsStreakViewProps> = ({
           return (
             <div
               key={habit.routineId}
-              className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm space-y-4 hover:border-slate-300 transition"
+              className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm space-y-4 hover:border-slate-300 transition"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-3">

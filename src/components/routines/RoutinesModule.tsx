@@ -454,7 +454,7 @@ export const RoutinesModule: React.FC = () => {
   return (
     <div id="routines-module-container" className="space-y-6" dir="rtl">
       {/* Top Banner Header */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-xs animate-fade-in-up stagger-1">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-xs animate-fade-in-up stagger-1">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 rounded-xl bg-teal-600 dark:bg-teal-500 text-white flex items-center justify-center shadow-xs">
@@ -646,7 +646,7 @@ export const RoutinesModule: React.FC = () => {
       {activeTab === 'routines' && (
         <div className="space-y-4">
           {/* Controls Bar */}
-          <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row items-center justify-between gap-3">
+          <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="relative flex-1 w-full">
               <Search size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
               <input
@@ -694,7 +694,7 @@ export const RoutinesModule: React.FC = () => {
               return (
                 <div
                   key={rtn.id}
-                  className={`bg-white dark:bg-slate-900 rounded-2xl border p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4 ${
+                  className={`bg-white dark:bg-slate-900 rounded-xl border p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4 ${
                     isPaused
                       ? 'opacity-60 border-slate-200 dark:border-slate-800'
                       : 'border-slate-200 dark:border-slate-800 hover:border-emerald-400'

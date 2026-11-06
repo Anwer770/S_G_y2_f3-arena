@@ -32,7 +32,7 @@ export const CustodyStatsCards: React.FC<CustodyStatsCardsProps> = ({
         {/* Total Records */}
         <div
           onClick={() => onSelectStatusFilter && onSelectStatusFilter('all')}
-          className={`p-3.5 rounded-2xl border transition-all cursor-pointer ${
+          className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
             activeStatusFilter === 'all'
               ? 'bg-slate-900 text-white border-slate-800 shadow-md ring-2 ring-slate-400'
               : 'bg-white text-slate-800 border-slate-200 hover:border-slate-300 shadow-xs'
@@ -52,7 +52,7 @@ export const CustodyStatsCards: React.FC<CustodyStatsCardsProps> = ({
         {/* Late / Overdue - Critical KPI */}
         <div
           onClick={() => onSelectStatusFilter && onSelectStatusFilter('متأخر')}
-          className={`p-3.5 rounded-2xl border transition-all cursor-pointer ${
+          className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
             activeStatusFilter === 'متأخر'
               ? 'bg-rose-600 text-white border-rose-700 shadow-md ring-2 ring-rose-300'
               : 'bg-rose-50/80 text-rose-900 border-rose-200 hover:bg-rose-100/60 shadow-xs'
@@ -73,7 +73,7 @@ export const CustodyStatsCards: React.FC<CustodyStatsCardsProps> = ({
         {/* Postponed */}
         <div
           onClick={() => onSelectStatusFilter && onSelectStatusFilter('مؤجل')}
-          className={`p-3.5 rounded-2xl border transition-all cursor-pointer ${
+          className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
             activeStatusFilter === 'مؤجل'
               ? 'bg-amber-600 text-white border-amber-700 shadow-md ring-2 ring-amber-300'
               : 'bg-amber-50/80 text-amber-900 border-amber-200 hover:bg-amber-100/60 shadow-xs'
@@ -94,7 +94,7 @@ export const CustodyStatsCards: React.FC<CustodyStatsCardsProps> = ({
         {/* Planned */}
         <div
           onClick={() => onSelectStatusFilter && onSelectStatusFilter('مخطط')}
-          className={`p-3.5 rounded-2xl border transition-all cursor-pointer ${
+          className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
             activeStatusFilter === 'مخطط'
               ? 'bg-sky-600 text-white border-sky-700 shadow-md ring-2 ring-sky-300'
               : 'bg-sky-50/80 text-sky-900 border-sky-200 hover:bg-sky-100/60 shadow-xs'
@@ -115,7 +115,7 @@ export const CustodyStatsCards: React.FC<CustodyStatsCardsProps> = ({
         {/* Company Transferred */}
         <div
           onClick={() => onSelectStatusFilter && onSelectStatusFilter('شركة')}
-          className={`p-3.5 rounded-2xl border transition-all cursor-pointer ${
+          className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
             activeStatusFilter === 'شركة'
               ? 'bg-purple-600 text-white border-purple-700 shadow-md ring-2 ring-purple-300'
               : 'bg-purple-50/80 text-purple-900 border-purple-200 hover:bg-purple-100/60 shadow-xs'
@@ -136,7 +136,7 @@ export const CustodyStatsCards: React.FC<CustodyStatsCardsProps> = ({
         {/* Completed */}
         <div
           onClick={() => onSelectStatusFilter && onSelectStatusFilter('مكتمل')}
-          className={`p-3.5 rounded-2xl border transition-all cursor-pointer ${
+          className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
             activeStatusFilter === 'مكتمل'
               ? 'bg-emerald-600 text-white border-emerald-700 shadow-md ring-2 ring-emerald-300'
               : 'bg-emerald-50/80 text-emerald-900 border-emerald-200 hover:bg-emerald-100/60 shadow-xs'

@@ -66,7 +66,7 @@ export const WorkOSTimelineTab: React.FC<WorkOSTimelineTabProps> = ({
   return (
     <div className="space-y-4" dir="rtl">
       {/* Timeline Controls Bar */}
-      <div className="bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+      <div className="bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
         <div className="flex items-center gap-2">
           <Calendar className="w-4 h-4 text-teal-700 dark:text-teal-300" />
           <span className="font-bold text-slate-800 dark:text-slate-200">مخطط الجدول الزمني وجانت المبسط</span>
@@ -91,7 +91,7 @@ export const WorkOSTimelineTab: React.FC<WorkOSTimelineTabProps> = ({
 
       {/* Projects Timeline Overview */}
       {selectedProjectId === 'all' && (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 space-y-3">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 space-y-3">
           <h3 className="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
             <FolderKanban className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
             <span>الجداول الزمنية الكلية للمشاريع:</span>
@@ -137,7 +137,7 @@ export const WorkOSTimelineTab: React.FC<WorkOSTimelineTabProps> = ({
       )}
 
       {/* Gantt / Task Timeline List */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden">
         <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-200">
           <span>المهام والجدول الزمني للأنشطة:</span>
           <span className="text-slate-400 dark:text-slate-500 font-normal">يتم تمييز المهام المتأخرة باللون الأحمر</span>

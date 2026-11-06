@@ -227,10 +227,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
         />
       )}
 
-      {/* Main Right Sidebar */}
+      {/* Main Right Sidebar (ثابتة تماماً على جهة اليمين بلون زيتي داكن #0F3935 / #134E48) */}
       <aside
         id="app-right-sidebar"
-        className={`fixed top-0 right-0 h-screen bg-white dark:bg-[#0f172a] text-slate-800 dark:text-slate-100 border-l border-slate-200/90 dark:border-slate-800/80 z-50 flex flex-col transition-all duration-300 shadow-xl ${
+        className={`fixed top-0 right-0 h-screen bg-[#0F3935] text-white border-l border-[#134E48]/90 z-50 flex flex-col transition-all duration-300 shadow-xl ${
           isCollapsed ? 'w-20' : 'w-72 sm:w-80'
         } ${
           isMobileOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'
@@ -238,22 +238,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
         dir="rtl"
       >
         {/* Sidebar Header & Brand Profile */}
-        <div className="p-4 border-b border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between gap-2 shrink-0 bg-slate-50/50 dark:bg-slate-900/40">
+        <div className="p-4 border-b border-[#134E48] flex items-center justify-between gap-2 shrink-0 bg-[#0c2e2a]">
           <div
             onClick={() => handleSelectTab('dashboard')}
             className="flex items-center gap-3 cursor-pointer overflow-hidden group select-none"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#0d6854] text-white flex items-center justify-center font-black text-xl shadow-sm shrink-0 group-hover:scale-105 transition-transform">
-              م
+            <div className="w-10 h-10 rounded-xl bg-[#0D9488] hover:bg-[#059669] text-white flex items-center justify-center font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform border border-emerald-400/30">
+              ق
             </div>
 
             {!isCollapsed && (
               <div className="min-w-0 transition-opacity">
-                <h1 className="text-sm font-black text-slate-900 dark:text-white truncate tracking-tight flex items-center gap-1.5" title="المنظومة-الإدارية-المتكاملة">
-                  <span>المنظومة-الإدارية-المتكاملة</span>
+                <h1 className="text-sm font-black text-white truncate tracking-tight flex items-center gap-1.5" title="المنظومة المحاسبية والإدارية">
+                  <span>المنظومة المحاسبية الموحدة</span>
                 </h1>
-                <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5 font-medium">
-                  نظام الإدارة والتشغيل الموحد
+                <p className="text-[11px] text-[#99C7BF] truncate mt-0.5 font-medium">
+                  نظام الإدارة والحسابات المالية
                 </p>
               </div>
             )}
@@ -262,7 +262,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {/* Desktop Collapse Toggle Button */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className="hidden lg:flex items-center justify-center w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors cursor-pointer border border-slate-200 dark:border-slate-700 shrink-0"
+            className="hidden lg:flex items-center justify-center w-8 h-8 rounded-lg bg-[#134E48] hover:bg-[#1a665f] text-emerald-100 transition-colors cursor-pointer border border-[#1a665f] shrink-0"
             title={isCollapsed ? 'توسيع القائمة الجانبية' : 'تصغير القائمة الجانبية'}
           >
             {isCollapsed ? (
@@ -275,14 +275,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {/* Mobile Close Button */}
           <button
             onClick={() => setIsMobileOpen(false)}
-            className="flex lg:hidden items-center justify-center w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 cursor-pointer border border-slate-200 dark:border-slate-700"
+            className="flex lg:hidden items-center justify-center w-8 h-8 rounded-lg bg-[#134E48] hover:bg-[#1a665f] text-emerald-100 cursor-pointer border border-[#1a665f]"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
         {/* Scrollable Navigation List */}
-        <div className="flex-1 overflow-y-auto px-3 py-3 space-y-1.5 scrollbar-thin">
+        <div className="flex-1 overflow-y-auto px-2.5 py-3 space-y-1.5 scrollbar-thin">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive =
@@ -300,12 +300,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   }
                   handleSelectTab(item.id);
                 }}
-                className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs transition-all cursor-pointer select-none group relative ${
+                className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-xs transition-all cursor-pointer select-none group relative ${
                   !isAllowed
-                    ? 'opacity-40 hover:opacity-70 bg-slate-100/40 dark:bg-slate-800/30 text-slate-400'
+                    ? 'opacity-35 bg-[#134E48]/30 text-emerald-200/50'
                     : isActive
-                    ? 'bg-[#e2f3ee] dark:bg-[#0e2d25] text-[#0d6854] dark:text-teal-300 font-bold border-r-4 border-[#0d6854] dark:border-teal-400'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-[#f2f7f5] dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-slate-100 font-medium'
+                    ? 'bg-[#0D9488] text-white font-bold border-r-4 border-emerald-300 shadow-xs'
+                    : 'text-[#E6F4F1]/85 hover:bg-[#134E48] hover:text-white font-medium'
                 } ${isCollapsed ? 'justify-center px-2' : 'justify-between'}`}
                 title={!isAllowed ? `${item.label} (مغلق ومحمي بالصلاحيات)` : `${item.index}. ${item.label}`}
               >
@@ -313,10 +313,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   <div
                     className={`shrink-0 transition-colors ${
                       !isAllowed
-                        ? 'text-slate-400'
+                        ? 'text-emerald-300/40'
                         : isActive
-                        ? 'text-[#0d6854] dark:text-teal-300'
-                        : 'text-slate-500 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white'
+                        ? 'text-white'
+                        : 'text-[#99C7BF] group-hover:text-white'
                     }`}
                   >
                     <Icon className="w-4 h-4" />
@@ -330,13 +330,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 {/* Badge / Count or Lock */}
                 {!isCollapsed && (
                   !isAllowed ? (
-                    <Lock className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500 shrink-0" title="مغلق بالصلاحيات" />
+                    <Lock className="w-3.5 h-3.5 text-emerald-300/40 shrink-0" title="مغلق بالصلاحيات" />
                   ) : typeof item.count === 'number' && item.count > 0 ? (
                     <span
-                      className={`text-xs font-mono font-bold px-2 py-0.5 rounded-full shrink-0 ${
+                      className={`text-xs font-mono font-bold px-2 py-0.5 rounded-md shrink-0 ${
                         isActive
-                          ? 'bg-[#0d6854] text-white'
-                          : 'bg-[#0d6854] text-white'
+                          ? 'bg-[#0F3935] text-emerald-100 border border-emerald-400/30'
+                          : 'bg-[#134E48] text-emerald-100 border border-[#1a665f]'
                       }`}
                     >
                       {item.count}
@@ -349,31 +349,31 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* Sidebar Footer with Live Clock & Dynamic User Profile */}
-        <div className="p-3 border-t border-slate-200/90 dark:border-slate-800/90 bg-slate-50/70 dark:bg-slate-900/60 shrink-0 space-y-2">
+        <div className="p-3 border-t border-[#134E48] bg-[#0c2e2a] shrink-0 space-y-2">
           {!isCollapsed ? (
             <>
               {/* Date & Time */}
-              <div className="text-xs font-mono font-medium text-slate-500 dark:text-slate-400 px-1 text-center truncate">
-                {currentTimeStr || 'جاري تحميل الوقت...'}
+              <div className="text-[11px] font-mono font-medium text-[#99C7BF] px-1 text-center truncate">
+                {currentTimeStr || 'جاري تحديث الوقت...'}
               </div>
 
               {/* User Profile Card */}
               <div
-                className="flex items-center justify-between p-2 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs select-none"
+                className="flex items-center justify-between p-2 rounded-xl bg-[#134E48] border border-[#1a665f] shadow-2xs select-none"
               >
                 <div
                   onClick={() => handleSelectTab('settings')}
                   className="flex items-center gap-2.5 min-w-0 flex-1 cursor-pointer group"
                   title="تعديل اسم المستخدم والملف الشخصي من الإعدادات"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-[#0d6854] text-white font-black text-sm flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-lg bg-[#0D9488] text-white font-black text-xs flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform border border-emerald-400/30">
                     {currentUser?.avatarInitial || userProfile.initial}
                   </div>
                   <div className="min-w-0">
-                    <div className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <div className="text-xs font-bold text-white truncate group-hover:text-emerald-300 transition-colors">
                       {currentUser?.name || userProfile.name}
                     </div>
-                    <div className="text-xs text-teal-700 dark:text-teal-400 font-bold truncate">
+                    <div className="text-[11px] text-[#99C7BF] font-medium truncate">
                       {currentUser?.role === 'admin'
                         ? 'مدير عام النظام'
                         : currentUser?.role === 'accountant'
@@ -385,11 +385,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   </div>
                 </div>
 
-                {/* Logout Button */}
+                {/* Coral Red Logout Button (#EF4444 / #FCA5A5) */}
                 <button
                   type="button"
                   onClick={logout}
-                  className="p-1.5 rounded-lg text-slate-400 dark:text-slate-500 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/50 transition-colors shrink-0 cursor-pointer"
+                  className="p-1.5 rounded-lg text-[#FCA5A5] hover:text-white hover:bg-[#EF4444] transition-colors shrink-0 cursor-pointer"
                   title="تسجيل الخروج من الجلسة الحالية"
                 >
                   <LogOut className="w-4 h-4" />
@@ -400,7 +400,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <div className="flex flex-col items-center gap-2 py-1 select-none">
               <div
                 onClick={() => handleSelectTab('settings')}
-                className="w-8 h-8 rounded-xl bg-[#0d6854] text-white font-bold text-xs flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs cursor-pointer"
+                className="w-8 h-8 rounded-lg bg-[#0D9488] text-white font-bold text-xs flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs cursor-pointer border border-emerald-400/30"
                 title={`${currentUser?.name || userProfile.name} (انقر للإعدادات)`}
               >
                 {currentUser?.avatarInitial || userProfile.initial}
@@ -408,7 +408,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <button
                 type="button"
                 onClick={logout}
-                className="p-1 rounded text-slate-400 dark:text-slate-500 hover:text-rose-600 dark:hover:text-rose-400 cursor-pointer"
+                className="p-1.5 rounded-lg text-[#FCA5A5] hover:text-white hover:bg-[#EF4444] cursor-pointer transition-colors"
                 title="تسجيل الخروج"
               >
                 <LogOut className="w-3.5 h-3.5" />

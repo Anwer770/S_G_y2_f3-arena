@@ -38,7 +38,7 @@ export const RoutineSkipModal: React.FC<RoutineSkipModalProps> = ({
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-md rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 my-auto">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-md rounded-xl sm:rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 my-auto">
         <div className="bg-rose-500 text-white p-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <SkipForward size={20} />

@@ -177,7 +177,7 @@ export const WorkOSTasksTab: React.FC<WorkOSTasksTabProps> = ({
     <div className="space-y-3" dir="rtl">
       {/* Bulk Action Bar if tasks selected */}
       {selectedTaskIds.length > 0 && (
-        <div className="bg-teal-900 text-white p-3 rounded-2xl flex items-center justify-between shadow-md text-xs animate-in fade-in">
+        <div className="bg-teal-900 text-white p-3 rounded-xl flex items-center justify-between shadow-md text-xs animate-in fade-in">
           <div className="flex items-center gap-2">
             <CheckSquare className="w-4 h-4 text-teal-300" />
             <span className="font-bold">تم تحديد {selectedTaskIds.length} مهمة</span>
@@ -207,7 +207,7 @@ export const WorkOSTasksTab: React.FC<WorkOSTasksTabProps> = ({
       )}
 
       {/* Main Tasks Table */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-right text-xs min-w-[960px] print:min-w-0">
             <thead className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200/80 dark:border-slate-700/80 text-slate-600 dark:text-slate-300 font-bold">

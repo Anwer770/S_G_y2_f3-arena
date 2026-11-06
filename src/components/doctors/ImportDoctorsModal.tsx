@@ -98,7 +98,7 @@ export const ImportDoctorsModal: React.FC<Props> = ({
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
       <div
-        className="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-100 dark:border-slate-800 overflow-hidden text-right flex flex-col max-h-[90vh]"
+        className="bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full shadow-2xl border border-slate-100 dark:border-slate-800 overflow-hidden text-right flex flex-col max-h-[90vh]"
         dir="rtl"
       >
         {/* Header */}
@@ -144,9 +144,9 @@ export const ImportDoctorsModal: React.FC<Props> = ({
             onDragOver={(e) => e.preventDefault()}
             onDrop={handleDrop}
             onClick={() => fileInputRef.current?.click()}
-            className="border-2 border-dashed border-slate-300 dark:border-slate-600 hover:border-teal-500 bg-slate-50 dark:bg-slate-800/60 hover:bg-teal-50/40 dark:hover:bg-teal-950/40 transition-all rounded-2xl p-8 text-center cursor-pointer flex flex-col items-center justify-center gap-3"
+            className="border-2 border-dashed border-slate-300 dark:border-slate-600 hover:border-teal-500 bg-slate-50 dark:bg-slate-800/60 hover:bg-teal-50/40 dark:hover:bg-teal-950/40 transition-all rounded-xl p-8 text-center cursor-pointer flex flex-col items-center justify-center gap-3"
           >
-            <div className="w-12 h-12 rounded-2xl bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 flex items-center justify-center shadow-xs">
+            <div className="w-12 h-12 rounded-xl bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 flex items-center justify-center shadow-xs">
               <Upload className="w-6 h-6" />
             </div>
             <div>

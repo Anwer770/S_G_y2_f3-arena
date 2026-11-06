@@ -135,7 +135,7 @@ export const WorkOSFilterStrip: React.FC<WorkOSFilterStripProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden" dir="rtl">
+    <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden" dir="rtl">
       {/* Header of Filter Bar */}
       <div className="px-4 py-2.5 flex items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/60">
         <div className="flex items-center gap-2">

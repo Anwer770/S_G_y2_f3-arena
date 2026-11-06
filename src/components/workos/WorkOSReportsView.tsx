@@ -101,7 +101,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
   return (
     <div className="space-y-6" dir="rtl">
       {/* Header Bar */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-xl bg-teal-500/10 text-teal-700 dark:text-teal-300 border border-teal-500/20">
             <BarChart3 className="w-6 h-6" />
@@ -144,7 +144,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
       </div>
 
       {/* Filter Toolbar */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 p-4 shadow-2xs flex flex-wrap items-center gap-3 text-xs">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-800 p-4 shadow-2xs flex flex-wrap items-center gap-3 text-xs">
         <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 font-bold shrink-0">
           <Filter className="w-4 h-4 text-teal-600" />
           <span>تصفية التحليلات:</span>
@@ -197,7 +197,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
 
       {/* Metrics Summary Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-1">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-bold">
             <span>المهام المكتملة</span>
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
@@ -216,7 +216,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-1">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-bold">
             <span>المهام المتأخرة</span>
             <AlertTriangle className="w-4 h-4 text-rose-600" />
@@ -232,7 +232,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-1">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-bold">
             <span>ساعات العمل المقدرة</span>
             <Clock className="w-4 h-4 text-indigo-600" />
@@ -248,7 +248,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-1">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-bold">
             <span>ساعات العمل الفعلية</span>
             <TrendingUp className="w-4 h-4 text-teal-600" />
@@ -268,7 +268,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
       {/* Visual Work Distribution & Projects Breakdown */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Project Health Progress */}
-        <div className="lg:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-2xs space-y-4">
+        <div className="lg:col-span-2 bg-white dark:bg-slate-900 rounded-xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-2xs space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="font-bold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <FolderKanban className="w-4 h-4 text-indigo-600" />
@@ -314,7 +314,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
         </div>
 
         {/* Status Distribution */}
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-2xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-2xs space-y-4">
           <h3 className="font-bold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <Layers className="w-4 h-4 text-teal-600" />
             <span>توزيع حالات المهام الحالية</span>
@@ -357,7 +357,7 @@ export const WorkOSReportsView: React.FC<WorkOSReportsViewProps> = ({
       </div>
 
       {/* Team Productivity Table */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs p-5 space-y-4">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xs p-5 space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="font-bold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <Users className="w-4 h-4 text-teal-600" />

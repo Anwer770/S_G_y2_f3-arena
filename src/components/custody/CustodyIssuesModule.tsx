@@ -344,9 +344,9 @@ export const CustodyIssuesModule: React.FC = () => {
   return (
     <div className="space-y-6" dir="rtl">
       {/* 1. Header Banner */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in-up stagger-1">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in-up stagger-1">
         <div className="flex items-center gap-3.5">
-          <div className="w-11 h-11 rounded-xl bg-teal-600 dark:bg-teal-500 text-white flex items-center justify-center shadow-xs">
+          <div className="w-11 h-11 rounded-lg bg-[#0D9488] text-white flex items-center justify-center shadow-xs">
             <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
@@ -436,7 +436,7 @@ export const CustodyIssuesModule: React.FC = () => {
       />
 
       {/* 3. Search & Comprehensive Filter Bar */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-3">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
           {/* Text Search */}
           <div className="relative lg:col-span-2">
@@ -608,7 +608,7 @@ export const CustodyIssuesModule: React.FC = () => {
       />
 
       {/* 5. Bottom Utilities: Backup, JSON Export/Import, and Restore */}
-      <div className="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap items-center justify-between gap-4 text-xs font-bold">
+      <div className="p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap items-center justify-between gap-4 text-xs font-bold">
         <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
           <Layers className="w-4 h-4 text-slate-400 dark:text-slate-500" />
           <span>إدارة وحفظ بيانات الدفتر (محلي وتلقائي 100% دون خادم)</span>
@@ -618,14 +618,14 @@ export const CustodyIssuesModule: React.FC = () => {
           {/* JSON Export */}
           <button
             onClick={() => exportCustodyToJSON(records)}
-            className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl transition flex items-center gap-1.5 cursor-pointer"
+            className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg transition flex items-center gap-1.5 cursor-pointer"
           >
             <Download className="w-3.5 h-3.5" />
             <span>تصدير نسخة JSON</span>
           </button>
 
           {/* JSON Import */}
-          <label className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl transition flex items-center gap-1.5 cursor-pointer">
+          <label className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg transition flex items-center gap-1.5 cursor-pointer">
             <Upload className="w-3.5 h-3.5" />
             <span>استيراد JSON</span>
             <input
@@ -639,7 +639,7 @@ export const CustodyIssuesModule: React.FC = () => {
           {/* Restore Original 40 records */}
           <button
             onClick={() => setIsResetConfirmOpen(true)}
-            className="px-3 py-1.5 bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/40 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800 rounded-xl transition flex items-center gap-1.5 cursor-pointer"
+            className="px-3 py-1.5 bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/40 text-[#EF4444] dark:text-rose-300 border border-rose-200 dark:border-rose-800 rounded-lg transition flex items-center gap-1.5 cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>استعادة بيانات Excel الأصلية</span>
@@ -663,8 +663,8 @@ export const CustodyIssuesModule: React.FC = () => {
       {/* 7. Modal: Delete Confirmation */}
       {recordToDelete && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-          <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 max-w-sm w-full shadow-2xl border border-slate-200 dark:border-slate-700 space-y-4">
-            <div className="flex items-center gap-3 text-rose-600 dark:text-rose-400">
+          <div className="bg-white dark:bg-slate-900 rounded-xl p-6 max-w-sm w-full shadow-2xl border border-slate-200 dark:border-slate-700 space-y-4">
+            <div className="flex items-center gap-3 text-[#EF4444] dark:text-rose-400">
               <Trash2 className="w-6 h-6 shrink-0" />
               <h3 className="text-base font-black text-slate-900 dark:text-slate-100">تأكيد حذف السجل</h3>
             </div>
@@ -674,13 +674,13 @@ export const CustodyIssuesModule: React.FC = () => {
             <div className="flex items-center justify-end gap-2 pt-2">
               <button
                 onClick={() => setRecordToDelete(null)}
-                className="px-4 py-2 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition cursor-pointer"
+                className="px-4 py-2 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition cursor-pointer"
               >
                 إلغاء
               </button>
               <button
                 onClick={confirmDeleteRecord}
-                className="px-4 py-2 text-xs font-black bg-rose-600 hover:bg-rose-700 text-white rounded-xl shadow-md transition cursor-pointer"
+                className="px-4 py-2 text-xs font-black bg-[#EF4444] hover:bg-rose-700 text-white rounded-lg shadow-md transition cursor-pointer"
               >
                 نعم، احذف السجل
               </button>
@@ -692,7 +692,7 @@ export const CustodyIssuesModule: React.FC = () => {
       {/* 8. Modal: Reset Confirm */}
       {isResetConfirmOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-          <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 max-w-md w-full shadow-2xl border border-slate-200 dark:border-slate-700 space-y-4">
+          <div className="bg-white dark:bg-slate-900 rounded-xl p-6 max-w-md w-full shadow-2xl border border-slate-200 dark:border-slate-700 space-y-4">
             <div className="flex items-center gap-3 text-amber-600 dark:text-amber-400">
               <RotateCcw className="w-6 h-6 shrink-0" />
               <h3 className="text-base font-black text-slate-900 dark:text-slate-100">استعادة بيانات Excel الأصلية</h3>

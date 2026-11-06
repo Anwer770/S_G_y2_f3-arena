@@ -90,7 +90,7 @@ export const ImportFinancialModal: React.FC<Props> = ({
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
       <div
-        className="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-100 dark:border-slate-800 overflow-hidden text-right flex flex-col max-h-[90vh]"
+        className="bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full shadow-2xl border border-slate-100 dark:border-slate-800 overflow-hidden text-right flex flex-col max-h-[90vh]"
         dir="rtl"
       >
         {/* Header */}
@@ -140,7 +140,7 @@ export const ImportFinancialModal: React.FC<Props> = ({
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onClick={() => fileInputRef.current?.click()}
-            className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition-all ${
+            className={`border-2 border-dashed rounded-xl p-6 text-center cursor-pointer transition-all ${
               isDragging
                 ? 'border-teal-500 bg-teal-50/60 dark:bg-teal-950/40 scale-[1.01]'
                 : 'border-slate-300 dark:border-slate-700 hover:border-teal-400 bg-slate-50/50 dark:bg-slate-800/40'

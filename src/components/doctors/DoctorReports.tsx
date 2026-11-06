@@ -29,7 +29,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
   return (
     <div className="space-y-6">
       {/* Print Trigger Bar */}
-      <div className="flex items-center justify-between bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xs print:hidden">
+      <div className="flex items-center justify-between bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xs print:hidden">
         <div>
           <h2 className="text-sm font-bold text-slate-800 dark:text-slate-200">التقرير الإحصائي والتحليلي لزيارات الأطباء</h2>
           <p className="text-xs text-slate-500 dark:text-slate-400">تحليل التغطية الميدانية، نسب إنجاز المناديب، ومؤشرات الأداء</p>
@@ -45,7 +45,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
       {/* Top Executive KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
         {/* Total Doctors */}
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold text-xs">
             <span>إجمالي شبكة الأطباء والمراكز</span>
             <Stethoscope className="w-4 h-4 text-teal-600 dark:text-teal-400" />
@@ -58,7 +58,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
 
         {/* Completion Rate Target Benchmark */}
         <div
-          className={`p-4 rounded-3xl border shadow-2xs ${
+          className={`p-4 rounded-xl border shadow-2xs ${
             benchmarkMet
               ? 'bg-emerald-50/50 border-emerald-200'
               : 'bg-amber-50/50 border-amber-200'
@@ -94,7 +94,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
         </div>
 
         {/* Documented Visits Log */}
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold text-xs">
             <span>سجلات الزيارات الموثقة</span>
             <Calendar className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
@@ -106,7 +106,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
         </div>
 
         {/* Medical Reps */}
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold text-xs">
             <span>المناديب والفرق الميدانية</span>
             <User className="w-4 h-4 text-purple-600 dark:text-purple-400" />
@@ -119,7 +119,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
       </div>
 
       {/* Target Progress Gauge */}
-      <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+      <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
         <div className="flex items-center justify-between flex-wrap gap-2 text-xs">
           <div className="flex items-center gap-2">
             <Award className="w-4 h-4 text-teal-700 dark:text-teal-300" />
@@ -157,7 +157,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
       {/* Grid: Geographic Regions & Specialty Distribution */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* 1. Geographic Coverage */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
               <MapPin className="w-4 h-4 text-teal-700 dark:text-teal-300" />
@@ -189,7 +189,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
         </div>
 
         {/* 2. Medical Specialties Breakdown */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
               <Stethoscope className="w-4 h-4 text-purple-600 dark:text-purple-400" />
@@ -222,7 +222,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
       </div>
 
       {/* Grid: Medical Representatives Performance Matrix */}
-      <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
+      <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
             <User className="w-4 h-4 text-teal-700 dark:text-teal-300" />
@@ -305,7 +305,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
       {/* Grid: Significance & Status Breakdown */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Significance Distribution */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
           <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
             <Award className="w-4 h-4 text-purple-600 dark:text-purple-400" />
             توزيع تصنيف أهمية الأطباء (Significance)
@@ -314,7 +314,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
             {stats.significanceBreakdown.map((item) => (
               <div
                 key={item.key}
-                className="bg-slate-50 dark:bg-slate-800/60 p-3 rounded-2xl border border-slate-200 dark:border-slate-700 text-center space-y-1"
+                className="bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-200 dark:border-slate-700 text-center space-y-1"
               >
                 <span className="text-xs font-bold text-slate-500 dark:text-slate-400">الفئة {item.key}</span>
                 <p className="text-lg font-black font-mono text-purple-800">{item.count}</p>
@@ -330,7 +330,7 @@ export const DoctorReports: React.FC<Props> = ({ doctors, visits }) => {
         </div>
 
         {/* Visit Status Distribution */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
           <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
             <Clock className="w-4 h-4 text-teal-700 dark:text-teal-300" />
             توزيع حالات الزيارات بالمنظومة

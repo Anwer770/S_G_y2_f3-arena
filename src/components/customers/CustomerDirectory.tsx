@@ -157,7 +157,7 @@ export const CustomerDirectory: React.FC<Props> = ({
   return (
     <div className="space-y-4">
       {/* Control & Filter Header */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-3">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-3">
         {/* Top bar: Search + Actions */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           {/* Search Input */}
@@ -171,7 +171,7 @@ export const CustomerDirectory: React.FC<Props> = ({
                 setCurrentPage(1);
               }}
               placeholder="البحث بالاسم، المعرف، الهاتف، المندوب، أو المسار..."
-              className="w-full pl-3.5 pr-10 py-2 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-amber-500 focus:bg-white dark:focus:bg-slate-900 transition-all"
+              className="w-full pl-3.5 pr-10 py-2 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-amber-500 focus:bg-white dark:focus:bg-slate-900 transition-all"
             />
           </div>
 
@@ -668,7 +668,7 @@ export const CustomerDirectory: React.FC<Props> = ({
             {paginatedCustomers.map((c) => (
               <div
                 key={c.id}
-                className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs hover:shadow-md transition-all space-y-3 relative group"
+                className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs hover:shadow-md transition-all space-y-3 relative group"
               >
                 <div className="flex items-start justify-between">
                   <div>
@@ -691,7 +691,7 @@ export const CustomerDirectory: React.FC<Props> = ({
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 text-xs bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-2xl border border-slate-100 dark:border-slate-800">
+                <div className="grid grid-cols-2 gap-2 text-xs bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800">
                   <div>
                     <span className="text-slate-400 dark:text-slate-500 block text-xs">المنطقة والمسار:</span>
                     <span className="font-bold text-slate-800 dark:text-slate-200">
@@ -759,7 +759,7 @@ export const CustomerDirectory: React.FC<Props> = ({
           </div>
 
           {/* Cards Pagination */}
-          <div className="bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs">
+          <div className="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs">
             <span>
               الصفحة {currentPage} من {totalPages} ({filteredCustomers.length} عميل)
             </span>

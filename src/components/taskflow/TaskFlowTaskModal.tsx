@@ -88,12 +88,12 @@ export const TaskFlowTaskModal: React.FC<TaskFlowTaskModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-xs overflow-y-auto">
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-white rounded-xl border border-slate-200 shadow-2xl max-w-xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
           <div className="flex items-center gap-3">
             <div
-              className="w-10 h-10 rounded-2xl flex items-center justify-center text-white shadow-xs font-bold"
+              className="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-xs font-bold"
               style={{ backgroundColor: selectedProject?.color || '#6366f1' }}
             >
               <FolderKanban className="w-5 h-5" />

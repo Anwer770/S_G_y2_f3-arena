@@ -142,7 +142,7 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
       className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-2 sm:p-4 backdrop-blur-xs overflow-y-auto"
       dir="rtl"
     >
-      <div className="relative w-full max-w-3xl my-auto bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col h-[85vh] overflow-hidden">
+      <div className="relative w-full max-w-3xl my-auto bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col h-[85vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-purple-50 dark:bg-purple-950/40">
           <div className="flex items-center gap-3">
@@ -191,7 +191,7 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
               </div>
 
               <div
-                className={`max-w-[82%] p-4 rounded-2xl text-xs sm:text-sm leading-relaxed ${
+                className={`max-w-[82%] p-4 rounded-xl text-xs sm:text-sm leading-relaxed ${
                   msg.sender === 'user'
                     ? 'bg-indigo-600 text-white rounded-tr-none'
                     : 'bg-slate-100 dark:bg-slate-800/80 text-slate-800 dark:text-slate-100 border border-slate-200/80 dark:border-slate-700 rounded-tl-none'
@@ -242,7 +242,7 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
               <div className="p-2 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 animate-pulse">
                 <Bot className="w-4 h-4" />
               </div>
-              <div className="p-3 bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 rounded-2xl rounded-tl-none text-xs flex items-center gap-2">
+              <div className="p-3 bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 rounded-xl rounded-tl-none text-xs flex items-center gap-2">
                 <Sparkles className="w-3.5 h-3.5 animate-spin text-purple-600 dark:text-purple-400" />
                 <span>المساعد يحلل الملاحظات ويصيغ الإجابة...</span>
               </div>

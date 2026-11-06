@@ -108,7 +108,7 @@ export const DoctorVisitsPlanner: React.FC<Props> = ({
   return (
     <div className="space-y-6">
       {/* Today's Spotlight Banner */}
-      <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 text-white rounded-3xl p-6 shadow-lg border border-teal-700/30">
+      <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 text-white rounded-xl p-6 shadow-lg border border-teal-700/30">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
@@ -125,7 +125,7 @@ export const DoctorVisitsPlanner: React.FC<Props> = ({
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="text-left bg-white/10 dark:bg-slate-900/10 px-4 py-2 rounded-2xl border border-white/10">
+            <div className="text-left bg-white/10 dark:bg-slate-900/10 px-4 py-2 rounded-xl border border-white/10">
               <span className="text-xs text-teal-200 block">نسبة الإنجاز اليوم:</span>
               <span className="text-base font-black">
                 {todayDoctors.length > 0
@@ -146,7 +146,7 @@ export const DoctorVisitsPlanner: React.FC<Props> = ({
             {todayDoctors.slice(0, 6).map((doc) => (
               <div
                 key={doc.id}
-                className="bg-white/10 dark:bg-slate-900/10 hover:bg-white/15 dark:hover:bg-slate-900/15 p-3.5 rounded-2xl border border-white/10 transition-all flex items-center justify-between gap-3 text-xs"
+                className="bg-white/10 dark:bg-slate-900/10 hover:bg-white/15 dark:hover:bg-slate-900/15 p-3.5 rounded-xl border border-white/10 transition-all flex items-center justify-between gap-3 text-xs"
               >
                 <div className="space-y-0.5 min-w-0">
                   <div className="flex items-center gap-1.5">
@@ -194,7 +194,7 @@ export const DoctorVisitsPlanner: React.FC<Props> = ({
       </div>
 
       {/* Filter by Representative & Route Bar */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
         {/* Rep Selector */}
         <div className="flex items-center justify-between flex-wrap gap-3 pb-3 border-b border-slate-100 dark:border-slate-800">
           <div className="flex items-center gap-2">
@@ -290,7 +290,7 @@ export const DoctorVisitsPlanner: React.FC<Props> = ({
         </div>
 
         {activeRouteDoctors.length === 0 ? (
-          <div className="bg-white dark:bg-slate-900 p-12 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700 text-center text-slate-400 dark:text-slate-500">
+          <div className="bg-white dark:bg-slate-900 p-12 rounded-xl border border-dashed border-slate-200 dark:border-slate-700 text-center text-slate-400 dark:text-slate-500">
             <Calendar className="w-10 h-10 mx-auto mb-2 opacity-40 text-teal-700 dark:text-teal-300" />
             <p className="text-sm font-bold text-slate-600 dark:text-slate-300">لا يوجد أطباء مسجلين في مسار {selectedRoute}</p>
             <button
@@ -307,7 +307,7 @@ export const DoctorVisitsPlanner: React.FC<Props> = ({
               return (
                 <div
                   key={doc.id}
-                  className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-teal-400 p-4 shadow-xs transition-all space-y-3 flex flex-col justify-between"
+                  className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-teal-400 p-4 shadow-xs transition-all space-y-3 flex flex-col justify-between"
                 >
                   {/* Top Row: Doctor Info & Significance */}
                   <div className="space-y-2">

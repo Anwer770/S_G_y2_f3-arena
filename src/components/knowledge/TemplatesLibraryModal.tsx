@@ -86,7 +86,7 @@ export const TemplatesLibraryModal: React.FC<TemplatesLibraryModalProps> = ({
       className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-2 sm:p-4 backdrop-blur-xs overflow-y-auto"
       dir="rtl"
     >
-      <div className="relative w-full max-w-4xl my-auto bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col max-h-[90vh] overflow-hidden">
+      <div className="relative w-full max-w-4xl my-auto bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col max-h-[90vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60">
           <div className="flex items-center gap-3">
@@ -127,7 +127,7 @@ export const TemplatesLibraryModal: React.FC<TemplatesLibraryModalProps> = ({
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {showAddForm ? (
             /* Add Template Form */
-            <form onSubmit={handleCreateTemplate} className="space-y-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <form onSubmit={handleCreateTemplate} className="space-y-4 p-5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
               <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200">
                 تصميم قالب ملاحظة جديد
               </h3>

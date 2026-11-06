@@ -85,13 +85,13 @@ export const CustomerDetailsModal: React.FC<Props> = ({
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
       <div
-        className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl max-w-4xl w-full overflow-hidden flex flex-col max-h-[92vh] border border-slate-200 dark:border-slate-700 animate-in fade-in zoom-in-95 duration-200"
+        className="bg-white dark:bg-slate-900 rounded-xl shadow-2xl max-w-4xl w-full overflow-hidden flex flex-col max-h-[92vh] border border-slate-200 dark:border-slate-700 animate-in fade-in zoom-in-95 duration-200"
         dir="rtl"
       >
         {/* Modal Header */}
         <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-amber-950 text-white px-6 py-5 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-300 font-black text-lg">
+            <div className="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-300 font-black text-lg">
               {customer.subId || customer.id.slice(-4)}
             </div>
             <div>
@@ -191,7 +191,7 @@ export const CustomerDetailsModal: React.FC<Props> = ({
           {/* Financial Balances KPI Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div
-              className={`p-4 rounded-2xl border ${
+              className={`p-4 rounded-xl border ${
                 customer.balanceYER < 0
                   ? 'bg-rose-50/70 border-rose-200'
                   : customer.balanceYER > 0
@@ -219,7 +219,7 @@ export const CustomerDetailsModal: React.FC<Props> = ({
               </p>
             </div>
 
-            <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
               <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold mb-1">
                 <span>الرصيد بالريال السعودي</span>
                 <span className="text-xs">SAR</span>
@@ -230,7 +230,7 @@ export const CustomerDetailsModal: React.FC<Props> = ({
               <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">حساب العملة الأجنبية</p>
             </div>
 
-            <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
               <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 font-bold mb-1">
                 <span>الرصيد بالدولار الأمريكي</span>
                 <span className="text-xs">USD</span>
@@ -245,7 +245,7 @@ export const CustomerDetailsModal: React.FC<Props> = ({
           {/* Grid Information Profile */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Right Column: Customer Details */}
-            <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 space-y-3">
+            <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-3">
               <h3 className="font-black text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
                 <Building2 className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                 معلومات الحساب والمسار
@@ -291,7 +291,7 @@ export const CustomerDetailsModal: React.FC<Props> = ({
             </div>
 
             {/* Left Column: Visit & Task Status */}
-            <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 space-y-3">
+            <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-3">
               <h3 className="font-black text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                 المهمة وحالة المتابعة الميدانية
@@ -329,7 +329,7 @@ export const CustomerDetailsModal: React.FC<Props> = ({
 
           {/* Notes Section */}
           {customer.notes && (
-            <div className="bg-amber-50/50 dark:bg-amber-950/40 p-4 rounded-2xl border border-amber-200 dark:border-amber-800">
+            <div className="bg-amber-50/50 dark:bg-amber-950/40 p-4 rounded-xl border border-amber-200 dark:border-amber-800">
               <h4 className="font-black text-amber-900 flex items-center gap-1.5 mb-1.5">
                 <FileText className="w-3.5 h-3.5 text-amber-700 dark:text-amber-300" />
                 ملاحظات وتفاصيل إضافية
@@ -355,11 +355,11 @@ export const CustomerDetailsModal: React.FC<Props> = ({
             </div>
 
             {customerVisits.length === 0 ? (
-              <div className="text-center py-6 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500">
+              <div className="text-center py-6 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-dashed border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500">
                 لا توجد سجلات زيارات سابقة مسجلة لهذا العميل حتى الآن
               </div>
             ) : (
-              <div className="border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-2xs">
+              <div className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-2xs">
                 <div className="w-full overflow-x-auto print:overflow-visible">
                 <table className="w-full text-right border-collapse min-w-[600px] print:min-w-0">
                   <thead className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold text-xs">

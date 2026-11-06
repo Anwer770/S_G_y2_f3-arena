@@ -206,7 +206,7 @@ export const WorkOSDailyPlannerView: React.FC<WorkOSDailyPlannerViewProps> = ({
   return (
     <div className="space-y-5" dir="rtl">
       {/* 1. شريط اليوم: التاريخ + الملخّص + إضافة + المؤقّت النشط */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
         <div className="flex items-center gap-3 flex-wrap">
           <span className="p-2 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300">
             <Sun className="w-5 h-5" />
@@ -273,7 +273,7 @@ export const WorkOSDailyPlannerView: React.FC<WorkOSDailyPlannerViewProps> = ({
               e.preventDefault();
               dropOn(col.id);
             }}
-            className={`bg-white dark:bg-slate-900 rounded-2xl border shadow-2xs p-4 space-y-3 transition ${
+            className={`bg-white dark:bg-slate-900 rounded-xl border shadow-2xs p-4 space-y-3 transition ${
               dragOverBucket === col.id ? toneRing[col.tone] : 'border-slate-200/80 dark:border-slate-700/80'
             }`}
           >
@@ -340,7 +340,7 @@ export const WorkOSDailyPlannerView: React.FC<WorkOSDailyPlannerViewProps> = ({
         ))}
 
         {/* الشريط الزمني لليوم */}
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 space-y-3">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 space-y-3">
           <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2.5">
             <h3 className="text-xs font-black text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
               <Coffee className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />

@@ -155,7 +155,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Top Branding Row */}
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-slate-900 via-indigo-900 to-amber-700 text-white flex items-center justify-center shadow-md shadow-indigo-200 shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-slate-900 via-indigo-900 to-amber-700 text-white flex items-center justify-center shadow-md shadow-indigo-200 shrink-0">
               <Layers className="w-5 h-5" />
             </div>
             <div>

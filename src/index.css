@@ -8,43 +8,70 @@
 @custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
 
 :root {
-  --color-bg-base: #f8fafc;
-  --color-bg-canvas: #f3f7f5;
-  --color-bg-card: #ffffff;
-  --color-bg-surface: #ffffff;
-  --color-bg-muted: #f1f5f9;
-  --color-bg-elevated: #ffffff;
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-text-muted: #64748b;
-  --color-text-dim: #94a3b8;
-  --color-border: #e2e8f0;
-  --color-border-subtle: #f1f5f9;
-  --color-primary: #0d6854;
-  --color-primary-hover: #0a5242;
-  --color-primary-fg: #ffffff;
+  /* نظام الهوية المحاسبي الحديث المعتمد */
+  --sidebar-primary: #0F3935;     /* الأخضر الداكن / الزيتي للقائمة الجانبية */
+  --sidebar-secondary: #134E48;   /* درجة زيتي مكملة */
+  --sidebar-active: #0D9488;      /* الأخضر الزمردي للعنصر النشط */
+  
+  --emerald-primary: #0D9488;     /* الأخضر الزمردي للأزرار الرئيسية والتحديث */
+  --emerald-hover: #059669;       /* الأخضر الفيروزي عند التحويم وحفظ السند */
+  
+  --royal-blue: #3B82F6;          /* الأزرق الملكي لشريط الخزينة والمبيعات */
+  --royal-indigo: #4338CA;        /* الأزرق الداكن للخزينة */
+  
+  --coral-red: #EF4444;           /* الأحمر المرجاني للسحب والصرف والخروج */
+  --coral-red-light: #FCA5A5;     /* الوردي الفاتح للحركات والتحذير */
+  
+  --amber-gold: #D97706;          /* الذهبي للعمليات والتقارير */
+  --amber-bronze: #B45309;        /* البرونزي لأزرار "جديد" و"بحث" */
+
+  --color-bg-base: #F3F4F6;       /* رمادي فاتح مائل للدفء (#F3F4F6 إلى #F9FAFB) */
+  --color-bg-canvas: #F9FAFB;
+  --color-bg-card: #FFFFFF;       /* أبيض ناصع تماماً للبطاقات والحقول */
+  --color-bg-surface: #FFFFFF;
+  --color-bg-muted: #F3F4F6;
+  --color-bg-elevated: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4B5563;
+  --color-text-muted: #6B7280;
+  --color-text-dim: #9CA3AF;
+  --color-border: #E5E7EB;        /* حدود خفيفة بتمويه رمادي ناعم */
+  --color-border-subtle: #F3F4F6;
 }
 
 :root[data-theme="dark"],
 :root.dark,
 [data-theme="dark"],
 .dark {
-  /* الوضع الليلي المعتمد: خلفيات داكنة فحمية ومطفأة مع نصوص فاتحة عالية التباين */
-  --color-bg-base: #0f172a;       /* خلفية الشاشة العامة #0F172A */
-  --color-bg-canvas: #0f172a;     /* خلفية شبكة القماش #0F172A */
-  --color-bg-card: #1e293b;       /* خلفيات البطاقات والمحافظ واللوحات #1E293B */
-  --color-bg-surface: #1e293b;    /* خلفيات الأسطح والجداول #1E293B */
-  --color-bg-muted: #1e293b;      /* خلفية العناصر الخاملة */
-  --color-bg-elevated: #334155;   /* النوافذ المنبثقة والقوائم المنسدلة */
-  --color-text-primary: #f8fafc;  /* عناوين وأسعار بيضاء ناصعة #F8FAFC */
-  --color-text-secondary: #cbd5e1;/* نصوص ثانوية مريحة وفاتحة #CBD5E1 */
-  --color-text-muted: #94a3b8;    /* تسميات ووصف فرعي واضح #94A3B8 */
-  --color-text-dim: #64748b;
-  --color-border: #334155;        /* حدود فواصل واضحة #334155 */
-  --color-border-subtle: #1e293b;
-  --color-primary: #14b8a6;       /* الأزرق التيل المضيء */
-  --color-primary-hover: #2dd4bf;
-  --color-primary-fg: #ffffff;
+  /* الوضع الليلي المحاسبي المريح */
+  --sidebar-primary: #0F3935;     /* القائمة الجانبية الزيتية الثابتة */
+  --sidebar-secondary: #134E48;
+  --sidebar-active: #0D9488;
+  
+  --emerald-primary: #0D9488;
+  --emerald-hover: #059669;
+  
+  --royal-blue: #3B82F6;
+  --royal-indigo: #4338CA;
+  
+  --coral-red: #EF4444;
+  --coral-red-light: #FCA5A5;
+  
+  --amber-gold: #D97706;
+  --amber-bronze: #B45309;
+
+  --color-bg-base: #0F172A;       /* خلفية الشاشة الداكنة #0F172A */
+  --color-bg-canvas: #0F172A;
+  --color-bg-card: #1E293B;       /* خلفيات البطاقات والمحافظ #1E293B */
+  --color-bg-surface: #1E293B;
+  --color-bg-muted: #1E293B;
+  --color-bg-elevated: #334155;
+  --color-text-primary: #F8FAFC;  /* نصوص بيضاء ناصعة */
+  --color-text-secondary: #CBD5E1;/* نصوص ثانوية مريحة */
+  --color-text-muted: #94A3B8;    /* تسميات ووصف فرعي */
+  --color-text-dim: #64748B;
+  --color-border: #334155;        /* حدود فواصل ناعمة */
+  --color-border-subtle: #1E293B;
 }
 
 @layer base {
@@ -56,19 +83,19 @@
   html.dark,
   html[data-theme="dark"] {
     color-scheme: dark;
-    background-color: #0f172a;
-    color: #f8fafc;
+    background-color: #0F172A;
+    color: #F8FAFC;
   }
 
   html, body {
     direction: rtl;
     text-align: right;
-    font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-family: 'Rubik', 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
   }
 
   input, select, textarea, button {
-    font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Rubik', 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     text-align: right;
   }
 
@@ -79,22 +106,23 @@
   }
 }
 
-/* Nova ERP Soft Dot Canvas Background */
+/* Modern Flat Accounting Gradient Canvas Background (#F3F4F6 to #F9FAFB) */
 .bg-canvas-pattern {
-  background-color: var(--color-bg-canvas, #f3f7f5);
+  background-color: #F3F4F6;
   background-image: 
-    radial-gradient(circle, rgba(13, 104, 84, 0.13) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+    radial-gradient(circle, rgba(15, 57, 53, 0.08) 1.2px, transparent 1.2px),
+    linear-gradient(135deg, #F3F4F6 0%, #F9FAFB 100%);
+  background-size: 24px 24px, 100% 100%;
 }
 
 .dark .bg-canvas-pattern,
 [data-theme="dark"] .bg-canvas-pattern,
 .dark.bg-canvas-pattern,
 [data-theme="dark"].bg-canvas-pattern {
-  background-color: #0f172a;
+  background-color: #0F172A;
   background-image: 
-    radial-gradient(circle, rgba(20, 184, 166, 0.12) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+    radial-gradient(circle, rgba(13, 148, 136, 0.12) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
 }
 
 /* Smooth Staggered Animation Utilities */

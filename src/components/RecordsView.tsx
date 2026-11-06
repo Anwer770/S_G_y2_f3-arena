@@ -226,11 +226,11 @@ export const RecordsView: React.FC<RecordsViewProps> = ({
   return (
     <div className="space-y-4 pb-12">
       {/* 1. Header & Quick Actions Bar */}
-      <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
+      <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h2 className="text-base sm:text-lg font-black text-slate-900 dark:text-slate-100 flex items-center gap-2">
-              <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <Layers className="w-5 h-5 text-[#0D9488]" />
               <span>سجل حركات الصرف والتوريد</span>
             </h2>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
@@ -252,7 +252,7 @@ export const RecordsView: React.FC<RecordsViewProps> = ({
                     setSelectedSubIds([]);
                   }
                 }}
-                className="flex items-center gap-1.5 px-3 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 px-3 py-2 bg-[#EF4444] hover:bg-rose-700 text-white text-xs font-bold rounded-lg transition-colors cursor-pointer"
               >
                 <Trash2 className="w-3.5 h-3.5" />
                 <span>حذف المحدد ({selectedSubIds.length})</span>
@@ -262,7 +262,7 @@ export const RecordsView: React.FC<RecordsViewProps> = ({
             {/* Export Excel (FR-35) */}
             <button
               onClick={() => exportRecordsToExcel(filteredRecords, products, 'حركات_صرف_وتوريد_مفلترة.xlsx')}
-              className="flex items-center gap-1.5 px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-2 bg-[#059669] hover:bg-[#047857] text-white text-xs font-bold rounded-lg transition-colors cursor-pointer"
               title="تصدير الحركات المعروضة إلى ملف Excel"
             >
               <FileSpreadsheet className="w-4 h-4" />
@@ -272,7 +272,7 @@ export const RecordsView: React.FC<RecordsViewProps> = ({
             {/* Export CSV (FR-42) */}
             <button
               onClick={() => exportRecordsToCSV(filteredRecords, products)}
-              className="flex items-center gap-1.5 px-3 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-xl transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-lg transition-colors cursor-pointer"
               title="تصدير CSV بترميز UTF-8"
             >
               <Download className="w-4 h-4" />
@@ -282,7 +282,7 @@ export const RecordsView: React.FC<RecordsViewProps> = ({
             {/* Add Movement */}
             <button
               onClick={onOpenAddModal}
-              className="flex items-center gap-1.5 px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl shadow-xs transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3.5 py-2 bg-[#0D9488] hover:bg-[#059669] text-white text-xs font-bold rounded-lg shadow-xs transition-colors cursor-pointer"
             >
               <Plus className="w-4 h-4" />
               <span>حركة جديدة</span>
@@ -549,7 +549,7 @@ export const RecordsView: React.FC<RecordsViewProps> = ({
                   return (
                     <div
                       key={r.id || r.subId}
-                      className={`p-3.5 rounded-2xl border transition-all relative flex flex-col justify-between space-y-2.5 shadow-2xs ${
+                      className={`p-3.5 rounded-xl border transition-all relative flex flex-col justify-between space-y-2.5 shadow-2xs ${
                         isSelected
                           ? 'bg-blue-50/50 border-blue-400 ring-2 ring-blue-500/20'
                           : 'bg-white border-slate-200 hover:border-teal-400'

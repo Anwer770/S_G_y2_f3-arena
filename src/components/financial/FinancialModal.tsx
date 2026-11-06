@@ -237,7 +237,7 @@ export const FinancialModal: React.FC<Props> = ({
       }}
     >
       <div
-        className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 w-full max-w-4xl max-h-[96vh] sm:max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200"
+        className="bg-white dark:bg-slate-900 rounded-xl sm:rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 w-full max-w-4xl max-h-[96vh] sm:max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200"
         dir="rtl"
       >
         {/* Header */}
@@ -266,14 +266,14 @@ export const FinancialModal: React.FC<Props> = ({
         {/* Form Body */}
         <form onSubmit={handleSubmit} className="overflow-y-auto p-6 space-y-6 flex-1">
           {error && (
-            <div className="p-3.5 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-2xl flex items-center gap-3 text-rose-700 dark:text-rose-300 text-xs font-bold animate-in fade-in">
+            <div className="p-3.5 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-xl flex items-center gap-3 text-rose-700 dark:text-rose-300 text-xs font-bold animate-in fade-in">
               <AlertCircle className="w-4 h-4 shrink-0" />
               <span>{error}</span>
             </div>
           )}
 
           {/* Section 1: Top Indicators & Auto Calculated Day */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
             {/* ID */}
             <div>
               <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">
@@ -481,7 +481,7 @@ export const FinancialModal: React.FC<Props> = ({
           </div>
 
           {/* Section 3: Account Name (اسم الحساب - 110+ items) */}
-          <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3">
+          <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-3">
             <div className="flex items-center justify-between">
               <label className="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2">
                 <User className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
@@ -549,7 +549,7 @@ export const FinancialModal: React.FC<Props> = ({
           </div>
 
           {/* Section 4: Multi-Currency Amounts (YER, SAR, USD) */}
-          <div className="p-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl shadow-lg space-y-4">
+          <div className="p-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-xl shadow-lg space-y-4">
             <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center gap-2">
                 <DollarSign className="w-5 h-5 text-amber-400" />
@@ -562,7 +562,7 @@ export const FinancialModal: React.FC<Props> = ({
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {/* Amount YER */}
-              <div className="bg-white/5 dark:bg-slate-900/5 p-3.5 rounded-2xl border border-white/10 space-y-1.5">
+              <div className="bg-white/5 dark:bg-slate-900/5 p-3.5 rounded-xl border border-white/10 space-y-1.5">
                 <label className="block text-xs font-bold text-emerald-300">
                   المبلغ (ريال يمني - YER)
                 </label>
@@ -581,7 +581,7 @@ export const FinancialModal: React.FC<Props> = ({
               </div>
 
               {/* Amount SAR */}
-              <div className="bg-white/5 dark:bg-slate-900/5 p-3.5 rounded-2xl border border-white/10 space-y-1.5">
+              <div className="bg-white/5 dark:bg-slate-900/5 p-3.5 rounded-xl border border-white/10 space-y-1.5">
                 <label className="block text-xs font-bold text-amber-300">
                   المبلغ (ريال سعودي - SAR)
                 </label>
@@ -600,7 +600,7 @@ export const FinancialModal: React.FC<Props> = ({
               </div>
 
               {/* Amount USD */}
-              <div className="bg-white/5 dark:bg-slate-900/5 p-3.5 rounded-2xl border border-white/10 space-y-1.5">
+              <div className="bg-white/5 dark:bg-slate-900/5 p-3.5 rounded-xl border border-white/10 space-y-1.5">
                 <label className="block text-xs font-bold text-blue-300">
                   المبلغ (دولار أمريكي - USD)
                 </label>
@@ -644,7 +644,7 @@ export const FinancialModal: React.FC<Props> = ({
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="اكتب تفاصيل القيد أو الحركة وملاحظات السداد..."
-                className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none resize-none"
+                className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none resize-none"
               />
             </div>
           </div>

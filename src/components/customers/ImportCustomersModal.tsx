@@ -93,13 +93,13 @@ export const ImportCustomersModal: React.FC<Props> = ({
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
       <div
-        className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden flex flex-col border border-slate-200 dark:border-slate-700"
+        className="bg-white dark:bg-slate-900 rounded-xl shadow-2xl max-w-2xl w-full overflow-hidden flex flex-col border border-slate-200 dark:border-slate-700"
         dir="rtl"
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-amber-600 to-amber-800 text-white px-6 py-4 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-white/15 dark:bg-slate-900/15 backdrop-blur-xs flex items-center justify-center border border-white/20">
+            <div className="w-10 h-10 rounded-xl bg-white/15 dark:bg-slate-900/15 backdrop-blur-xs flex items-center justify-center border border-white/20">
               <FileSpreadsheet className="w-5 h-5 text-amber-100" />
             </div>
             <div>
@@ -120,7 +120,7 @@ export const ImportCustomersModal: React.FC<Props> = ({
         {/* Body */}
         <div className="p-6 space-y-4 text-xs">
           {/* Template Download Banner */}
-          <div className="flex items-center justify-between bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3 rounded-2xl text-xs">
+          <div className="flex items-center justify-between bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3 rounded-xl text-xs">
             <div className="flex items-center gap-2 text-amber-900 font-bold">
               <FileSpreadsheet className="w-4 h-4 text-amber-700 dark:text-amber-300" />
               <span>هل تحتاج إلى نموذج Excel جاهز بالأعمدة المطابقة؟</span>
@@ -141,7 +141,7 @@ export const ImportCustomersModal: React.FC<Props> = ({
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onClick={() => fileInputRef.current?.click()}
-            className={`border-2 border-dashed rounded-3xl p-6 text-center cursor-pointer transition-all ${
+            className={`border-2 border-dashed rounded-xl p-6 text-center cursor-pointer transition-all ${
               isDragging
                 ? 'border-amber-500 bg-amber-100/50 scale-[1.01]'
                 : 'border-amber-300 hover:border-amber-500 bg-amber-50/40 hover:bg-amber-50/70'
@@ -154,7 +154,7 @@ export const ImportCustomersModal: React.FC<Props> = ({
               accept=".xlsx, .xls, .csv"
               className="hidden"
             />
-            <div className="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 flex items-center justify-center mx-auto mb-2 border border-amber-200 dark:border-amber-800">
+            <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 flex items-center justify-center mx-auto mb-2 border border-amber-200 dark:border-amber-800">
               <UploadCloud className="w-6 h-6" />
             </div>
             <h3 className="font-black text-slate-800 dark:text-slate-200 text-sm">
@@ -166,7 +166,7 @@ export const ImportCustomersModal: React.FC<Props> = ({
           </div>
 
           {error && (
-            <div className="p-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-2xl flex items-center gap-2 text-rose-700 dark:text-rose-300 font-bold">
+            <div className="p-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-xl flex items-center gap-2 text-rose-700 dark:text-rose-300 font-bold">
               <AlertTriangle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
               <span>{error}</span>
             </div>
@@ -174,7 +174,7 @@ export const ImportCustomersModal: React.FC<Props> = ({
 
           {/* Preview Results */}
           {parsedData && (
-            <div className="space-y-3 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <div className="space-y-3 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 font-black text-slate-800 dark:text-slate-200">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />

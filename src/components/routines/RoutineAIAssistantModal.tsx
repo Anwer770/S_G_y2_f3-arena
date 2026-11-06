@@ -63,7 +63,7 @@ export const RoutineAIAssistantModal: React.FC<RoutineAIAssistantModalProps> = (
       className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm p-4 overflow-y-auto"
       dir="rtl"
     >
-      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]">
         {/* Header */}
         <div className="bg-gradient-to-r from-indigo-700 via-purple-700 to-emerald-600 p-5 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -145,7 +145,7 @@ export const RoutineAIAssistantModal: React.FC<RoutineAIAssistantModalProps> = (
 
           {/* Generated Result Card */}
           {generatedRoutine && (
-            <div className="p-4 rounded-2xl border-2 border-emerald-400 dark:border-emerald-600 bg-emerald-50/40 dark:bg-emerald-950/20 space-y-4 animate-in fade-in duration-200">
+            <div className="p-4 rounded-xl border-2 border-emerald-400 dark:border-emerald-600 bg-emerald-50/40 dark:bg-emerald-950/20 space-y-4 animate-in fade-in duration-200">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-sm">

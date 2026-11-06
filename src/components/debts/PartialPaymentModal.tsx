@@ -65,11 +65,11 @@ export const PartialPaymentModal: React.FC<PartialPaymentModalProps> = ({
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl max-w-xl w-full border border-slate-200 dark:border-slate-800 overflow-hidden animate-in fade-in zoom-in-95 duration-200 my-auto">
+      <div className="bg-white dark:bg-slate-900 rounded-xl sm:rounded-xl shadow-2xl max-w-xl w-full border border-slate-200 dark:border-slate-800 overflow-hidden animate-in fade-in zoom-in-95 duration-200 my-auto">
         {/* Header */}
         <div className="bg-slate-900 text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
               <DollarSign className="w-5 h-5" />
             </div>
             <div>
@@ -89,7 +89,7 @@ export const PartialPaymentModal: React.FC<PartialPaymentModalProps> = ({
 
         <div className="p-6 space-y-5">
           {/* Commitment Summary Card */}
-          <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3">
+          <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-3">
             <div className="flex items-center justify-between text-xs">
               <span className="font-bold text-slate-500 dark:text-slate-400">إجمالي قيمة الالتزام:</span>
               <span className="font-extrabold text-slate-900 dark:text-slate-100 text-sm">
@@ -135,7 +135,7 @@ export const PartialPaymentModal: React.FC<PartialPaymentModalProps> = ({
 
           {/* Add New Payment Form */}
           {remainingAmount > 0 ? (
-            <form onSubmit={handleAddPaymentSubmit} className="p-4 bg-emerald-50/50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200 dark:border-emerald-800 space-y-3">
+            <form onSubmit={handleAddPaymentSubmit} className="p-4 bg-emerald-50/50 dark:bg-emerald-950/40 rounded-xl border border-emerald-200 dark:border-emerald-800 space-y-3">
               <h4 className="text-xs font-black text-emerald-900 flex items-center gap-1.5">
                 <Plus className="w-4 h-4 text-emerald-700 dark:text-emerald-300" />
                 <span>تسجيل دفعة سداد جديدة</span>
@@ -200,7 +200,7 @@ export const PartialPaymentModal: React.FC<PartialPaymentModalProps> = ({
               </div>
             </form>
           ) : (
-            <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200 dark:border-emerald-800 text-center">
+            <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 rounded-xl border border-emerald-200 dark:border-emerald-800 text-center">
               <CheckCircle2 className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mx-auto mb-1" />
               <p className="text-xs font-black text-emerald-900">
                 تم سداد هذا الالتزام بالكامل بنسبة 100%

@@ -286,7 +286,7 @@ export const WorkOSEisenhowerMatrix: React.FC<WorkOSEisenhowerMatrixProps> = ({
         {/* ========================================================= */}
         {/* QUADRANT 1: URGENT & IMPORTANT (DO FIRST)                 */}
         {/* ========================================================= */}
-        <div className="rounded-2xl border-2 border-rose-300/80 bg-rose-50/30 p-4 flex flex-col min-h-[480px] shadow-2xs">
+        <div className="rounded-xl border-2 border-rose-300/80 bg-rose-50/30 p-4 flex flex-col min-h-[480px] shadow-2xs">
           {/* Header */}
           <div className="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-rose-200">
             <div className="flex items-center gap-2.5">
@@ -330,7 +330,7 @@ export const WorkOSEisenhowerMatrix: React.FC<WorkOSEisenhowerMatrixProps> = ({
         {/* ========================================================= */}
         {/* QUADRANT 2: NOT URGENT & IMPORTANT (SCHEDULE / PLAN)      */}
         {/* ========================================================= */}
-        <div className="rounded-2xl border-2 border-indigo-300/80 bg-indigo-50/30 p-4 flex flex-col min-h-[480px] shadow-2xs">
+        <div className="rounded-xl border-2 border-indigo-300/80 bg-indigo-50/30 p-4 flex flex-col min-h-[480px] shadow-2xs">
           {/* Header */}
           <div className="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-indigo-200">
             <div className="flex items-center gap-2.5">
@@ -374,7 +374,7 @@ export const WorkOSEisenhowerMatrix: React.FC<WorkOSEisenhowerMatrixProps> = ({
         {/* ========================================================= */}
         {/* QUADRANT 3: URGENT & NOT IMPORTANT (DELEGATE)             */}
         {/* ========================================================= */}
-        <div className="rounded-2xl border-2 border-amber-300/80 bg-amber-50/30 p-4 flex flex-col min-h-[480px] shadow-2xs">
+        <div className="rounded-xl border-2 border-amber-300/80 bg-amber-50/30 p-4 flex flex-col min-h-[480px] shadow-2xs">
           {/* Header */}
           <div className="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-amber-200">
             <div className="flex items-center gap-2.5">
@@ -418,7 +418,7 @@ export const WorkOSEisenhowerMatrix: React.FC<WorkOSEisenhowerMatrixProps> = ({
         {/* ========================================================= */}
         {/* QUADRANT 4: NOT URGENT & NOT IMPORTANT (ELIMINATE)        */}
         {/* ========================================================= */}
-        <div className="rounded-2xl border-2 border-slate-300/80 bg-slate-50/50 p-4 flex flex-col min-h-[480px] shadow-2xs">
+        <div className="rounded-xl border-2 border-slate-300/80 bg-slate-50/50 p-4 flex flex-col min-h-[480px] shadow-2xs">
           {/* Header */}
           <div className="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-slate-200">
             <div className="flex items-center gap-2.5">

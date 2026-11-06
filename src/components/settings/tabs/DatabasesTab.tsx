@@ -225,7 +225,7 @@ export const DatabasesTab: React.FC<Props> = ({
       )}
 
       {/* IndexedDB Active Engine Card */}
-      <div className="p-5 rounded-2xl bg-gradient-to-r from-teal-900/10 via-teal-50 to-emerald-50 dark:from-teal-950/40 dark:via-slate-900 dark:to-slate-900 border border-teal-200 dark:border-teal-800/80 shadow-xs space-y-3">
+      <div className="p-5 rounded-xl bg-gradient-to-r from-teal-900/10 via-teal-50 to-emerald-50 dark:from-teal-950/40 dark:via-slate-900 dark:to-slate-900 border border-teal-200 dark:border-teal-800/80 shadow-xs space-y-3">
         <div className="flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center shadow-xs">
@@ -260,7 +260,7 @@ export const DatabasesTab: React.FC<Props> = ({
       </div>
 
       {/* Sync Outbox Engine Card */}
-      <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+      <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
         <div className="flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-xs">
@@ -340,7 +340,7 @@ export const DatabasesTab: React.FC<Props> = ({
       </div>
 
       {/* Local Backups */}
-      <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+      <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
         <div className="flex items-center gap-2">
           <HardDrive className="w-4 h-4 text-blue-600 dark:text-blue-400" />
           <h3 className="text-xs font-bold text-slate-900 dark:text-white">النسخ الاحتياطي المحلي والتصدير</h3>
@@ -386,7 +386,7 @@ export const DatabasesTab: React.FC<Props> = ({
       </div>
 
       {/* Google Drive Integration */}
-      <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+      <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Cloud className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
@@ -447,7 +447,7 @@ export const DatabasesTab: React.FC<Props> = ({
       </div>
 
       {/* Cloud Snapshots */}
-      <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+      <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h3 className="text-xs font-bold text-slate-900 dark:text-white">
@@ -589,7 +589,7 @@ export const DatabasesTab: React.FC<Props> = ({
       </div>
 
       {/* Danger Zone */}
-      <div className="p-5 rounded-2xl bg-rose-50/40 dark:bg-rose-950/20 border border-rose-200/80 dark:border-rose-900/40 shadow-xs space-y-3">
+      <div className="p-5 rounded-xl bg-rose-50/40 dark:bg-rose-950/20 border border-rose-200/80 dark:border-rose-900/40 shadow-xs space-y-3">
         <div className="flex items-center gap-2">
           <AlertTriangle className="w-4 h-4 text-rose-600 dark:text-rose-400" />
           <h3 className="font-bold text-xs text-rose-900 dark:text-rose-300">

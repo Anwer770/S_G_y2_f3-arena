@@ -29,11 +29,11 @@ export const PWAInstallModal: React.FC<{ isOpen: boolean; onClose: () => void }>
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-7 w-full max-w-md text-right space-y-5 animate-in zoom-in-95 duration-150">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-7 w-full max-w-md text-right space-y-5 animate-in zoom-in-95 duration-150">
         {/* Modal Top Header */}
         <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3.5">
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-2xl bg-teal-600/10 text-teal-700 dark:text-teal-400 flex items-center justify-center border border-teal-600/20">
+            <div className="w-10 h-10 rounded-lg bg-teal-600/10 text-[#0D9488] dark:text-emerald-400 flex items-center justify-center border border-teal-600/20">
               <Download className="w-5 h-5" />
             </div>
             <div>
@@ -56,7 +56,7 @@ export const PWAInstallModal: React.FC<{ isOpen: boolean; onClose: () => void }>
 
         {/* Success Feedback */}
         {justInstalled || isInstalled ? (
-          <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-center space-y-2">
+          <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-center space-y-2">
             <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
             <h4 className="font-bold text-sm text-emerald-900 dark:text-emerald-200">
               المنظومة مثبتة بنجاح على جهازك!
@@ -69,8 +69,8 @@ export const PWAInstallModal: React.FC<{ isOpen: boolean; onClose: () => void }>
           <>
             {/* Value Proposition Grid */}
             <div className="grid grid-cols-2 gap-2.5 text-xs">
-              <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60 space-y-1">
-                <div className="flex items-center gap-1.5 font-bold text-teal-700 dark:text-teal-300">
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60 space-y-1">
+                <div className="flex items-center gap-1.5 font-bold text-[#0D9488] dark:text-teal-300">
                   <ShieldCheck className="w-4 h-4" />
                   <span>عمل كامل دون اتصال</span>
                 </div>
@@ -79,8 +79,8 @@ export const PWAInstallModal: React.FC<{ isOpen: boolean; onClose: () => void }>
                 </p>
               </div>
 
-              <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60 space-y-1">
-                <div className="flex items-center gap-1.5 font-bold text-teal-700 dark:text-teal-300">
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60 space-y-1">
+                <div className="flex items-center gap-1.5 font-bold text-[#0D9488] dark:text-teal-300">
                   <Laptop className="w-4 h-4" />
                   <span>شاشة كاملة سريعة</span>
                 </div>
@@ -92,7 +92,7 @@ export const PWAInstallModal: React.FC<{ isOpen: boolean; onClose: () => void }>
 
             {/* Platform Guides */}
             {isIOS ? (
-              <div className="p-4 rounded-2xl bg-teal-50/60 dark:bg-teal-950/30 border border-teal-200/60 dark:border-teal-800/60 space-y-2.5 text-xs text-slate-700 dark:text-slate-200">
+              <div className="p-4 rounded-xl bg-teal-50/60 dark:bg-teal-950/30 border border-teal-200/60 dark:border-teal-800/60 space-y-2.5 text-xs text-slate-700 dark:text-slate-200">
                 <div className="flex items-center gap-2 font-bold text-teal-800 dark:text-teal-300">
                   <Smartphone className="w-4 h-4" />
                   <span>طريقة التثبيت على أجهزة iPhone / iPad:</span>
@@ -120,7 +120,7 @@ export const PWAInstallModal: React.FC<{ isOpen: boolean; onClose: () => void }>
                 <button
                   type="button"
                   onClick={handleInstallClick}
-                  className="w-full py-3 bg-teal-700 hover:bg-teal-800 text-white rounded-2xl font-bold flex items-center justify-center gap-2 transition cursor-pointer shadow-md hover:shadow-lg"
+                  className="w-full py-3 bg-[#0D9488] hover:bg-[#059669] text-white rounded-lg font-bold flex items-center justify-center gap-2 transition cursor-pointer shadow-md hover:shadow-lg"
                 >
                   <Download className="w-4 h-4" />
                   <span>تثبيت المنظومة بنقرة واحدة الآن</span>

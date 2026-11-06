@@ -119,9 +119,9 @@ export const UnifiedSettings: React.FC<Props> = ({
   return (
     <div className="space-y-6 max-w-7xl mx-auto pb-12" dir="rtl">
       {/* Top Header Bar matching user's design */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs">
         <div className="flex items-center gap-3">
-          <div className="p-3 rounded-2xl bg-blue-600 text-white shadow-xs">
+          <div className="p-3 rounded-lg bg-[#0D9488] text-white shadow-xs">
             <SettingsIcon className="w-6 h-6" />
           </div>
           <div>
@@ -136,7 +136,7 @@ export const UnifiedSettings: React.FC<Props> = ({
 
         <div className="flex items-center gap-3 self-end sm:self-auto">
           {isSavedRecently && (
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800 animate-fadeIn">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1.5 rounded-lg border border-emerald-200 dark:border-emerald-800 animate-fadeIn">
               <Check className="w-4 h-4" />
               تم حفظ التغييرات بنجاح
             </span>
@@ -145,7 +145,7 @@ export const UnifiedSettings: React.FC<Props> = ({
           <button
             type="button"
             onClick={handleSaveAll}
-            className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white rounded-xl text-xs font-bold shadow-xs transition-all cursor-pointer"
+            className="flex items-center gap-2 px-5 py-2.5 bg-[#0D9488] hover:bg-[#059669] active:scale-95 text-white rounded-lg text-xs font-bold shadow-xs transition-all cursor-pointer"
           >
             <Save className="w-4 h-4" />
             <span>حفظ التغييرات</span>
@@ -156,7 +156,7 @@ export const UnifiedSettings: React.FC<Props> = ({
       {/* Main Settings Layout with Sidebar & Content */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Right Settings Sub-Navigation Sidebar */}
-        <aside className="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-3 shadow-xs">
+        <aside className="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-3 shadow-xs">
           <nav className="flex lg:flex-col gap-1 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 scrollbar-none">
             {NAV_ITEMS.map((item) => {
               const Icon = item.icon;
@@ -166,9 +166,9 @@ export const UnifiedSettings: React.FC<Props> = ({
                   key={item.id}
                   type="button"
                   onClick={() => setActiveTab(item.id)}
-                  className={`flex items-center gap-3 px-3.5 py-3 rounded-2xl text-xs font-bold transition-all shrink-0 cursor-pointer text-right w-full ${
+                  className={`flex items-center gap-3 px-3.5 py-3 rounded-lg text-xs font-bold transition-all shrink-0 cursor-pointer text-right w-full ${
                     isActive
-                      ? 'bg-blue-600 text-white shadow-xs'
+                      ? 'bg-[#0D9488] text-white shadow-xs'
                       : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
@@ -181,7 +181,7 @@ export const UnifiedSettings: React.FC<Props> = ({
         </aside>
 
         {/* Content Pane */}
-        <main className="lg:col-span-9 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xs">
+        <main className="lg:col-span-9 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 sm:p-7 shadow-xs">
           {activeTab === 'company' && (
             <CompanyInfoTab
               settings={settings.company}

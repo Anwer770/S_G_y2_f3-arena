@@ -451,7 +451,7 @@ export const KnowledgeModule: React.FC<KnowledgeModuleProps> = ({
   return (
     <div className="space-y-6" dir="rtl">
       {/* 1. Header Banner & Quick Actions */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 animate-fade-in-up stagger-1">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 animate-fade-in-up stagger-1">
         <div className="flex items-center gap-3.5">
           <div className="w-11 h-11 rounded-xl bg-teal-600 dark:bg-teal-500 text-white flex items-center justify-center shadow-xs">
             <BookOpen className="w-5 h-5" />
@@ -564,7 +564,7 @@ export const KnowledgeModule: React.FC<KnowledgeModuleProps> = ({
       </div>
 
       {/* 2. Instant Quick Capture Bar */}
-      <div className="p-3.5 sm:p-4 rounded-2xl bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs border border-slate-200/80 dark:border-slate-800 shadow-xs">
+      <div className="p-3.5 sm:p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs border border-slate-200/80 dark:border-slate-800 shadow-xs">
         <form onSubmit={handleQuickCapture} className="flex items-center gap-2">
           <div className="p-2 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 shrink-0">
             <Zap className="w-5 h-5" />
@@ -759,7 +759,7 @@ export const KnowledgeModule: React.FC<KnowledgeModuleProps> = ({
 
       {/* Trash Tab View */}
       {activeSubTab === 'trash' && (
-        <div className="space-y-4 p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <div className="space-y-4 p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
           <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
             <div>
               <h3 className="text-sm font-bold text-slate-800 dark:text-white">
@@ -831,7 +831,7 @@ export const KnowledgeModule: React.FC<KnowledgeModuleProps> = ({
 
       {/* Audit Logs Tab View */}
       {activeSubTab === 'audit' && (
-        <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
+        <div className="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
             <div className="flex items-center gap-2">
               <History className="w-5 h-5 text-indigo-500" />

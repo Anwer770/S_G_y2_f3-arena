@@ -18,7 +18,7 @@ export const AboutAppTab: React.FC = () => {
       </div>
 
       {/* Main Hero Card */}
-      <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-slate-900 via-slate-800 to-indigo-950 text-white p-6 sm:p-8 shadow-xl">
+      <div className="relative overflow-hidden rounded-xl bg-linear-to-br from-slate-900 via-slate-800 to-indigo-950 text-white p-6 sm:p-8 shadow-xl">
         <div className="relative z-10 max-w-2xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 dark:bg-slate-900/10 backdrop-blur-md text-emerald-400 text-xs font-bold border border-white/10">
             <Sparkles className="w-3.5 h-3.5" />
@@ -53,7 +53,7 @@ export const AboutAppTab: React.FC = () => {
       {/* Company & Support Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* Developer Card */}
-        <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
               INJAZ
@@ -90,7 +90,7 @@ export const AboutAppTab: React.FC = () => {
         </div>
 
         {/* WhatsApp & Phone Support */}
-        <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <h4 className="text-sm font-bold text-slate-900 dark:text-white">
@@ -126,7 +126,7 @@ export const AboutAppTab: React.FC = () => {
         </div>
 
         {/* Tutorials / YouTube */}
-        <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3 md:col-span-2">
+        <div className="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3 md:col-span-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Youtube className="w-5 h-5 text-rose-600 dark:text-rose-400" />

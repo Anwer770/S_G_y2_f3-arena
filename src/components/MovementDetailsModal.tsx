@@ -70,13 +70,13 @@ export const MovementDetailsModal: React.FC<MovementDetailsModalProps> = ({
           }
         }
       `}</style>
-      <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] print:max-h-none print:h-auto voucher-print-container my-auto">
+      <div className="bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] print:max-h-none print:h-auto voucher-print-container my-auto">
         {/* Top Controls Bar */}
         <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/70 dark:bg-slate-800/60 print:hidden print-hidden">
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488] hover:bg-[#059669] text-white text-xs font-bold rounded-lg transition-colors cursor-pointer"
             >
               <Printer className="w-3.5 h-3.5" />
               <span>طباعة السند</span>

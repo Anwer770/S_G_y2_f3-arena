@@ -29,12 +29,12 @@ export const TaskFlowUserSwitchModal: React.FC<TaskFlowUserSwitchModalProps> = (
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-xs overflow-y-auto">
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-md w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-white rounded-xl border border-slate-200 shadow-2xl max-w-md w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
           <div className="flex items-center gap-3">
             <div
-              className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-sm shadow-xs"
+              className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-sm shadow-xs"
               style={{ backgroundColor: currentUser.avatarColor }}
             >
               {currentUser.name.charAt(0)}
@@ -57,7 +57,7 @@ export const TaskFlowUserSwitchModal: React.FC<TaskFlowUserSwitchModalProps> = (
         {/* Content */}
         <div className="p-6 space-y-5">
           {/* Active User Card */}
-          <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+          <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-xs text-slate-600 font-bold">المستخدم النشط حالياً:</span>
               <span
@@ -98,7 +98,7 @@ export const TaskFlowUserSwitchModal: React.FC<TaskFlowUserSwitchModalProps> = (
                       onSwitchUser(m);
                       onClose();
                     }}
-                    className={`w-full p-3 rounded-2xl flex items-center justify-between text-right transition-all ${
+                    className={`w-full p-3 rounded-xl flex items-center justify-between text-right transition-all ${
                       isSelected
                         ? 'bg-indigo-50 border-2 border-indigo-500 shadow-xs'
                         : 'bg-white hover:bg-slate-50 border border-slate-200 text-slate-700'
@@ -141,7 +141,7 @@ export const TaskFlowUserSwitchModal: React.FC<TaskFlowUserSwitchModalProps> = (
             </div>
           </div>
 
-          <div className="p-3 bg-amber-50/70 border border-amber-200 rounded-2xl text-xs text-amber-800 flex items-start gap-2">
+          <div className="p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-xs text-amber-800 flex items-start gap-2">
             <Info className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
             <span>
               تم استبعاد شاشات تسجيل الدخول وكلمات المرور لتسهيل التجربة والتعاون المباشر بنقرة واحدة.

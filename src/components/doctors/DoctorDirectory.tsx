@@ -155,7 +155,7 @@ export const DoctorDirectory: React.FC<Props> = ({
   return (
     <div className="space-y-4">
       {/* Search & Actions Bar */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-3">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-3">
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
           {/* Search Input */}
           <div className="relative flex-1">
@@ -371,7 +371,7 @@ export const DoctorDirectory: React.FC<Props> = ({
 
       {/* Batch Operations Bar */}
       {selectedIds.length > 0 && (
-        <div className="bg-teal-900 text-white p-3 rounded-2xl flex items-center justify-between flex-wrap gap-2 shadow-md animate-fade-in text-xs">
+        <div className="bg-teal-900 text-white p-3 rounded-xl flex items-center justify-between flex-wrap gap-2 shadow-md animate-fade-in text-xs">
           <div className="flex items-center gap-2 font-bold">
             <CheckSquare className="w-4 h-4 text-teal-300" />
             <span>تم تحديد {selectedIds.length} طبيب</span>
@@ -469,7 +469,7 @@ export const DoctorDirectory: React.FC<Props> = ({
                   return (
                     <div
                       key={d.id}
-                      className={`p-3.5 rounded-2xl border transition-all relative flex flex-col justify-between space-y-2.5 shadow-2xs ${
+                      className={`p-3.5 rounded-xl border transition-all relative flex flex-col justify-between space-y-2.5 shadow-2xs ${
                         isSelected
                           ? 'bg-teal-50/60 border-teal-400 ring-2 ring-teal-500/20'
                           : 'bg-white border-slate-200 hover:border-teal-400'

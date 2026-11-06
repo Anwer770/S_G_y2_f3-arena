@@ -112,7 +112,7 @@ export const SecurityPermissionsTab: React.FC<Props> = ({ rolePermissions, onCha
               key={r.id}
               type="button"
               onClick={() => setActiveRole(r.id)}
-              className={`p-4 rounded-2xl border text-right transition-all cursor-pointer relative flex flex-col justify-between gap-3 ${
+              className={`p-4 rounded-xl border text-right transition-all cursor-pointer relative flex flex-col justify-between gap-3 ${
                 isSelected
                   ? 'border-blue-500 bg-white dark:bg-slate-900 ring-2 ring-blue-500/20 shadow-xs'
                   : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40 hover:border-slate-300'
@@ -144,7 +144,7 @@ export const SecurityPermissionsTab: React.FC<Props> = ({ rolePermissions, onCha
       </div>
 
       {/* Active Role Permissions Editor */}
-      <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+      <div className="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100 dark:border-slate-800">
           <div>
             <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">

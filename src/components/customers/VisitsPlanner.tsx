@@ -92,10 +92,10 @@ export const VisitsPlanner: React.FC<Props> = ({
   return (
     <div className="space-y-4">
       {/* Today Visits Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-5 rounded-3xl border border-indigo-900/50 shadow-md">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-5 rounded-xl border border-indigo-900/50 shadow-md">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-300">
+            <div className="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-300">
               <Calendar className="w-6 h-6" />
             </div>
             <div>
@@ -113,7 +113,7 @@ export const VisitsPlanner: React.FC<Props> = ({
           </div>
 
           {/* Progress gauge */}
-          <div className="flex items-center gap-4 bg-white/5 dark:bg-slate-900/5 backdrop-blur-xs p-3 rounded-2xl border border-white/10 w-full md:w-auto justify-between">
+          <div className="flex items-center gap-4 bg-white/5 dark:bg-slate-900/5 backdrop-blur-xs p-3 rounded-xl border border-white/10 w-full md:w-auto justify-between">
             <div className="text-right">
               <div className="text-xs text-slate-300 font-bold">نسبة إنجاز زيارات اليوم</div>
               <div className="text-lg font-black font-mono text-emerald-400">
@@ -131,12 +131,12 @@ export const VisitsPlanner: React.FC<Props> = ({
       </div>
 
       {/* Route Tabs Selector */}
-      <div className="bg-white dark:bg-slate-900 p-3 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-3">
+      <div className="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-3">
         {/* Horizontal tabs */}
         <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs font-bold no-scrollbar">
           <button
             onClick={() => setSelectedRoute('الكل')}
-            className={`px-4 py-2 rounded-2xl whitespace-nowrap transition-all cursor-pointer ${
+            className={`px-4 py-2 rounded-xl whitespace-nowrap transition-all cursor-pointer ${
               selectedRoute === 'الكل'
                 ? 'bg-slate-900 text-white shadow-xs'
                 : 'bg-slate-50 text-slate-600 hover:bg-slate-100'
@@ -154,7 +154,7 @@ export const VisitsPlanner: React.FC<Props> = ({
               <button
                 key={day}
                 onClick={() => setSelectedRoute(day)}
-                className={`px-3.5 py-2 rounded-2xl whitespace-nowrap transition-all cursor-pointer flex items-center gap-1.5 ${
+                className={`px-3.5 py-2 rounded-xl whitespace-nowrap transition-all cursor-pointer flex items-center gap-1.5 ${
                   isSelected
                     ? 'bg-indigo-600 text-white shadow-xs'
                     : isTodayTab
@@ -216,7 +216,7 @@ export const VisitsPlanner: React.FC<Props> = ({
       {/* Customer Visits Grid for Selected Route */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {routeCustomers.length === 0 ? (
-          <div className="col-span-full py-16 text-center bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500">
+          <div className="col-span-full py-16 text-center bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500">
             <Calendar className="w-10 h-10 mx-auto text-slate-300 mb-2" />
             <p className="font-bold text-slate-600 dark:text-slate-300">لا يوجد عملاء مجدولون لهذا المسار حالياً</p>
           </div>
@@ -228,7 +228,7 @@ export const VisitsPlanner: React.FC<Props> = ({
             return (
               <div
                 key={c.id}
-                className={`bg-white dark:bg-slate-900 p-4 rounded-3xl border transition-all space-y-3 relative shadow-2xs ${
+                className={`bg-white dark:bg-slate-900 p-4 rounded-xl border transition-all space-y-3 relative shadow-2xs ${
                   isCompleted
                     ? 'border-emerald-200 bg-emerald-50/10'
                     : isInProgress
@@ -255,7 +255,7 @@ export const VisitsPlanner: React.FC<Props> = ({
                 </div>
 
                 {/* Region & Responsible */}
-                <div className="bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-2xl border border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+                <div className="bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
                   <div className="flex items-center gap-1 text-slate-700 dark:text-slate-200 font-medium">
                     <MapPin className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500 shrink-0" />
                     <span>{c.region}</span>

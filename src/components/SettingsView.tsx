@@ -140,23 +140,23 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
   return (
     <div className="space-y-4 pb-12">
       {/* Settings Navigation Tabs */}
-      <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xs">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <Settings className="w-5 h-5 text-blue-600" />
+            <Settings className="w-5 h-5 text-[#0D9488]" />
             <div>
-              <h2 className="text-base font-black text-slate-900">إعدادات النظام والنسخ الاحتياطي</h2>
-              <p className="text-xs text-slate-500">
+              <h2 className="text-base font-black text-slate-900 dark:text-slate-100">إعدادات النظام والنسخ الاحتياطي</h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
                 إدارة خيارات الاستيراد والتصدير، قواعد احتساب المخزون، وسجل التعديلات
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl text-xs font-bold overflow-x-auto">
+          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg text-xs font-bold overflow-x-auto">
             <button
               onClick={() => setActiveTab('backup')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
-                activeTab === 'backup' ? 'bg-white text-blue-600 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                activeTab === 'backup' ? 'bg-[#0D9488] text-white shadow-xs' : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
               }`}
             >
               <Database className="w-3.5 h-3.5" />
@@ -166,7 +166,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
             <button
               onClick={() => setActiveTab('system')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
-                activeTab === 'system' ? 'bg-white text-blue-600 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                activeTab === 'system' ? 'bg-[#0D9488] text-white shadow-xs' : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
               }`}
             >
               <Shield className="w-3.5 h-3.5" />
@@ -176,7 +176,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
             <button
               onClick={() => setActiveTab('dropdowns')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
-                activeTab === 'dropdowns' ? 'bg-white text-blue-600 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                activeTab === 'dropdowns' ? 'bg-[#0D9488] text-white shadow-xs' : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
               }`}
             >
               <Layers className="w-3.5 h-3.5" />
@@ -186,7 +186,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
             <button
               onClick={() => setActiveTab('audit')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
-                activeTab === 'audit' ? 'bg-white text-blue-600 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                activeTab === 'audit' ? 'bg-[#0D9488] text-white shadow-xs' : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
               }`}
             >
               <History className="w-3.5 h-3.5" />
@@ -202,7 +202,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
       {activeTab === 'backup' && (
         <div className="space-y-4">
           {/* Export Center */}
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
+          <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xs space-y-4">
             <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
               <Download className="w-4 h-4 text-emerald-600" />
               <span>تصدير البيانات والنسخ الاحتياطية</span>
@@ -279,7 +279,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
           </div>
 
           {/* Import Center (FR-37 to FR-41) */}
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
+          <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xs space-y-4">
             <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
               <Upload className="w-4 h-4 text-blue-600" />
               <span>استيراد الحركات من ملف خارجي (Excel / CSV)</span>
@@ -382,7 +382,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
           </div>
 
           {/* Factory Reset & Danger Zone */}
-          <div className="bg-white p-5 rounded-2xl border border-rose-200 shadow-2xs space-y-4">
+          <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-rose-200 dark:border-rose-900/60 shadow-2xs space-y-4">
             <h3 className="text-sm font-bold text-rose-900 flex items-center gap-2 border-b border-rose-100 pb-3">
               <AlertTriangle className="w-4 h-4 text-rose-600" />
               <span>إدارة بيانات الأساس ومنطقة العمليات الحساسة</span>
@@ -447,9 +447,9 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
       {/* 2. SYSTEM SETTINGS & RULES TAB (FR-50, FR-51) */}
       {/* ========================================================================= */}
       {activeTab === 'system' && (
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-5">
-          <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
-            <Shield className="w-4 h-4 text-blue-600" />
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xs space-y-5">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+            <Shield className="w-4 h-4 text-[#0D9488]" />
             <span>قواعد احتساب المخزون والتواريخ</span>
           </h3>
 
@@ -509,9 +509,9 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
       {activeTab === 'dropdowns' && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Categories Management */}
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
-            <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
-              <Layers className="w-4 h-4 text-blue-600" />
+          <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xs space-y-4">
+            <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+              <Layers className="w-4 h-4 text-[#0D9488]" />
               <span>فئات الحركات ({categories.length})</span>
             </h3>
 
@@ -521,11 +521,11 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
                 value={newCat}
                 onChange={(e) => setNewCat(e.target.value)}
                 placeholder="إضافة فئة جديدة..."
-                className="flex-1 p-2 bg-slate-50 border border-slate-300 rounded-xl text-xs"
+                className="flex-1 p-2 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-xs"
               />
               <button
                 onClick={handleAddCategory}
-                className="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs cursor-pointer"
+                className="px-3 py-2 bg-[#0D9488] hover:bg-[#059669] text-white font-bold rounded-lg text-xs cursor-pointer transition-colors"
               >
                 إضافة
               </button>
@@ -535,7 +535,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
               {categories.map((c) => (
                 <span
                   key={c}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100 text-slate-800 rounded-lg text-xs font-semibold"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-lg text-xs font-semibold"
                 >
                   <span>{c}</span>
                   <button
@@ -550,9 +550,9 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
           </div>
 
           {/* Statuses Management */}
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
-            <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
-              <CheckCircle className="w-4 h-4 text-emerald-600" />
+          <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xs space-y-4">
+            <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+              <CheckCircle className="w-4 h-4 text-[#0D9488]" />
               <span>حالات الحركات ({statuses.length})</span>
             </h3>
 
@@ -562,11 +562,11 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
                 value={newStatus}
                 onChange={(e) => setNewStatus(e.target.value)}
                 placeholder="إضافة حالة جديدة..."
-                className="flex-1 p-2 bg-slate-50 border border-slate-300 rounded-xl text-xs"
+                className="flex-1 p-2 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-xs"
               />
               <button
                 onClick={handleAddStatus}
-                className="px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs cursor-pointer"
+                className="px-3 py-2 bg-[#0D9488] hover:bg-[#059669] text-white font-bold rounded-lg text-xs cursor-pointer transition-colors"
               >
                 إضافة
               </button>
@@ -576,7 +576,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
               {statuses.map((s) => (
                 <span
                   key={s}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100 text-slate-800 rounded-lg text-xs font-semibold"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-lg text-xs font-semibold"
                 >
                   <span>{s}</span>
                   <button
@@ -596,10 +596,10 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
       {/* 4. AUDIT LOGS TAB (FR-33) */}
       {/* ========================================================================= */}
       {activeTab === 'audit' && (
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
-            <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <History className="w-4 h-4 text-indigo-600" />
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xs space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-3">
+            <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+              <History className="w-4 h-4 text-[#0D9488]" />
               <span>سجل التعديلات والعمليات الأخيرة</span>
             </h3>
 

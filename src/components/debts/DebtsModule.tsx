@@ -322,7 +322,7 @@ export const DebtsModule: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto space-y-6" dir="rtl">
       {/* Top Header */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-wrap items-center justify-between gap-4 animate-fade-in-up stagger-1">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-wrap items-center justify-between gap-4 animate-fade-in-up stagger-1">
         <div className="flex items-center gap-3.5">
           <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-teal-600 to-teal-500 text-white flex items-center justify-center shadow-xs">
             <DollarSign className="w-5 h-5" />
@@ -388,7 +388,7 @@ export const DebtsModule: React.FC = () => {
       {/* KPI Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-fade-in-up stagger-2">
         {/* 1. Anwar Debts Balance */}
-        <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 mb-2">
             <span className="text-xs font-bold">صافي دين أنور (YER)</span>
             <div className="w-8 h-8 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center border border-amber-200/40 dark:border-amber-800/40">
@@ -408,7 +408,7 @@ export const DebtsModule: React.FC = () => {
         </div>
 
         {/* 2. Total Commitments */}
-        <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 mb-2">
             <span className="text-xs font-bold">إجمالي الالتزامات المالية</span>
             <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center border border-teal-200/40 dark:border-teal-800/40">
@@ -426,7 +426,7 @@ export const DebtsModule: React.FC = () => {
         </div>
 
         {/* 3. Paid vs Remaining */}
-        <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 mb-2">
             <span className="text-xs font-bold">المتبقي للسداد vs المدفوع</span>
             <div className="w-8 h-8 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center border border-rose-200/40 dark:border-rose-800/40">
@@ -444,7 +444,7 @@ export const DebtsModule: React.FC = () => {
         </div>
 
         {/* 4. Alerts Counter */}
-        <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 mb-2">
             <span className="text-xs font-bold">تنبيهات الاستحقاق</span>
             <div className="w-8 h-8 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center border border-amber-200/40 dark:border-amber-800/40">

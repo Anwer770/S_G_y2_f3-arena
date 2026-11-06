@@ -167,11 +167,11 @@ export const UniversalDataExchangeModal: React.FC<UniversalDataExchangeModalProp
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-xs overflow-y-auto" dir="rtl">
-      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl max-w-xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 my-8 text-right">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xl max-w-xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 my-8 text-right">
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/70 dark:bg-slate-800/60">
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-2xl ${colorStyles.bgIcon} flex items-center justify-center shadow-xs`}>
+            <div className={`w-10 h-10 rounded-xl ${colorStyles.bgIcon} flex items-center justify-center shadow-xs`}>
               <Icon className="w-5 h-5" />
             </div>
             <div>
@@ -245,7 +245,7 @@ export const UniversalDataExchangeModal: React.FC<UniversalDataExchangeModalProp
                 e.stopPropagation();
               }}
               onDrop={handleDrop}
-              className={`border-2 border-dashed rounded-2xl p-5 text-center transition-colors ${colorStyles.borderDashed}`}
+              className={`border-2 border-dashed rounded-xl p-5 text-center transition-colors ${colorStyles.borderDashed}`}
             >
               {isLoading ? (
                 <div className="py-4 flex flex-col items-center justify-center gap-2">
@@ -288,7 +288,7 @@ export const UniversalDataExchangeModal: React.FC<UniversalDataExchangeModalProp
 
           {/* 2. Sample Data Generator (Optional) */}
           {onGenerateSampleData && (
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-between gap-3">
+            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center justify-between gap-3">
               <div>
                 <h4 className="text-xs font-black text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
                   <Sparkles className={`w-4 h-4 ${colorStyles.textAccent}`} />
@@ -320,7 +320,7 @@ export const UniversalDataExchangeModal: React.FC<UniversalDataExchangeModalProp
               <button
                 type="button"
                 onClick={onExportExcel}
-                className="p-3 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-emerald-300 hover:bg-emerald-50/40 dark:hover:bg-emerald-950/40 text-right transition-all flex items-center gap-3 cursor-pointer"
+                className="p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-emerald-300 hover:bg-emerald-50/40 dark:hover:bg-emerald-950/40 text-right transition-all flex items-center gap-3 cursor-pointer"
               >
                 <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
                   <FileSpreadsheet className="w-4 h-4" />
@@ -335,7 +335,7 @@ export const UniversalDataExchangeModal: React.FC<UniversalDataExchangeModalProp
                 <button
                   type="button"
                   onClick={onExportJSON}
-                  className={`p-3 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-indigo-300 hover:bg-indigo-50/40 dark:hover:bg-indigo-950/40 text-right transition-all flex items-center gap-3 cursor-pointer`}
+                  className={`p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-300 hover:bg-indigo-50/40 dark:hover:bg-indigo-950/40 text-right transition-all flex items-center gap-3 cursor-pointer`}
                 >
                   <div className="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 flex items-center justify-center shrink-0">
                     <Download className="w-4 h-4" />

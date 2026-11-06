@@ -133,7 +133,7 @@ export const WorkOSProjectsTab: React.FC<WorkOSProjectsTabProps> = ({
     return (
       <div className="space-y-4" dir="rtl">
         {/* Breadcrumb & Navigation Bar */}
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <button
               onClick={() => setSelectedProject(null)}
@@ -171,7 +171,7 @@ export const WorkOSProjectsTab: React.FC<WorkOSProjectsTabProps> = ({
         </div>
 
         {/* 7 Detailed Tabs */}
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden">
           <div className="flex items-center gap-1 border-b border-slate-200 dark:border-slate-700 px-4 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-bold overflow-x-auto no-scrollbar">
             <button
               onClick={() => setProjectDetailTab('overview')}
@@ -289,7 +289,7 @@ export const WorkOSProjectsTab: React.FC<WorkOSProjectsTabProps> = ({
 
                 {/* Details Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 bg-slate-50/50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3">
+                  <div className="p-4 bg-slate-50/50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-3">
                     <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100">المعلومات الإدارية:</h4>
                     <div className="space-y-2 text-xs">
                       <div className="flex justify-between py-1 border-b border-slate-200/60 dark:border-slate-700/60">
@@ -311,7 +311,7 @@ export const WorkOSProjectsTab: React.FC<WorkOSProjectsTabProps> = ({
                     </div>
                   </div>
 
-                  <div className="p-4 bg-slate-50/50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3">
+                  <div className="p-4 bg-slate-50/50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-3">
                     <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100">الوصف وأهداف المبادرة:</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
                       {selectedProject.description || 'لا يوجد وصف مدخل لهذا المشروع حتى الآن.'}
@@ -431,7 +431,7 @@ export const WorkOSProjectsTab: React.FC<WorkOSProjectsTabProps> = ({
 
             {/* 6. ATTACHMENTS */}
             {projectDetailTab === 'attachments' && (
-              <div className="p-8 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-2xl text-center text-xs text-slate-400 dark:text-slate-500">
+              <div className="p-8 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl text-center text-xs text-slate-400 dark:text-slate-500">
                 <Paperclip className="w-8 h-8 text-slate-300 mx-auto mb-2" />
                 <p className="font-bold text-slate-700 dark:text-slate-200">لا توجد مستندات مرفقة للمشروع حالياً</p>
                 <p className="text-xs mt-1">يمكن رفع كراسة الشروط، العقود، والتقارير الفنية</p>
@@ -457,7 +457,7 @@ export const WorkOSProjectsTab: React.FC<WorkOSProjectsTabProps> = ({
   return (
     <div className="space-y-4" dir="rtl">
       {/* Switcher & Sub-header */}
-      <div className="flex items-center justify-between bg-white dark:bg-slate-900 px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+      <div className="flex items-center justify-between bg-white dark:bg-slate-900 px-4 py-2.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
         <div className="flex items-center gap-2">
           <FolderKanban className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
           <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
@@ -497,7 +497,7 @@ export const WorkOSProjectsTab: React.FC<WorkOSProjectsTabProps> = ({
             return (
               <div
                 key={project.id}
-                className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs hover:shadow-md hover:border-indigo-300 transition-all p-5 flex flex-col justify-between space-y-4"
+                className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs hover:shadow-md hover:border-indigo-300 transition-all p-5 flex flex-col justify-between space-y-4"
               >
                 {/* Header of card */}
                 <div className="space-y-2">
@@ -581,7 +581,7 @@ export const WorkOSProjectsTab: React.FC<WorkOSProjectsTabProps> = ({
 
       {/* TABLE VIEW */}
       {viewMode === 'table' && (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-x-auto">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-x-auto">
           <table className="w-full text-right text-xs min-w-[960px] print:min-w-0">
             <thead className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200/80 dark:border-slate-700/80 text-slate-600 dark:text-slate-300 font-bold">
               <tr>

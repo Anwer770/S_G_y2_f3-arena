@@ -148,7 +148,7 @@ export const WorkOSKPICards: React.FC<WorkOSKPICardsProps> = ({
             <button
               key={card.id}
               onClick={() => handleClick(card.id)}
-              className={`p-2.5 rounded-2xl border transition-all text-right cursor-pointer group select-none ${
+              className={`p-2.5 rounded-xl border transition-all text-right cursor-pointer group select-none ${
                 isActive
                   ? `${card.activeColor} shadow-xs`
                   : card.cardBg

@@ -92,10 +92,10 @@ export const DueAlertsPanel: React.FC<DueAlertsPanelProps> = ({
   return (
     <div className="space-y-6">
       {/* Alert Center Top Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-6 rounded-3xl shadow-md border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-6 rounded-xl shadow-md border border-slate-800 flex flex-wrap items-center justify-between gap-4">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-400">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-400">
               <BellRing className="w-5 h-5" />
             </div>
             <div>
@@ -111,7 +111,7 @@ export const DueAlertsPanel: React.FC<DueAlertsPanelProps> = ({
         <div className="flex items-center gap-3">
           <button
             onClick={handleEnableNotifications}
-            className="flex items-center gap-2 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-2xl transition-all shadow-sm cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-xl transition-all shadow-sm cursor-pointer"
           >
             <Bell className="w-4 h-4" />
             <span>
@@ -124,7 +124,7 @@ export const DueAlertsPanel: React.FC<DueAlertsPanelProps> = ({
       </div>
 
       {testSent && (
-        <div className="p-3 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-bold rounded-2xl border border-emerald-300 flex items-center gap-2">
+        <div className="p-3 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-bold rounded-xl border border-emerald-300 flex items-center gap-2">
           <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
           <span>تم إرسال إشعار تنبيه تجريبي عبر المتصفح بنجاح!</span>
         </div>
@@ -133,7 +133,7 @@ export const DueAlertsPanel: React.FC<DueAlertsPanelProps> = ({
       {/* 2 Main Columns: Overdue vs Due Soon */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* 1. Overdue Commitments */}
-        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-rose-200 dark:border-rose-800 shadow-xs overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-rose-200 dark:border-rose-800 shadow-xs overflow-hidden">
           <div className="bg-rose-50 dark:bg-rose-950/40 px-6 py-4 border-b border-rose-100 dark:border-rose-900 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-xl bg-rose-500 text-white flex items-center justify-center">
@@ -236,7 +236,7 @@ export const DueAlertsPanel: React.FC<DueAlertsPanelProps> = ({
         </div>
 
         {/* 2. Due Soon (Within 30 Days) */}
-        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-amber-200 dark:border-amber-800 shadow-xs overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-amber-200 dark:border-amber-800 shadow-xs overflow-hidden">
           <div className="bg-amber-50 dark:bg-amber-950/40 px-6 py-4 border-b border-amber-100 dark:border-amber-900 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center">

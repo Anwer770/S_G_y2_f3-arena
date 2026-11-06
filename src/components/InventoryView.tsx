@@ -200,19 +200,19 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
     <div className="space-y-4 pb-12">
       {/* 1. Inventory Summary Top Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
           <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold block mb-1">إجمالي الأصناف</span>
           <div className="text-xl font-black text-slate-900 dark:text-slate-100 font-mono">{stats.totalItems} صنف</div>
           <span className="text-xs text-slate-400 dark:text-slate-500">مسجلة في قاعدة البيانات</span>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
           <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold block mb-1">الأصناف النشطة</span>
-          <div className="text-xl font-black text-emerald-700 dark:text-emerald-300 font-mono">{stats.activeItems} نشط</div>
+          <div className="text-xl font-black text-[#0D9488] dark:text-emerald-400 font-mono">{stats.activeItems} نشط</div>
           <span className="text-xs text-emerald-600 dark:text-emerald-400">متاحة في حركات التوريد والصرف</span>
         </div>
 
-        <div className={`p-4 rounded-2xl border shadow-2xs ${
+        <div className={`p-4 rounded-xl border shadow-2xs ${
           stats.negativeItems > 0 ? 'bg-amber-50/70 border-amber-200' : 'bg-white border-slate-200'
         }`}>
           <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold block mb-1">أصناف برصيد سالب</span>
@@ -222,9 +222,9 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           <span className="text-xs text-slate-400 dark:text-slate-500">تجاوز الصرف كميات التوريد</span>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
           <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold block mb-1">صافي الرصيد المخزني</span>
-          <div className="text-xl font-black text-blue-900 font-mono">
+          <div className="text-xl font-black text-[#3B82F6] dark:text-blue-400 font-mono">
             {formatNumberLatin(stats.totalStockUnits)}
           </div>
           <span className="text-xs text-blue-600 dark:text-blue-400">إجمالي الوحدات المتوفرة</span>
@@ -232,11 +232,11 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
       </div>
 
       {/* 2. Search & Controls Bar */}
-      <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+      <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h2 className="text-base sm:text-lg font-black text-slate-900 dark:text-slate-100 flex items-center gap-2">
-              <Boxes className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <Boxes className="w-5 h-5 text-[#0D9488]" />
               <span>إدارة الأصناف والمخزون الحي</span>
             </h2>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
@@ -246,7 +246,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
           <button
             onClick={openAddModal}
-            className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl shadow-xs transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-4 py-2 bg-[#0D9488] hover:bg-[#059669] text-white text-xs font-bold rounded-lg shadow-xs transition-colors cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>إضافة صنف جديد</span>
@@ -468,7 +468,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
       {/* 4. Add / Edit Product Modal (FR-06, FR-07, FR-09) */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 max-w-md w-full shadow-2xl border border-slate-200 dark:border-slate-700 space-y-4">
+          <div className="bg-white dark:bg-slate-900 rounded-xl p-6 max-w-md w-full shadow-2xl border border-slate-200 dark:border-slate-700 space-y-4">
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
               <h3 className="text-base font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
                 <Boxes className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -568,7 +568,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-xs cursor-pointer"
+                  className="px-5 py-2 bg-[#0D9488] hover:bg-[#059669] text-white font-bold rounded-lg shadow-xs cursor-pointer transition-colors"
                 >
                   {editingProduct ? 'حفظ التعديلات' : 'إضافة الصنف'}
                 </button>

@@ -117,16 +117,16 @@ export const LoginScreen: React.FC = () => {
       className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-slate-100 flex items-center justify-center p-4 sm:p-6 select-none font-sans"
       dir="rtl"
     >
-      <div className="w-full max-w-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-200/20 dark:border-slate-800 overflow-hidden text-slate-900 dark:text-slate-100 transition-all">
+      <div className="w-full max-w-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-slate-200/20 dark:border-slate-800 overflow-hidden text-slate-900 dark:text-slate-100 transition-all">
         {/* Brand Banner */}
-        <div className="bg-gradient-to-r from-teal-800 via-[#0d6854] to-teal-900 p-6 sm:p-8 text-white relative overflow-hidden">
-          <div className="absolute -left-12 -top-12 w-48 h-48 bg-teal-500/10 rounded-full blur-2xl pointer-events-none" />
+        <div className="bg-[#0F3935] p-6 sm:p-8 text-white relative overflow-hidden border-b border-[#134E48]">
+          <div className="absolute -left-12 -top-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
           <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-teal-400/10 rounded-full blur-xl pointer-events-none" />
 
           <div className="flex items-center justify-between relative z-10 flex-wrap gap-4">
             <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-2xl bg-white/10 dark:bg-slate-900/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-lg">
-                <Building2 className="w-6 h-6 text-teal-300" />
+              <div className="w-12 h-12 rounded-xl bg-white/10 dark:bg-slate-900/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-lg">
+                <Building2 className="w-6 h-6 text-emerald-300" />
               </div>
               <div>
                 <h1 className="text-xl sm:text-2xl font-black tracking-tight">
@@ -159,7 +159,7 @@ export const LoginScreen: React.FC = () => {
           </div>
 
           {errorMessage && (
-            <div className="p-3.5 bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900/60 rounded-2xl flex items-center gap-2.5 text-rose-700 dark:text-rose-300 text-xs font-bold animate-shake">
+            <div className="p-3.5 bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900/60 rounded-xl flex items-center gap-2.5 text-rose-700 dark:text-rose-300 text-xs font-bold animate-shake">
               <AlertCircle className="w-4 h-4 shrink-0" />
               <span>{errorMessage}</span>
             </div>
@@ -184,7 +184,7 @@ export const LoginScreen: React.FC = () => {
                       setSelectedUser(user);
                       setErrorMessage(null);
                     }}
-                    className={`p-3 rounded-2xl border transition-all cursor-pointer relative text-right flex flex-col justify-between ${
+                    className={`p-3 rounded-xl border transition-all cursor-pointer relative text-right flex flex-col justify-between ${
                       isSelected
                         ? 'border-teal-600 bg-teal-50/50 dark:bg-teal-950/30 ring-2 ring-teal-500/20 shadow-sm'
                         : 'border-slate-200 dark:border-slate-800 hover:border-teal-300 dark:hover:border-slate-700 bg-white dark:bg-slate-850'
@@ -292,7 +292,7 @@ export const LoginScreen: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-3 px-4 bg-gradient-to-r from-teal-700 to-[#0d6854] hover:from-teal-800 hover:to-teal-900 text-white font-bold text-sm rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+              className="w-full py-3 px-4 bg-[#0D9488] hover:bg-[#059669] text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
             >
               {isSubmitting ? (
                 <>
@@ -309,7 +309,7 @@ export const LoginScreen: React.FC = () => {
           </form>
 
           {/* Role Access Matrix Quick Guide */}
-          <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-400">
             <div className="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
               <HelpCircle className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
               <span>مستويات الوصول والصلاحيات المعمول بها:</span>

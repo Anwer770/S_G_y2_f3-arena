@@ -393,7 +393,7 @@ export const WorkOSTasksView: React.FC<WorkOSTasksViewProps> = ({
       {/* ============================================================= */}
       {/* 1. TOP HEADER & METRIC SUMMARY RIBBON                         */}
       {/* ============================================================= */}
-      <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs p-4 sm:p-5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div className="bg-white rounded-xl border border-slate-200/80 shadow-2xs p-4 sm:p-5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div className="flex items-center gap-3.5">
           <div className="w-11 h-11 rounded-xl bg-teal-600 text-white flex items-center justify-center shadow-xs">
             <CheckSquare className="w-6 h-6" />
@@ -1166,7 +1166,7 @@ export const WorkOSTasksView: React.FC<WorkOSTasksViewProps> = ({
 
       {/* 5.7 AUDIT LOG VIEW */}
       {viewMode === 'audit' && (
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
+        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-2xs space-y-4">
           <div className="flex items-center justify-between pb-4 border-b border-slate-200">
             <div>
               <h3 className="font-bold text-base text-slate-900">

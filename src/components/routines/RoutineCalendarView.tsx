@@ -72,7 +72,7 @@ export const RoutineCalendarView: React.FC<RoutineCalendarViewProps> = ({
   return (
     <div id="routine-calendar-view" className="space-y-4">
       {/* Calendar Header */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
             <CalendarIcon size={20} />
@@ -110,7 +110,7 @@ export const RoutineCalendarView: React.FC<RoutineCalendarViewProps> = ({
       </div>
 
       {/* Calendar Grid */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
         {/* Days of week header */}
         <div className="grid grid-cols-7 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60 text-center py-2.5 text-xs font-bold text-slate-600 dark:text-slate-300">
           <div>السبت</div>

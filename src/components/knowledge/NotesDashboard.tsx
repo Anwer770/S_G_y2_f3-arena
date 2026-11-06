@@ -59,7 +59,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
       {/* Top Executive KPI Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
         {/* Total Active Notes */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
+        <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">إجمالي الملاحظات</span>
             <div className="p-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
@@ -73,7 +73,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
         </div>
 
         {/* Pinned Notes */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
+        <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">المثبتة بالأعلى</span>
             <div className="p-2 rounded-xl bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400">
@@ -87,7 +87,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
         </div>
 
         {/* Favorites */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
+        <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">المفضلة</span>
             <div className="p-2 rounded-xl bg-yellow-50 dark:bg-yellow-950/50 text-yellow-600 dark:text-yellow-400">
@@ -101,7 +101,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
         </div>
 
         {/* Embedded Tasks */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
+        <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">المهام المضمنة</span>
             <div className="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400">
@@ -122,7 +122,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
         {/* Overdue Reviews */}
         <div
           onClick={onOpenOverdueReviews}
-          className={`p-4 rounded-2xl border shadow-xs flex flex-col justify-between cursor-pointer transition-colors ${
+          className={`p-4 rounded-xl border shadow-xs flex flex-col justify-between cursor-pointer transition-colors ${
             stats.needsReview > 0
               ? 'bg-rose-50/60 dark:bg-rose-950/30 border-rose-200 dark:border-rose-900/60 hover:bg-rose-100/60'
               : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800'
@@ -143,7 +143,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
         </div>
 
         {/* Locked / Security */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
+        <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">المحمية برمز PIN</span>
             <div className="p-2 rounded-xl bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400">
@@ -159,7 +159,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
 
       {/* Overdue Review Alert Banner if any */}
       {overdueNotes.length > 0 && (
-        <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-xl bg-amber-500 text-white shrink-0">
               <AlertTriangle className="w-5 h-5" />
@@ -186,7 +186,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
       {/* Folders & Categories Section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Folders Overview (Col 1) */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Folder className="w-4 h-4 text-indigo-500" />
@@ -226,7 +226,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
         </div>
 
         {/* Categories & Note Types Breakdown (Col 2) */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Layers className="w-4 h-4 text-purple-500" />
@@ -276,7 +276,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
         </div>
 
         {/* Pinned & High Priority Notes (Col 3) */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Pin className="w-4 h-4 text-amber-500" />
@@ -315,7 +315,7 @@ export const NotesDashboard: React.FC<NotesDashboardProps> = ({
       </div>
 
       {/* Recent Notes Stream */}
-      <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+      <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-indigo-500" />

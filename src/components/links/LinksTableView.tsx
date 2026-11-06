@@ -76,7 +76,7 @@ export const LinksTableView: React.FC<LinksTableViewProps> = ({
 
   if (links.length === 0) {
     return (
-      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 p-12 text-center my-6">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 p-12 text-center my-6">
         <SearchX className="w-12 h-12 text-slate-300 mx-auto mb-3" />
         <p className="text-sm font-bold text-slate-700 dark:text-slate-200">لا توجد روابط لعرضها في الجدول</p>
       </div>
@@ -84,7 +84,7 @@ export const LinksTableView: React.FC<LinksTableViewProps> = ({
   }
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-700/90 overflow-hidden shadow-xs">
+    <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/90 dark:border-slate-700/90 overflow-hidden shadow-xs">
       <div className="overflow-x-auto">
         <table className="w-full text-right border-collapse text-xs min-w-[820px] print:min-w-0">
           <thead>

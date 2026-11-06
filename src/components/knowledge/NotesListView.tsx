@@ -184,7 +184,7 @@ export const NotesListView: React.FC<NotesListViewProps> = ({
   return (
     <div className="space-y-4 animate-in fade-in duration-300" dir="rtl">
       {/* Top Search & Filter Controls Bar */}
-      <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+      <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
           {/* Search Input with quick clear */}
           <div className="relative flex-1">
@@ -513,7 +513,7 @@ export const NotesListView: React.FC<NotesListViewProps> = ({
       {viewMode === 'grid' && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredNotes.length === 0 ? (
-            <div className="col-span-full py-16 text-center text-slate-400 dark:text-slate-500 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+            <div className="col-span-full py-16 text-center text-slate-400 dark:text-slate-500 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
               <p className="text-sm font-semibold">لم يتم العثور على أي ملاحظات مطابقة لمعايير البحث والتصفية.</p>
               <button
                 onClick={onOpenNewNote}
@@ -527,7 +527,7 @@ export const NotesListView: React.FC<NotesListViewProps> = ({
               <div
                 key={note.id}
                 onClick={() => onSelectNote(note)}
-                className={`p-4 rounded-2xl bg-white dark:bg-slate-900 border transition-all cursor-pointer flex flex-col justify-between space-y-3 group shadow-2xs hover:shadow-md ${
+                className={`p-4 rounded-xl bg-white dark:bg-slate-900 border transition-all cursor-pointer flex flex-col justify-between space-y-3 group shadow-2xs hover:shadow-md ${
                   note.isPinned
                     ? 'border-amber-300 dark:border-amber-800/80 bg-amber-50/20 dark:bg-amber-950/10'
                     : 'border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700'
@@ -616,7 +616,7 @@ export const NotesListView: React.FC<NotesListViewProps> = ({
 
       {/* 2. LIST VIEW (Detailed Table) */}
       {viewMode === 'list' && (
-        <div className="overflow-x-auto bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="overflow-x-auto bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xs">
           <table className="w-full text-right text-xs min-w-[820px] print:min-w-0">
             <thead className="bg-slate-50 dark:bg-slate-800/60 text-slate-600 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
               <tr>
@@ -741,7 +741,7 @@ export const NotesListView: React.FC<NotesListViewProps> = ({
             return (
               <div
                 key={colStatus}
-                className="p-3.5 rounded-2xl bg-slate-100/70 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/80 space-y-3 flex flex-col max-h-[75vh]"
+                className="p-3.5 rounded-xl bg-slate-100/70 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/80 space-y-3 flex flex-col max-h-[75vh]"
               >
                 <div className="flex items-center justify-between px-1">
                   <span className="text-xs font-bold text-slate-700 dark:text-slate-200">
@@ -793,7 +793,7 @@ export const NotesListView: React.FC<NotesListViewProps> = ({
 
       {/* 4. TIMELINE VIEW */}
       {viewMode === 'timeline' && (
-        <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-6">
+        <div className="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 space-y-6">
           <div className="relative border-r-2 border-indigo-200 dark:border-indigo-900 mr-4 space-y-6">
             {filteredNotes.map((note, index) => (
               <div key={note.id} className="relative pr-6 group">
@@ -832,7 +832,7 @@ export const NotesListView: React.FC<NotesListViewProps> = ({
             return (
               <div
                 key={folder.id}
-                className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3"
+                className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3"
               >
                 <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
                   <div className="flex items-center gap-2">

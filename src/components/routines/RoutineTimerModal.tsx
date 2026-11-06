@@ -222,7 +222,7 @@ export const RoutineTimerModal: React.FC<RoutineTimerModalProps> = ({
       className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm p-4 overflow-y-auto"
       dir="rtl"
     >
-      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
         <div className="bg-gradient-to-r from-emerald-600 to-teal-700 p-5 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -410,7 +410,7 @@ export const RoutineTimerModal: React.FC<RoutineTimerModalProps> = ({
           /* Post-Execution Rating Screen */
           <div className="p-6 space-y-5 animate-in fade-in duration-200">
             <div className="text-center space-y-2">
-              <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 rounded-2xl mx-auto flex items-center justify-center text-3xl shadow-inner">
+              <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 rounded-xl mx-auto flex items-center justify-center text-3xl shadow-inner">
                 <Award size={36} />
               </div>
               <h3 className="text-xl font-bold text-slate-800 dark:text-white">

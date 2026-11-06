@@ -74,7 +74,7 @@ export const BalancesLedger: React.FC<Props> = ({
       {/* KPI Cards Ribbon */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {/* Total YER Debt */}
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-rose-200/80 dark:border-rose-800/80 shadow-2xs space-y-1">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-rose-200/80 dark:border-rose-800/80 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-bold">
             <span className="flex items-center gap-1 text-rose-600 dark:text-rose-400">
               <AlertTriangle className="w-3.5 h-3.5" />
@@ -91,7 +91,7 @@ export const BalancesLedger: React.FC<Props> = ({
         </div>
 
         {/* Total Balance SAR */}
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-1">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-bold">
             <span>الرصيد التراكمي (سعودي)</span>
             <span className="text-xs font-mono">SAR</span>
@@ -103,7 +103,7 @@ export const BalancesLedger: React.FC<Props> = ({
         </div>
 
         {/* Total Balance USD */}
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-1">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-bold">
             <span>الرصيد التراكمي (دولار)</span>
             <span className="text-xs font-mono">USD</span>
@@ -115,7 +115,7 @@ export const BalancesLedger: React.FC<Props> = ({
         </div>
 
         {/* Internal Accounts */}
-        <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-purple-200/80 dark:border-purple-800/80 shadow-2xs space-y-1">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-purple-200/80 dark:border-purple-800/80 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-bold">
             <span className="text-purple-700 font-bold">الحسابات الخاصة والعهدة</span>
             <span className="text-xs bg-purple-50 dark:bg-purple-950/40 text-purple-700 px-2 py-0.5 rounded-full font-bold">
@@ -131,10 +131,10 @@ export const BalancesLedger: React.FC<Props> = ({
       </div>
 
       {/* Tabs & Filters */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-3">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-3">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           {/* Sub tabs */}
-          <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-2xl border border-slate-200 dark:border-slate-700 w-full sm:w-auto text-xs font-bold">
+          <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700 w-full sm:w-auto text-xs font-bold">
             <button
               onClick={() => setActiveTab('debtors')}
               className={`px-4 py-2 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 ${
@@ -221,7 +221,7 @@ export const BalancesLedger: React.FC<Props> = ({
             return (
               <div
                 key={sourceName}
-                className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4"
+                className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs space-y-4"
               >
                 <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
                   <h4 className="font-black text-slate-900 dark:text-slate-100 text-base">{sourceName}</h4>
@@ -265,7 +265,7 @@ export const BalancesLedger: React.FC<Props> = ({
         </div>
       ) : (
         /* Table of Balances */
-        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-right border-collapse text-xs min-w-[960px] print:min-w-0">
               <thead className="bg-slate-50 dark:bg-slate-800/60 text-slate-700 dark:text-slate-200 font-bold border-b border-slate-200 dark:border-slate-700">

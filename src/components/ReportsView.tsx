@@ -224,10 +224,10 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
   return (
     <div className="space-y-4 pb-12">
       {/* Top Report Type Tabs */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <PieChart className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <PieChart className="w-5 h-5 text-[#0D9488]" />
             <div>
               <h2 className="text-base font-black text-slate-900 dark:text-slate-100">التقارير والكشوفات التفصيلية</h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -236,11 +236,11 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-bold">
+          <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg text-xs font-bold">
             <button
               onClick={() => setReportType('beneficiary')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
-                reportType === 'beneficiary' ? 'bg-white text-blue-600 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                reportType === 'beneficiary' ? 'bg-[#0D9488] text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 dark:text-slate-300'
               }`}
             >
               <User className="w-3.5 h-3.5" />
@@ -250,7 +250,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
             <button
               onClick={() => setReportType('product')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
-                reportType === 'product' ? 'bg-white text-blue-600 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                reportType === 'product' ? 'bg-[#0D9488] text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 dark:text-slate-300'
               }`}
             >
               <Package className="w-3.5 h-3.5" />
@@ -260,7 +260,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
             <button
               onClick={() => setReportType('period')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
-                reportType === 'period' ? 'bg-white text-blue-600 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                reportType === 'period' ? 'bg-[#0D9488] text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 dark:text-slate-300'
               }`}
             >
               <Calendar className="w-3.5 h-3.5" />
@@ -276,7 +276,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
       {reportType === 'beneficiary' && (
         <div className="space-y-4">
           {/* Filter Bar */}
-          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <span className="text-xs font-bold text-slate-700 dark:text-slate-200">تحديد المستفيد والفترة الزمنية:</span>
               <div className="flex items-center gap-2">
@@ -387,9 +387,9 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
           </div>
 
           {/* Products Breakdown Table (FR-27) */}
-          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
             <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-              <Boxes className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <Boxes className="w-4 h-4 text-[#0D9488]" />
               <span>تفصيل الأصناف المسلمة / المستلمة من {activeBeneficiary}</span>
             </h3>
 
@@ -432,7 +432,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
           </div>
 
           {/* Chronological Movements Table */}
-          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
             <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
               <span>كشف الحركات التفصيلي</span>
@@ -493,7 +493,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
       {/* ========================================================================= */}
       {reportType === 'product' && (
         <div className="space-y-4">
-          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <span className="text-xs font-bold text-slate-700 dark:text-slate-200">تحديد الصنف والفترة:</span>
               <div className="flex items-center gap-2">
@@ -583,7 +583,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
           </div>
 
           {/* Running Balance Statement Table */}
-          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
             <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
               <span>بطاقة حركة الصنف التفصيلية (كشف تراكمي)</span>
@@ -669,7 +669,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
             </div>
           )}
 
-          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
+          <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-3">
             <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <Calendar className="w-4 h-4 text-blue-600 dark:text-blue-400" />
               <span>التوزيع الشهري لحركات وكميات التوريد والصرف</span>

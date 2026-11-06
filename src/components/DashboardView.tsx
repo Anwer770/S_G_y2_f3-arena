@@ -80,7 +80,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* 1. Stat Summary Cards (FR-01) */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
         {/* Total In */}
-        <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-2">
+        <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-2">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
             <span className="text-xs font-semibold">إجمالي التوريد (IN)</span>
             <div className="w-8 h-8 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
@@ -96,7 +96,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* Total Out */}
-        <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-2">
+        <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-2">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
             <span className="text-xs font-semibold">إجمالي الصرف (OUT)</span>
             <div className="w-8 h-8 rounded-xl bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 flex items-center justify-center">
@@ -112,7 +112,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* Net Total Stock */}
-        <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-2">
+        <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-2">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
             <span className="text-xs font-semibold">صافي المخزون الكلي</span>
             <div className="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 flex items-center justify-center">
@@ -126,7 +126,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* Total Records */}
-        <div className="bg-white dark:bg-slate-900 p-4.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-2">
+        <div className="bg-white dark:bg-slate-900 p-4.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-2">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
             <span className="text-xs font-semibold">عدد الحركات</span>
             <div className="w-8 h-8 rounded-xl bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 flex items-center justify-center">
@@ -140,7 +140,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* Negative Stock Alert */}
-        <div className={`p-4.5 rounded-2xl border shadow-2xs space-y-2 col-span-2 sm:col-span-1 ${
+        <div className={`p-4.5 rounded-xl border shadow-2xs space-y-2 col-span-2 sm:col-span-1 ${
           negativeCount > 0
             ? 'bg-amber-50/70 border-amber-200 text-amber-950'
             : 'bg-white border-slate-200 text-slate-900'
@@ -165,7 +165,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* 2. Middle Row: Top 8 Dispensed Products & Categories */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Top 8 Most Dispensed Items (FR-02) */}
-        <div className="lg:col-span-2 bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
+        <div className="lg:col-span-2 bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
           <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400" />
@@ -216,7 +216,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
         {/* Category Breakdown & Quick Actions */}
         <div className="space-y-4">
-          <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
+          <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
             <h2 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
               <PieChart className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
               <span>توزيع الحركات حسب الفئة</span>
@@ -243,7 +243,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
 
           {/* Quick Action Buttons */}
-          <div className="bg-slate-900 text-white p-5 rounded-2xl shadow-sm space-y-3">
+          <div className="bg-slate-900 text-white p-5 rounded-xl shadow-sm space-y-3">
             <h3 className="text-xs font-bold text-slate-300">إجراءات سريعة</h3>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <button
@@ -266,7 +266,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* 3. Bottom Row: Recent 8 Movements (FR-03) */}
-      <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
+      <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs space-y-4">
         <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-slate-600 dark:text-slate-300" />

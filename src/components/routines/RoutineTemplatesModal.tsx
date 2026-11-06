@@ -43,7 +43,7 @@ export const RoutineTemplatesModal: React.FC<RoutineTemplatesModalProps> = ({
       className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm p-4 overflow-y-auto"
       dir="rtl"
     >
-      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-3xl rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]">
         {/* Header */}
         <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-700 p-5 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -101,7 +101,7 @@ export const RoutineTemplatesModal: React.FC<RoutineTemplatesModalProps> = ({
             return (
               <div
                 key={tpl.id}
-                className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/60 hover:border-emerald-400 dark:hover:border-emerald-600 transition flex flex-col justify-between space-y-3 group shadow-sm hover:shadow-md"
+                className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/60 hover:border-emerald-400 dark:hover:border-emerald-600 transition flex flex-col justify-between space-y-3 group shadow-sm hover:shadow-md"
               >
                 <div className="space-y-2">
                   <div className="flex items-start justify-between">

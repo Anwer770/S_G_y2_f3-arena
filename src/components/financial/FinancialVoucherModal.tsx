@@ -115,7 +115,7 @@ export const FinancialVoucherModal: React.FC<Props> = ({ isOpen, onClose, transa
         }
       `}</style>
 
-      <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden border border-slate-200 dark:border-slate-800 print:border-none print:shadow-none animate-in fade-in zoom-in-95 duration-200 my-auto" dir="rtl">
+      <div className="bg-white dark:bg-slate-900 rounded-xl sm:rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden border border-slate-200 dark:border-slate-800 print:border-none print:shadow-none animate-in fade-in zoom-in-95 duration-200 my-auto" dir="rtl">
         {/* Header - Screen Only */}
         <div className="bg-slate-900 text-white px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 print-hidden">
           <div className="flex items-center gap-2.5">
@@ -196,7 +196,7 @@ export const FinancialVoucherModal: React.FC<Props> = ({ isOpen, onClose, transa
         {/* 80mm Thermal Receipt View */}
         {printMode === 'thermal80' ? (
           <div className="p-4 sm:p-6 bg-slate-100 dark:bg-slate-800 flex justify-center print:bg-white dark:print:bg-slate-900 print:p-0">
-            <div className="thermal-voucher-container w-full max-w-[320px] bg-white dark:bg-slate-900 p-4 font-mono text-slate-900 dark:text-slate-100 border border-dashed border-slate-300 dark:border-slate-600 shadow-md rounded-2xl print:shadow-none print:border-none print:rounded-none text-xs">
+            <div className="thermal-voucher-container w-full max-w-[320px] bg-white dark:bg-slate-900 p-4 font-mono text-slate-900 dark:text-slate-100 border border-dashed border-slate-300 dark:border-slate-600 shadow-md rounded-xl print:shadow-none print:border-none print:rounded-none text-xs">
               <div className="text-center space-y-1 pb-2">
                 <div className="text-base font-black tracking-tight">المنظومة-الإدارية-المتكاملة — الإدارة المالية</div>
                 <div className="text-xs text-slate-600 dark:text-slate-300 font-bold">سند قبض / صرف حراري (80mm)</div>
@@ -284,7 +284,7 @@ export const FinancialVoucherModal: React.FC<Props> = ({ isOpen, onClose, transa
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">قسم الحسابات والمالية — السجل المالي اليومي المعتمد</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">الجمهورية اليمنية • مركز العمليات والتوزيع</p>
               </div>
-              <div className="text-center p-3 border-2 border-slate-800 rounded-2xl bg-slate-50 dark:bg-slate-800/60">
+              <div className="text-center p-3 border-2 border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-800/60">
                 <span className="text-xs font-bold block text-slate-500 dark:text-slate-400">نوع القيد والحركة</span>
                 <span className="text-lg font-black text-slate-900 dark:text-slate-100">
                   {transaction.restriction} ({transaction.movement})
@@ -293,7 +293,7 @@ export const FinancialVoucherModal: React.FC<Props> = ({ isOpen, onClose, transa
             </div>
 
             {/* Voucher Info Meta */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-xs">
               <div>
                 <span className="text-slate-400 dark:text-slate-500 block font-bold">المعرف (ID):</span>
                 <span className="font-mono font-bold text-sm text-teal-700 dark:text-teal-300">{transaction.id}</span>
@@ -314,7 +314,7 @@ export const FinancialVoucherModal: React.FC<Props> = ({ isOpen, onClose, transa
 
             {/* Details Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-              <div className="p-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 space-y-2">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 space-y-2">
                 <h4 className="font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                   <User className="w-4 h-4 text-teal-600 dark:text-teal-400" />
                   طرف القيد والحساب المرتبط
@@ -335,7 +335,7 @@ export const FinancialVoucherModal: React.FC<Props> = ({ isOpen, onClose, transa
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 space-y-2">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 space-y-2">
                 <h4 className="font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                   <FileText className="w-4 h-4 text-teal-600 dark:text-teal-400" />
                   بيان وشرح الحركة
@@ -347,7 +347,7 @@ export const FinancialVoucherModal: React.FC<Props> = ({ isOpen, onClose, transa
             </div>
 
             {/* Amounts Grid */}
-            <div className="bg-slate-900 text-white p-5 rounded-2xl space-y-2">
+            <div className="bg-slate-900 text-white p-5 rounded-xl space-y-2">
               <span className="text-xs font-bold text-slate-300 block">المبالغ المسجلة في القيد:</span>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="bg-white/10 dark:bg-slate-900/10 p-3 rounded-xl border border-white/10">

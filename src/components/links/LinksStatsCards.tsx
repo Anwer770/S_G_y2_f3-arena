@@ -42,7 +42,7 @@ export const LinksStatsCards: React.FC<LinksStatsCardsProps> = ({
             importance: 'الكل',
           })
         }
-        className="bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-xs hover:shadow-md hover:border-indigo-500 transition-all cursor-pointer group"
+        className="bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-xs hover:shadow-md hover:border-indigo-500 transition-all cursor-pointer group"
       >
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold text-slate-500 dark:text-slate-400">إجمالي الروابط</span>
@@ -64,7 +64,7 @@ export const LinksStatsCards: React.FC<LinksStatsCardsProps> = ({
             onlyFavorites: false,
           })
         }
-        className={`p-3.5 rounded-2xl border transition-all cursor-pointer group ${
+        className={`p-3.5 rounded-xl border transition-all cursor-pointer group ${
           activeFilter.onlyAI
             ? 'bg-purple-50/90 border-purple-500 ring-2 ring-purple-500/20'
             : 'bg-white border-slate-200/80 hover:shadow-md hover:border-purple-500'
@@ -90,7 +90,7 @@ export const LinksStatsCards: React.FC<LinksStatsCardsProps> = ({
             onlyAI: false,
           })
         }
-        className={`p-3.5 rounded-2xl border transition-all cursor-pointer group ${
+        className={`p-3.5 rounded-xl border transition-all cursor-pointer group ${
           activeFilter.onlyFavorites
             ? 'bg-amber-50/90 border-amber-500 ring-2 ring-amber-500/20'
             : 'bg-white border-slate-200/80 hover:shadow-md hover:border-amber-500'
@@ -118,7 +118,7 @@ export const LinksStatsCards: React.FC<LinksStatsCardsProps> = ({
                 : 'الاوفس الاكسل',
           })
         }
-        className="bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-xs hover:shadow-md hover:border-emerald-500 transition-all cursor-pointer group"
+        className="bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-xs hover:shadow-md hover:border-emerald-500 transition-all cursor-pointer group"
       >
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300">أوفيس وإكسل</span>
@@ -142,7 +142,7 @@ export const LinksStatsCards: React.FC<LinksStatsCardsProps> = ({
                 : 'الامن سيبراني',
           })
         }
-        className="bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-xs hover:shadow-md hover:border-rose-500 transition-all cursor-pointer group"
+        className="bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-xs hover:shadow-md hover:border-rose-500 transition-all cursor-pointer group"
       >
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold text-rose-700 dark:text-rose-300">أمن وحماية</span>
@@ -163,7 +163,7 @@ export const LinksStatsCards: React.FC<LinksStatsCardsProps> = ({
             importance: activeFilter.importance === 'A' ? 'الكل' : 'A',
           })
         }
-        className={`p-3.5 rounded-2xl border transition-all cursor-pointer group ${
+        className={`p-3.5 rounded-xl border transition-all cursor-pointer group ${
           activeFilter.importance === 'A'
             ? 'bg-indigo-50 border-indigo-600 ring-2 ring-indigo-500/20'
             : 'bg-white border-slate-200/80 hover:shadow-md hover:border-indigo-500'

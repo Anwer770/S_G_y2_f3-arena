@@ -158,7 +158,7 @@ export const CalendarView: React.FC<Props> = ({ tasks, onToggleComplete, onEditT
   return (
     <div className="space-y-4">
       {/* Calendar Header Control Bar */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Navigation & Title */}
         <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
           <div className="flex items-center gap-1.5">
@@ -236,7 +236,7 @@ export const CalendarView: React.FC<Props> = ({ tasks, onToggleComplete, onEditT
 
       {/* 1. MONTHLY VIEW */}
       {viewMode === 'monthly' && (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs overflow-hidden">
           {/* Weekday Headers */}
           <div className="grid grid-cols-7 border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 text-center py-2.5 text-xs font-bold text-slate-600 dark:text-slate-300">
             {ARABIC_WEEKDAYS.map((w) => (
@@ -316,7 +316,7 @@ export const CalendarView: React.FC<Props> = ({ tasks, onToggleComplete, onEditT
 
       {/* 2. WEEKLY VIEW (SATURDAY TO FRIDAY) */}
       {viewMode === 'weekly' && (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-7 divide-y md:divide-y-0 md:divide-x divide-slate-200 dark:divide-slate-700">
             {weekDays.map((w) => {
               const dayTasks = getTasksForDate(w.dateStr);
@@ -385,7 +385,7 @@ export const CalendarView: React.FC<Props> = ({ tasks, onToggleComplete, onEditT
 
       {/* 3. DAILY VIEW */}
       {viewMode === 'daily' && (
-        <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
           <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-700">
             <div>
               <h4 className="text-xl font-bold text-slate-900 dark:text-slate-100">

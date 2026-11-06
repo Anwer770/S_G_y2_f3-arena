@@ -63,7 +63,7 @@ export const WorkOSPrioritiesTab: React.FC<WorkOSPrioritiesTabProps> = ({
   return (
     <div className="space-y-4" dir="rtl">
       {/* Intro strip */}
-      <div className="bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs flex items-center justify-between text-xs">
+      <div className="bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs flex items-center justify-between text-xs">
         <div>
           <span className="font-bold text-slate-800 dark:text-slate-200">مصفوفة أيزنهاور لتحديد الأولويات (2×2)</span>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
@@ -75,7 +75,7 @@ export const WorkOSPrioritiesTab: React.FC<WorkOSPrioritiesTabProps> = ({
       {/* 2x2 Matrix Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Q1: Urgent & Important (عاجل ومهم) */}
-        <div className="bg-rose-50/40 dark:bg-rose-950/40 rounded-2xl border-2 border-rose-200/80 dark:border-rose-800/80 p-4 space-y-3">
+        <div className="bg-rose-50/40 dark:bg-rose-950/40 rounded-xl border-2 border-rose-200/80 dark:border-rose-800/80 p-4 space-y-3">
           <div className="flex items-center justify-between border-b border-rose-200 dark:border-rose-800 pb-2">
             <div className="flex items-center gap-2 text-rose-800 dark:text-rose-200 font-black text-xs">
               <Flame className="w-4 h-4 text-rose-600 dark:text-rose-400 animate-pulse" />
@@ -123,7 +123,7 @@ export const WorkOSPrioritiesTab: React.FC<WorkOSPrioritiesTabProps> = ({
         </div>
 
         {/* Q2: Important & Not Urgent (مهم وغير عاجل) */}
-        <div className="bg-indigo-50/40 dark:bg-indigo-950/40 rounded-2xl border-2 border-indigo-200/80 dark:border-indigo-800/80 p-4 space-y-3">
+        <div className="bg-indigo-50/40 dark:bg-indigo-950/40 rounded-xl border-2 border-indigo-200/80 dark:border-indigo-800/80 p-4 space-y-3">
           <div className="flex items-center justify-between border-b border-indigo-200 dark:border-indigo-800 pb-2">
             <div className="flex items-center gap-2 text-indigo-800 font-black text-xs">
               <Calendar className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
@@ -171,7 +171,7 @@ export const WorkOSPrioritiesTab: React.FC<WorkOSPrioritiesTabProps> = ({
         </div>
 
         {/* Q3: Urgent & Not Important (عاجل وغير مهم) */}
-        <div className="bg-amber-50/40 dark:bg-amber-950/40 rounded-2xl border-2 border-amber-200/80 dark:border-amber-800/80 p-4 space-y-3">
+        <div className="bg-amber-50/40 dark:bg-amber-950/40 rounded-xl border-2 border-amber-200/80 dark:border-amber-800/80 p-4 space-y-3">
           <div className="flex items-center justify-between border-b border-amber-200 dark:border-amber-800 pb-2">
             <div className="flex items-center gap-2 text-amber-800 dark:text-amber-200 font-black text-xs">
               <Users className="w-4 h-4 text-amber-600 dark:text-amber-400" />
@@ -219,7 +219,7 @@ export const WorkOSPrioritiesTab: React.FC<WorkOSPrioritiesTabProps> = ({
         </div>
 
         {/* Q4: Not Urgent & Not Important (غير عاجل وغير مهم) */}
-        <div className="bg-slate-50 dark:bg-slate-800/60 rounded-2xl border-2 border-slate-200/80 dark:border-slate-700/80 p-4 space-y-3">
+        <div className="bg-slate-50 dark:bg-slate-800/60 rounded-xl border-2 border-slate-200/80 dark:border-slate-700/80 p-4 space-y-3">
           <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-2">
             <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200 font-black text-xs">
               <Inbox className="w-4 h-4 text-slate-500 dark:text-slate-400" />

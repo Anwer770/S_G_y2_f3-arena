@@ -54,7 +54,7 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
       </div>
 
       {/* Current User & Admin Profile Settings Card */}
-      <div className="p-5 sm:p-6 rounded-2xl bg-linear-to-r from-blue-50/70 via-slate-50 to-indigo-50/70 dark:from-slate-900 dark:via-slate-900/90 dark:to-indigo-950/30 border border-blue-200/80 dark:border-blue-900/40 shadow-xs space-y-4">
+      <div className="p-5 sm:p-6 rounded-xl bg-linear-to-r from-blue-50/70 via-slate-50 to-indigo-50/70 dark:from-slate-900 dark:via-slate-900/90 dark:to-indigo-950/30 border border-blue-200/80 dark:border-blue-900/40 shadow-xs space-y-4">
         <div className="flex items-center justify-between flex-wrap gap-3 pb-3 border-b border-blue-200/60 dark:border-slate-800">
           <div className="flex items-center gap-2.5">
             <div className="p-2 rounded-xl bg-blue-600 text-white shadow-xs">
@@ -128,7 +128,7 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* Base Currency Selection */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
           <label className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
             <Coins className="w-4 h-4 text-amber-500" />
             <span>العملة الأساسية للنظام</span>
@@ -150,7 +150,7 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
         </div>
 
         {/* Timezone */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
           <label className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
             <Calendar className="w-4 h-4 text-blue-500" />
             <span>المنطقة الزمنية (Timezone)</span>
@@ -172,7 +172,7 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
         </div>
 
         {/* Calendar Type */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
           <label className="block text-xs font-bold text-slate-700 dark:text-slate-300">
             نوع التقويم المعتمد
           </label>
@@ -205,7 +205,7 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
         </div>
 
         {/* Theme */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
           <label className="block text-xs font-bold text-slate-700 dark:text-slate-300">
             مظهر واجهة التطبيق (Theme)
           </label>
@@ -246,7 +246,7 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
         </div>
 
         {/* Invoice Prefixes */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
           <label className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
             <Hash className="w-4 h-4 text-emerald-500" />
             <span>بادئة فواتير المبيعات</span>
@@ -262,7 +262,7 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
           <p className="text-xs text-slate-400 dark:text-slate-500">مثال للترقيم التلقائي: INV-0001, INV-0002</p>
         </div>
 
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
           <label className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
             <Hash className="w-4 h-4 text-purple-500" />
             <span>بادئة فواتير المشتريات</span>
@@ -280,7 +280,7 @@ export const GeneralSettingsTab: React.FC<Props> = ({ settings, onChange }) => {
       </div>
 
       {/* Available Currencies Preview Grid */}
-      <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+      <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
         <div className="flex items-center justify-between">
           <h3 className="text-xs font-bold text-slate-800 dark:text-slate-200">
             معاينة العملات المتاحة في النظام (انقر للاختيار كعملة رئيسية)

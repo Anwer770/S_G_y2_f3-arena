@@ -194,7 +194,7 @@ export const DoctorsModule: React.FC<Props> = ({
   return (
     <div className="space-y-6" dir="rtl">
       {/* Top Header Card */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-xs animate-fade-in-up stagger-1">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs rounded-xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-xs animate-fade-in-up stagger-1">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 rounded-xl bg-teal-600 dark:bg-teal-500 text-white flex items-center justify-center shadow-xs">
@@ -381,7 +381,7 @@ export const DoctorsModule: React.FC<Props> = ({
       {activeSubTab === 'reports' && <DoctorReports doctors={doctors} visits={visits} />}
 
       {activeSubTab === 'audit' && (
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 flex items-center gap-2">
               <History className="w-4 h-4 text-teal-700 dark:text-teal-300" />
@@ -393,7 +393,7 @@ export const DoctorsModule: React.FC<Props> = ({
           </div>
 
           {auditLogs.length === 0 ? (
-            <div className="p-8 text-center text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700 text-xs">
+            <div className="p-8 text-center text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-dashed border-slate-200 dark:border-slate-700 text-xs">
               لا توجد سجلات تدقيق مسجلة حتى الآن
             </div>
           ) : (

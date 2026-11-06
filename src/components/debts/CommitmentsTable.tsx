@@ -149,7 +149,7 @@ export const CommitmentsTable: React.FC<CommitmentsTableProps> = ({
   return (
     <div className="space-y-4">
       {/* Header & Status Chips */}
-      <div className="bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap items-center justify-between gap-3">
         {/* Status Tab Chips */}
         <div className="flex flex-wrap items-center gap-1.5">
           <button
@@ -248,7 +248,7 @@ export const CommitmentsTable: React.FC<CommitmentsTableProps> = ({
       </div>
 
       {/* Filters Row */}
-      <div className="bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs">
+      <div className="bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs">
         {/* Search */}
         <div className="relative flex-1 min-w-[220px]">
           <Search className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute right-3 top-1/2 -translate-y-1/2" />

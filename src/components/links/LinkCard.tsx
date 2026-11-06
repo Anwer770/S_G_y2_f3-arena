@@ -127,7 +127,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({
   const typeStyle = getTypeBadge(link.type);
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-700/90 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/5 transition-all flex flex-col justify-between p-4 relative group">
+    <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/90 dark:border-slate-700/90 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/5 transition-all flex flex-col justify-between p-4 relative group">
       {/* Top Bar: Badges + Favorite & Menu */}
       <div>
         <div className="flex items-start justify-between gap-2 mb-3">

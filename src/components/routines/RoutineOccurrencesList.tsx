@@ -86,7 +86,7 @@ export const RoutineOccurrencesList: React.FC<RoutineOccurrencesListProps> = ({
   return (
     <div id="routine-today-timeline" className="space-y-4">
       {/* Top Header & Day Navigator */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold">
             <Calendar size={24} />
@@ -203,8 +203,8 @@ export const RoutineOccurrencesList: React.FC<RoutineOccurrencesListProps> = ({
 
       {/* Timeline List */}
       {sortedOccurrences.length === 0 ? (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-12 text-center space-y-3">
-          <div className="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-500 mx-auto text-2xl">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-12 text-center space-y-3">
+          <div className="w-16 h-16 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-500 mx-auto text-2xl">
             🌿
           </div>
           <h3 className="text-base font-bold text-slate-700 dark:text-slate-200">
@@ -227,7 +227,7 @@ export const RoutineOccurrencesList: React.FC<RoutineOccurrencesListProps> = ({
             return (
               <div
                 key={occ.id}
-                className={`bg-white dark:bg-slate-900 rounded-2xl border transition p-4 md:p-5 shadow-sm hover:shadow-md ${
+                className={`bg-white dark:bg-slate-900 rounded-xl border transition p-4 md:p-5 shadow-sm hover:shadow-md ${
                   isCompleted
                     ? 'border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/20'
                     : isSkipped

@@ -26,8 +26,8 @@ export const LinksGridView: React.FC<LinksGridViewProps> = ({
 }) => {
   if (links.length === 0) {
     return (
-      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 p-12 text-center my-6">
-        <div className="w-16 h-16 bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 p-12 text-center my-6">
+        <div className="w-16 h-16 bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 rounded-xl flex items-center justify-center mx-auto mb-4">
           <SearchX className="w-8 h-8" />
         </div>
         <h3 className="text-base font-black text-slate-800 dark:text-slate-200 mb-1">

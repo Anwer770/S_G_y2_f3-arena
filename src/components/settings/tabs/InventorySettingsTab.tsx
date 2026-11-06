@@ -122,7 +122,7 @@ export const InventorySettingsTab: React.FC<Props> = ({ settings, onChange }) =>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {/* Warehouses Column */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Warehouse className="w-4 h-4 text-blue-600 dark:text-blue-400" />
@@ -196,7 +196,7 @@ export const InventorySettingsTab: React.FC<Props> = ({ settings, onChange }) =>
         </div>
 
         {/* Categories Column */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Tag className="w-4 h-4 text-purple-600 dark:text-purple-400" />
@@ -247,7 +247,7 @@ export const InventorySettingsTab: React.FC<Props> = ({ settings, onChange }) =>
         </div>
 
         {/* Units Column */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Scale className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />

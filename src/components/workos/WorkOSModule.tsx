@@ -783,7 +783,7 @@ export const WorkOSModule: React.FC<WorkOSModuleProps> = ({
         />
 
         {/* 3. MAIN IN-PAGE TAB NAVIGATION BAR */}
-        <div className="flex items-center justify-between bg-white dark:bg-slate-900 px-3 py-2 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs gap-2">
+        <div className="flex items-center justify-between bg-white dark:bg-slate-900 px-3 py-2 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs gap-2">
           {/* 7 تبويبات العمل/العروض/التحليل + مجموعة التخطيط والمتابعة (§25) */}
           <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5">
             {primaryTabs.map((tab, idx) => {
@@ -873,7 +873,7 @@ export const WorkOSModule: React.FC<WorkOSModuleProps> = ({
               </button>
 
               {isMoreMenuOpen && (
-                <div className="absolute left-0 mt-1 w-56 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-1.5 z-40 text-xs font-bold animate-in fade-in">
+                <div className="absolute left-0 mt-1 w-56 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 p-1.5 z-40 text-xs font-bold animate-in fade-in">
                   <button
                     onClick={() => {
                       setSecondaryView('inbox');
@@ -1395,7 +1395,7 @@ export const WorkOSModule: React.FC<WorkOSModuleProps> = ({
           )}
 
           {(secondaryView === 'works' || secondaryView === 'classic_tasks') && (
-            <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+            <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
               <TasksModule
                 tasks={classicTasks || []}
                 commitments={commitments || []}
@@ -1511,7 +1511,7 @@ export const WorkOSModule: React.FC<WorkOSModuleProps> = ({
               )}
 
               {currentTab === 'works' && (
-                <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs">
+                <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xs">
                   <TasksModule
                     tasks={classicTasks || []}
                     commitments={commitments || []}

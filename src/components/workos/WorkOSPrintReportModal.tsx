@@ -97,7 +97,7 @@ export const WorkOSPrintReportModal: React.FC<WorkOSPrintReportModalProps> = ({
         }
       `}</style>
 
-      <div className="bg-white dark:bg-slate-900 w-full max-w-5xl rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] print:max-h-none print:h-auto print-container my-auto">
+      <div className="bg-white dark:bg-slate-900 w-full max-w-5xl rounded-xl sm:rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] print:max-h-none print:h-auto print-container my-auto">
         {/* Modal Toolbar (Hidden during print) */}
         <div className="px-5 py-3.5 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0 print-hidden">
           <div className="flex items-center gap-3">

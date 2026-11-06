@@ -221,7 +221,7 @@ ${lastVisit}
       `}</style>
 
       <div
-        className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl max-w-4xl w-full overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] border border-slate-200 dark:border-slate-800 print:border-none print:shadow-none print:max-h-none print:w-full my-auto"
+        className="bg-white dark:bg-slate-900 rounded-xl sm:rounded-xl shadow-2xl max-w-4xl w-full overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] border border-slate-200 dark:border-slate-800 print:border-none print:shadow-none print:max-h-none print:w-full my-auto"
         dir="rtl"
       >
         {/* Modal Toolbar (Non-printable) */}
@@ -346,7 +346,7 @@ ${lastVisit}
           <div className="p-4 sm:p-8 overflow-y-auto flex-1 bg-slate-100 dark:bg-slate-800 flex justify-center print:bg-white dark:print:bg-slate-900 print:p-0">
             <div
               ref={printRef}
-              className="thermal-receipt-container w-full max-w-[320px] bg-white dark:bg-slate-900 p-4 font-mono text-slate-900 dark:text-slate-100 border border-dashed border-slate-300 dark:border-slate-600 shadow-md rounded-2xl print:shadow-none print:border-none print:rounded-none print:p-1 text-xs"
+              className="thermal-receipt-container w-full max-w-[320px] bg-white dark:bg-slate-900 p-4 font-mono text-slate-900 dark:text-slate-100 border border-dashed border-slate-300 dark:border-slate-600 shadow-md rounded-xl print:shadow-none print:border-none print:rounded-none print:p-1 text-xs"
             >
               {/* Thermal Header */}
               <div className="text-center space-y-1 pb-2">
@@ -483,7 +483,7 @@ ${lastVisit}
           /* ============================================================ */
           <div ref={printRef} className="p-6 sm:p-8 overflow-y-auto flex-1 space-y-6 text-xs text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900">
             {/* Official Letterhead Header */}
-            <div className={`p-6 rounded-2xl bg-gradient-to-r ${headerInfo.color} text-white relative overflow-hidden shadow-xs`}>
+            <div className={`p-6 rounded-xl bg-gradient-to-r ${headerInfo.color} text-white relative overflow-hidden shadow-xs`}>
               <div className="flex items-center justify-between relative z-10 flex-wrap gap-4">
                 <div>
                   <h1 className="text-xl font-black tracking-tight">{headerInfo.title}</h1>
@@ -506,7 +506,7 @@ ${lastVisit}
             </div>
 
             {/* Customer Metadata Card */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700 text-xs">
               <div>
                 <span className="text-slate-500 dark:text-slate-400 block font-bold">اسم العميل / المنشأة:</span>
                 <span className="text-sm font-black text-slate-900 dark:text-slate-100">{customer.name}</span>
@@ -534,7 +534,7 @@ ${lastVisit}
                 ملخص الأرصدة المالية الحالية
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div className="p-3.5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800">
+                <div className="p-3.5 rounded-xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800">
                   <div className="text-slate-500 dark:text-slate-400 font-bold text-xs">الرصيد بالريال اليمني (YER)</div>
                   <div
                     className={`text-lg font-black font-mono mt-1 ${
@@ -548,7 +548,7 @@ ${lastVisit}
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
                   <div className="text-slate-500 dark:text-slate-400 font-bold text-xs">الرصيد بالريال السعودي (SAR)</div>
                   <div className="text-lg font-black font-mono text-slate-800 dark:text-slate-200 mt-1">
                     {(customer.balanceSAR || 0).toLocaleString('ar-SA')} ر.س
@@ -556,7 +556,7 @@ ${lastVisit}
                   <div className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">حساب العملة الأجنبية</div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
                   <div className="text-slate-500 dark:text-slate-400 font-bold text-xs">الرصيد بالدولار الأمريكي (USD)</div>
                   <div className="text-lg font-black font-mono text-slate-800 dark:text-slate-200 mt-1">
                     ${(customer.balanceUSD || 0).toLocaleString()}
@@ -572,7 +572,7 @@ ${lastVisit}
                 <Calendar className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                 سجل الحركات والزيارات والتحصيلات الأخيرة
               </h3>
-              <div className="border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-2xs">
+              <div className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-2xs">
                 <div className="w-full overflow-x-auto print:overflow-visible">
                 <table className="w-full text-right border-collapse text-xs min-w-[600px] print:min-w-0">
                   <thead className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold">

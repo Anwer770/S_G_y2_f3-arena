@@ -106,7 +106,7 @@ export const TaskFlowBoardView: React.FC<TaskFlowBoardViewProps> = ({
             onDragOver={(e) => handleDragOver(e, col.id)}
             onDragLeave={handleDragLeave}
             onDrop={(e) => handleDrop(e, col.id)}
-            className={`rounded-3xl border transition-all duration-200 p-4 flex flex-col min-h-[550px] ${
+            className={`rounded-xl border transition-all duration-200 p-4 flex flex-col min-h-[550px] ${
               isDropTarget
                 ? 'ring-2 ring-indigo-500 bg-indigo-50/50 border-indigo-300'
                 : 'bg-white border-slate-200/90 shadow-xs'
@@ -143,7 +143,7 @@ export const TaskFlowBoardView: React.FC<TaskFlowBoardViewProps> = ({
             {/* Task Cards List */}
             <div className="flex-1 space-y-3 overflow-y-auto">
               {colTasks.length === 0 ? (
-                <div className="h-40 border-2 border-dashed border-slate-200 rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs text-center p-4">
+                <div className="h-40 border-2 border-dashed border-slate-200 rounded-xl flex flex-col items-center justify-center text-slate-400 text-xs text-center p-4">
                   <span>لا توجد مهام في هذا العمود</span>
                   <button
                     onClick={() => onOpenTaskModal(undefined, col.id)}
@@ -164,7 +164,7 @@ export const TaskFlowBoardView: React.FC<TaskFlowBoardViewProps> = ({
                       draggable
                       onDragStart={(e) => handleDragStart(e, task.id)}
                       onClick={() => onOpenTaskModal(task)}
-                      className={`group p-4 rounded-2xl border transition-all cursor-grab active:cursor-grabbing bg-white hover:shadow-md ${
+                      className={`group p-4 rounded-xl border transition-all cursor-grab active:cursor-grabbing bg-white hover:shadow-md ${
                         overdue
                           ? 'border-rose-300 ring-1 ring-rose-200 shadow-rose-100'
                           : 'border-slate-200 hover:border-indigo-200'

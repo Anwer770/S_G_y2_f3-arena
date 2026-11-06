@@ -209,7 +209,7 @@ export const WorkOSUnifiedTopBar: React.FC<WorkOSUnifiedTopBarProps> = ({
 
             {/* Dropdown Options */}
             {isAddMenuOpen && (
-              <div className="absolute left-0 sm:right-0 sm:left-auto mt-2 w-56 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-1.5 z-50 text-xs animate-in fade-in zoom-in-95 duration-150">
+              <div className="absolute left-0 sm:right-0 sm:left-auto mt-2 w-56 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 p-1.5 z-50 text-xs animate-in fade-in zoom-in-95 duration-150">
                 <div className="px-2.5 py-1.5 text-xs font-bold text-slate-400 dark:text-slate-500 border-b border-slate-100 dark:border-slate-800 mb-1">
                   اختر نوع العنصر الجديد:
                 </div>
@@ -329,7 +329,7 @@ export const WorkOSUnifiedTopBar: React.FC<WorkOSUnifiedTopBarProps> = ({
 
             {/* Notifications Popover */}
             {isNotificationsOpen && (
-              <div className="absolute left-0 mt-2 w-72 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-3 z-50 text-xs animate-in fade-in zoom-in-95 duration-150">
+              <div className="absolute left-0 mt-2 w-72 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 p-3 z-50 text-xs animate-in fade-in zoom-in-95 duration-150">
                 <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2 mb-2">
                   <span className="font-bold text-slate-800 dark:text-slate-200">التنبيهات العاجلة</span>
                   <span className="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full text-slate-600 dark:text-slate-300 font-mono">
@@ -403,7 +403,7 @@ export const WorkOSUnifiedTopBar: React.FC<WorkOSUnifiedTopBarProps> = ({
 
             {/* Display Settings Popover */}
             {isSettingsOpen && (
-              <div className="absolute left-0 mt-2 w-64 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-3 z-50 text-xs animate-in fade-in zoom-in-95 duration-150 space-y-3">
+              <div className="absolute left-0 mt-2 w-64 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 p-3 z-50 text-xs animate-in fade-in zoom-in-95 duration-150 space-y-3">
                 <div className="font-bold text-slate-800 dark:text-slate-200 border-b border-slate-100 dark:border-slate-800 pb-2">
                   تفضيلات العرض
                 </div>

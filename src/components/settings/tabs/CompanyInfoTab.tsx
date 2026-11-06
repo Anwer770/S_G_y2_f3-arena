@@ -47,12 +47,12 @@ export const CompanyInfoTab: React.FC<Props> = ({ settings, onChange }) => {
       </div>
 
       {/* Logo Section */}
-      <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+      <div className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
         <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-3">
           شعار الشركة (اللوجو)
         </label>
         <div className="flex flex-col sm:flex-row items-center gap-5">
-          <div className="relative w-28 h-28 rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
+          <div className="relative w-28 h-28 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
             {settings.logoUrl ? (
               <img
                 src={settings.logoUrl}

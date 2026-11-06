@@ -117,7 +117,7 @@ export const WorkOSAutomationView: React.FC<WorkOSAutomationViewProps> = ({
   return (
     <div className="space-y-6" dir="rtl">
       {/* Header bar */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
             <Zap className="w-6 h-6" />
@@ -158,7 +158,7 @@ export const WorkOSAutomationView: React.FC<WorkOSAutomationViewProps> = ({
           return (
             <div
               key={rule.id}
-              className={`bg-white dark:bg-slate-900 rounded-2xl border p-5 shadow-2xs transition flex flex-col md:flex-row md:items-center justify-between gap-4 ${
+              className={`bg-white dark:bg-slate-900 rounded-xl border p-5 shadow-2xs transition flex flex-col md:flex-row md:items-center justify-between gap-4 ${
                 rule.isActive
                   ? 'border-slate-200/90 dark:border-slate-800 hover:border-amber-300 dark:hover:border-amber-700/60'
                   : 'border-slate-100 dark:border-slate-800/60 opacity-60 bg-slate-50/50 dark:bg-slate-900/40'
@@ -262,7 +262,7 @@ export const WorkOSAutomationView: React.FC<WorkOSAutomationViewProps> = ({
             if (e.target === e.currentTarget) setIsNewModalOpen(false);
           }}
         >
-          <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 w-full max-w-lg space-y-4 animate-in fade-in zoom-in-95 duration-150">
+          <div className="bg-white dark:bg-slate-900 rounded-xl sm:rounded-xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 w-full max-w-lg space-y-4 animate-in fade-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
               <div className="flex items-center gap-2">
                 <div className="p-2 rounded-xl bg-amber-500/10 text-amber-600">

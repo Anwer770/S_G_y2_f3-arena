@@ -148,7 +148,7 @@ export const WorkOSKanbanTab: React.FC<WorkOSKanbanTabProps> = ({
               key={col.id}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, col.id)}
-              className="bg-slate-50/70 dark:bg-slate-800/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-3 min-h-[480px] flex flex-col space-y-2.5 transition"
+              className="bg-slate-50/70 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-700/80 p-3 min-h-[480px] flex flex-col space-y-2.5 transition"
             >
               {/* Column Header */}
               <div className={`p-2.5 rounded-xl border flex items-center justify-between font-bold text-xs ${col.headerColor}`}>

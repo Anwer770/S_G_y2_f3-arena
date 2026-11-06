@@ -174,13 +174,13 @@ export const CustomerModal: React.FC<Props> = ({
       }}
     >
       <div
-        className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl max-w-3xl w-full overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] border border-slate-200 dark:border-slate-800 animate-in fade-in zoom-in-95 duration-200"
+        className="bg-white dark:bg-slate-900 rounded-xl sm:rounded-xl shadow-2xl max-w-3xl w-full overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[92vh] border border-slate-200 dark:border-slate-800 animate-in fade-in zoom-in-95 duration-200"
         dir="rtl"
       >
         {/* Modal Header */}
         <div className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-6 py-4 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-white/15 dark:bg-slate-900/15 backdrop-blur-xs flex items-center justify-center border border-white/20">
+            <div className="w-10 h-10 rounded-xl bg-white/15 dark:bg-slate-900/15 backdrop-blur-xs flex items-center justify-center border border-white/20">
               <UserCheck className="w-5 h-5 text-amber-100" />
             </div>
             <div>
@@ -203,7 +203,7 @@ export const CustomerModal: React.FC<Props> = ({
         {/* Modal Form Content */}
         <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-6 flex-1 text-xs">
           {/* 1. Basic Identification Section */}
-          <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 space-y-4">
+          <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-4">
             <div className="flex items-center justify-between">
               <h3 className="text-xs font-black text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
                 <Building2 className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
@@ -313,7 +313,7 @@ export const CustomerModal: React.FC<Props> = ({
           </div>
 
           {/* 2. Route, Geographical Region & Visit Details */}
-          <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 space-y-4">
+          <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-4">
             <h3 className="text-xs font-black text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
               <Calendar className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
               تخطيط المسار والزيارات والمندوب
@@ -443,7 +443,7 @@ export const CustomerModal: React.FC<Props> = ({
           </div>
 
           {/* 3. Multi-Currency Financial Balances */}
-          <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 space-y-4">
+          <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-4">
             <div className="flex items-center justify-between">
               <h3 className="text-xs font-black text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
                 <DollarSign className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />

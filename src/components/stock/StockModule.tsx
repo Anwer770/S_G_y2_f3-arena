@@ -114,7 +114,7 @@ export const StockModule: React.FC<Props> = ({
   return (
     <div className="space-y-6" dir="rtl">
       {/* Top Banner */}
-      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 md:p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4 animate-fade-in-up stagger-1">
+      <div className="bg-white/95 dark:bg-slate-900/85 backdrop-blur-xs p-5 md:p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4 animate-fade-in-up stagger-1">
         <div className="flex items-center gap-3.5">
           <div className="w-11 h-11 rounded-xl bg-teal-600 dark:bg-teal-500 text-white flex items-center justify-center shadow-xs">
             <Package className="w-5 h-5" />

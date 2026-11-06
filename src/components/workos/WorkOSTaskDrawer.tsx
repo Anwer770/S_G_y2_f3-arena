@@ -424,7 +424,7 @@ export const WorkOSTaskDrawer: React.FC<WorkOSTaskDrawerProps> = ({
               </div>
 
               {/* Progress Slider */}
-              <div className="bg-slate-50 dark:bg-slate-800/60 p-3.5 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+              <div className="bg-slate-50 dark:bg-slate-800/60 p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-2">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-200">
                   <span>نسبة الإنجاز:</span>
                   <span className="font-mono text-teal-800 dark:text-teal-200">{progress}%</span>
@@ -440,7 +440,7 @@ export const WorkOSTaskDrawer: React.FC<WorkOSTaskDrawerProps> = ({
               </div>
 
               {/* Participants & Goal */}
-              <div className="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+              <div className="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-2">
                 <div className="text-xs font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5">
                   <Users className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
                   <span>المشاركون في المهمة:</span>
@@ -567,7 +567,7 @@ export const WorkOSTaskDrawer: React.FC<WorkOSTaskDrawerProps> = ({
           {/* TAB 4: ATTACHMENTS */}
           {drawerTab === 'attachments' && (
             <div className="space-y-3">
-              <div className="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-2xl p-6 text-center hover:border-teal-400 transition cursor-pointer bg-slate-50 dark:bg-slate-800/60">
+              <div className="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl p-6 text-center hover:border-teal-400 transition cursor-pointer bg-slate-50 dark:bg-slate-800/60">
                 <Paperclip className="w-6 h-6 text-slate-400 dark:text-slate-500 mx-auto mb-2" />
                 <p className="text-xs font-bold text-slate-700 dark:text-slate-200">اسحب وأفلت الملفات هنا أو انقر للإرفاق</p>
                 <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">يدعم مستندات PDF، ملفات Excel، والصور</p>

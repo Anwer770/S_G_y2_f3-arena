@@ -173,7 +173,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
       {/* 1. TOP SUMMARY CARDS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Overall Completion Card */}
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-3">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-slate-500 dark:text-slate-400">نسبة الإنجاز العامة</span>
             <span className="p-1.5 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-700 dark:text-teal-300">
@@ -199,7 +199,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
         {/* Overdue Alerts Card */}
         <div
           onClick={() => onNavigateToTab('tasks')}
-          className="bg-white dark:bg-slate-900 hover:bg-rose-50/40 dark:hover:bg-rose-950/40 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 hover:border-rose-300 shadow-2xs p-5 space-y-3 transition cursor-pointer"
+          className="bg-white dark:bg-slate-900 hover:bg-rose-50/40 dark:hover:bg-rose-950/40 rounded-xl border border-slate-200/80 dark:border-slate-700/80 hover:border-rose-300 shadow-2xs p-5 space-y-3 transition cursor-pointer"
         >
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-rose-700 dark:text-rose-300">المهام المتأخرة</span>
@@ -219,7 +219,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
         {/* Due Today Card */}
         <div
           onClick={() => onNavigateToTab('tasks')}
-          className="bg-white dark:bg-slate-900 hover:bg-amber-50/40 dark:hover:bg-amber-950/40 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 hover:border-amber-300 shadow-2xs p-5 space-y-3 transition cursor-pointer"
+          className="bg-white dark:bg-slate-900 hover:bg-amber-50/40 dark:hover:bg-amber-950/40 rounded-xl border border-slate-200/80 dark:border-slate-700/80 hover:border-amber-300 shadow-2xs p-5 space-y-3 transition cursor-pointer"
         >
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-amber-800 dark:text-amber-200">مستحقة اليوم</span>
@@ -257,7 +257,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
               type="button"
               disabled={!kpi.tab}
               onClick={() => kpi.tab && onNavigateToTab(kpi.tab)}
-              className={`text-right rounded-2xl border p-3.5 transition ${tones[kpi.tone]} ${kpi.tab ? 'cursor-pointer hover:shadow-xs' : 'cursor-default'}`}
+              className={`text-right rounded-xl border p-3.5 transition ${tones[kpi.tone]} ${kpi.tab ? 'cursor-pointer hover:shadow-xs' : 'cursor-default'}`}
             >
               <div className="text-xs font-bold opacity-90">{kpi.label}</div>
               <div className="text-2xl font-black font-mono mt-1">{kpi.value}</div>
@@ -267,7 +267,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
       </div>
 
       {/* 1.c القادم (§10) — تجميع عرض لمهام ومواعيد واجتماعات والتزامات قائمة */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-3">
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-3">
         <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
           <h3 className="text-sm font-black text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <Calendar className="w-4 h-4 text-teal-600 dark:text-teal-400" />
@@ -304,7 +304,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
       {/* 2. ACTION REQUIRED TASKS & ACTIVE PROJECTS SPLIT */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left: Tasks Needing Immediate Action (Ranked 1 to 5) */}
-        <div className="lg:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-4">
+        <div className="lg:col-span-2 bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-4">
           <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
             <div>
               <h3 className="text-sm font-black text-slate-900 dark:text-slate-100 flex items-center gap-2">
@@ -396,7 +396,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
         {/* Right: Active Projects & Upcoming Meetings */}
         <div className="space-y-6">
           {/* Active Projects */}
-          <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-4">
+          <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-4">
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
               <h3 className="text-sm font-black text-slate-900 dark:text-slate-100 flex items-center gap-2">
                 <FolderKanban className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
@@ -443,7 +443,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
           </div>
 
           {/* Upcoming Appointments & Meetings */}
-          <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-3">
+          <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-3">
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
               <h3 className="text-xs font-bold text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5 text-sky-600 dark:text-sky-400" />
@@ -471,7 +471,7 @@ export const WorkOSOverviewTab: React.FC<WorkOSOverviewTabProps> = ({
           </div>
 
           {/* Activity Feed (آخر التحديثات) */}
-          <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-3">
+          <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xs p-5 space-y-3">
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
               <h3 className="text-xs font-bold text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
                 <Activity className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
