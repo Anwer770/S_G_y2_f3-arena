@@ -9,7 +9,6 @@ import { exportFinancialToExcel } from '../../utils/excel';
 import { FinancialModal } from './FinancialModal';
 import { FinancialVoucherModal } from './FinancialVoucherModal';
 import { ImportFinancialModal } from './ImportFinancialModal';
-import { CashTreasuryLiquidityBanner } from './CashTreasuryLiquidityBanner';
 import {
   Search,
   Plus,
@@ -576,42 +575,6 @@ export const FinancialModule: React.FC<Props> = ({
           </button>
         </div>
       </div>
-
-      {/* شريط إجمالي رصيد الخزينة والسيولة النقدية المتاحة (مطابق للقطة الشاشة 1) */}
-      <CashTreasuryLiquidityBanner
-        balance={periodSummary.netBalanceYER > 0 ? periodSummary.netBalanceYER : 52000}
-        currency="YER"
-        onOpenReceipt={handleOpenReceiptVoucher}
-        onOpenPayment={handleOpenPaymentVoucher}
-        onOpenJournal={() => {
-          setActiveSubTab('journal');
-        }}
-        onAddTreasury={(name, bal, curr) => {
-          if (onAddOption) {
-            onAddOption('restrictionAccount', name);
-          }
-          if (bal > 0 && onSaveTransaction) {
-            onSaveTransaction({
-              id: `TXN-${Date.now().toString().slice(-4)}`,
-              date: todayStr,
-              day: '',
-              importance: '√',
-              movement: 'ايرادات',
-              restriction: 'سند إيداع',
-              movementType: 'نقدا',
-              categoryAccount: 'رصيد افتتاحي',
-              restrictionAccount: name,
-              accountName: name,
-              description: `رصيد افتتاحي عند إنشاء ${name}`,
-              number: `OB-${Date.now().toString().slice(-4)}`,
-              amountYER: curr === 'YER' ? bal : 0,
-              amountSAR: curr === 'SAR' ? bal : 0,
-              amountUSD: curr === 'USD' ? bal : 0,
-              isDraft: false,
-            });
-          }
-        }}
-      />
 
       {/* 2. KPI SUMMARY BAR (Matching User Design: وارد الفترة | مصروف الفترة | صافي الفترة | عدد الحركات) */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
